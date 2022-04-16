@@ -1,0 +1,65 @@
+// FV
+@use "../../../setting"as *;
+@use "../../../mixin"as *;
+
+.fv {
+  position: relative;
+  width: 100%;
+  height: 39.063vw;
+  background-image: url(../../../img/fv_pic6.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+
+  &_title {
+    position: fixed;
+    top: 19.531vw;
+    left: calc(50% + 4.805vw);
+    transform: translateY(-50%) translateX(-50%);
+    @include white_bold;
+    color: $dGray;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    font-family: $lato;
+    font-size: 3.281vw;
+    letter-spacing: .06em;
+    z-index: 1;
+
+    ._heading {
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
+    }
+
+    ._sub {
+      font-size: $pc16;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
+      margin-top: $pc32;
+    }
+  }
+}
+
+@include mq(lg) {
+  .fv {
+    background-image: url(../../../img/fv_pic7.jpg);
+    background-position: top;
+
+    &_title {
+      @include ab_center_rl;
+      position: fixed;
+      top: 16vw;
+      font-size: $tb36;
+
+      ._heading {
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
+      }
+
+      ._sub {
+        font-size: $tb16;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
+        margin-top: $tb24;
+      }
+    }
+  }
+} 

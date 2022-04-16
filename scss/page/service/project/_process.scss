@@ -1,0 +1,175 @@
+@use "../../../setting"as *;
+@use "../../../mixin"as *;
+
+.process {
+  position: relative;
+  padding-top: $pc122;
+  padding-left: 10.78vw;
+  // padding-bottom: 17.5vw;
+  background-color: $white;
+  z-index: 1;
+
+  &_top {
+    display: flex;
+    align-items: center;
+  }
+
+  &_heading {
+    @include section_title;
+  }
+
+  &_subheading {
+    @include section_subtitle;
+  }
+
+  &_msg {
+    margin-left: 12.266vw;
+    font-size: 1.563vw;
+  }
+
+  &_container {
+    position: relative;
+    width: 72.5vw;
+    margin: $pc64 auto 0;
+  }
+
+  &_step {
+    position: relative;
+    // margin-top: 10.626vw;
+    padding-top: 5.469vw;
+    padding-bottom: 10.625vw;
+
+    ._step {
+      position: absolute;
+      top: 0;
+      left: -$pc1;
+      transform: translateY(-100%);
+      font-size: $pc24;
+      font-weight: 700;
+      line-height: 1.5em;
+      background-color: $white;
+      padding: $pc16 0;
+
+      span {
+        font-size: $pc48;
+        color: $yellow;
+      }
+    }
+
+    ._title {
+      display: inline-block;
+      color: $white;
+      font-size: $pc24;
+      background-color: $black;
+      margin-left: 5.781vw;
+      padding: 0.547vw 1.17vw;
+    }
+    
+    ._txt {
+      margin-top: $pc48;
+      margin-left: 5.781vw;
+      font-size: $pc16;
+    }
+
+    .border-line {
+      /*線の位置*/
+      position: absolute;
+      left: $pc2;
+      top: 0;
+      width: $pc1;
+      /*線の太さ*/
+      height: 0;
+      /*はじめは高さを0に*/
+      background: $black;
+    }
+  }
+
+  &_step:nth-child(1) {
+    margin-top: 10.626vw;
+  }
+}
+
+// レスポンシブ
+// タブレットサイズ
+@include mq(lg) {
+  .process {
+    padding-top: $tb64;
+
+    &_heading {
+      margin-top: 4.063vw;
+      padding-right: 1.719vw;
+      @include section_title_tab;
+    }
+
+    &_subheading {
+      @include section_subtitle_tab;
+    }
+
+    &_msg {
+      margin-left: 8vw;
+      font-size: $tb14;
+    }
+    
+    &_container {
+      position: relative;
+      width: 72.5vw;
+      margin: $tb120 auto 0;
+    }
+
+    &_step {
+      position: relative;
+      padding-top: $tb24;
+      padding-bottom: $tb120;
+    
+      ._step {
+        position: absolute;
+        top: 0;
+        left: -$pc1;
+        transform: translateY(-100%);
+        font-size: $tb20;
+        font-weight: 700;
+        line-height: 1.5em;
+        background-color: $white;
+        padding: $tb16 0;
+    
+        span {
+          font-size: $tb36;
+          color: $yellow;
+        }
+      }
+    
+      ._title {
+        display: inline-block;
+        color: $white;
+        font-size: $tb20;
+        background-color: $black;
+        margin-left: 5.781vw;
+        padding: $tb9;
+      }
+    
+      ._txt {
+        width: 80%;
+        margin-top: $tb24;
+        margin-left: 5.781vw;
+        font-size: $tb14;
+        line-height: 1.8em;
+      }
+    
+      .border-line {
+        /*線の位置*/
+        position: absolute;
+        left: $tb2;
+        top: 0;
+        width: $tb1;
+        /*線の太さ*/
+        height: 0;
+        /*はじめは高さを0に*/
+        background: $black;
+      }
+    }
+    
+    &_step:nth-child(1) {
+      margin-top: 16vw;
+    }
+  }
+}

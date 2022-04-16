@@ -1,0 +1,231 @@
+@use "../../../setting"as *;
+@use "../../../mixin"as *;
+
+.plan {
+  position: relative;
+  padding-top: $pc122;
+  padding-right: 12.891vw;
+  padding-left: 10.78vw;
+  padding-bottom: $pc122;
+  background-color: $white;
+  z-index: 1;
+
+  &_heading {
+    @include section_title;
+  }
+
+  &_subheading {
+    @include section_subtitle;
+  }
+
+  &_container {
+    width: 72.421vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center;
+    margin-top: 8.438vw;
+    // overflow: scroll;
+    // flex-wrap: nowrap;
+  }
+
+  &_card {
+    flex: 0 0 31%;
+    text-align: center;
+    border: 3px solid $dGray;
+    padding-bottom: $pc48;
+    box-sizing: border-box;
+    margin:0 auto;
+    
+    h3 {
+      display: block;
+      background: $dGray;
+      @include white_bold;
+      font-size: 1.563vw;
+      padding: $pc18;
+      margin: 0;
+    }
+
+    h4 {
+      font-size: $pc64;
+      margin: 0 auto;
+      padding: $pc28   0;
+
+      span {
+        font-size: $pc24;
+      }
+    }
+
+    ._product {
+      margin: 0 0.547vw;
+      color: $white;
+      font-size: 1.641vw;
+      font-weight: 600;
+      line-height: 4.219vw;
+      background-color: $dGray;
+      border-radius: 0.781vw;
+    }
+
+    p {
+      font-size: $pc18;
+      font-weight: 500;
+      line-height: 2em;
+
+      span {
+        color: $dGray;
+        font-weight: 700;
+        line-height: 6.094vw;
+      }
+    }
+  } 
+    
+    
+
+  &_card.basic {
+    position: relative;
+    border-color: $yellow;
+
+    ._reccomend {
+      position: absolute;
+      width: 100%;
+      top: -0.781vw;
+      left: 50%;
+      transform: translateY(-100%) translateX(-50%);
+      color: $yellow;
+      font-size: $pc24;
+      font-weight: 700;
+    }
+    
+    h3 {
+      background: $yellow;
+      padding: $pc32;
+      font-size: 2.188vw;
+    }
+    
+    ._product {
+      background-color: $yellow;
+    }
+  }
+  
+  &_card.pro {
+    border-color: $blue;
+    
+    h3 {
+      background: $blue;
+    }
+
+    ._product {
+      background-color: $blue;
+    }
+  }  
+}
+
+// レスポンシブ
+// タブレットサイズ
+@include mq(lg) {
+  .plan {
+    padding-top: $tb64;
+    padding-left: 10.78vw;
+    padding-right: 10.78vw;
+
+    &_heading {
+      margin-top: 4.063vw;
+      padding-right: 1.719vw;
+      @include section_title_tab;
+    }
+
+    &_subheading {
+      @include section_subtitle_tab;
+    }
+
+    &_container {
+      width: auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: center;
+      margin-top: 8.438vw;
+      // overflow: scroll;
+      // flex-wrap: nowrap;
+    }
+    
+    &_card {
+      flex: 0 0 31%;
+      text-align: center;
+      border: 3px solid $dGray;
+      padding-bottom: $tb28;
+      box-sizing: border-box;
+      margin: 0 auto;
+    
+      h3 {
+        font-size: $tb16;
+        padding: $tb18;
+      }
+    
+      h4 {
+        font-size: $tb54;
+        margin: 0 auto;
+        padding: $tb20 0;
+    
+        span {
+          font-size: $tb20;
+        }
+      }
+    
+      ._product {
+        margin: 0 $tb5;
+        font-size: $tb16;
+        line-height: 2.5em;
+        border-radius: .5em;
+      }
+    
+      p {
+        font-size: $tb14;
+    
+        span {
+          line-height: 3.2em;
+        }
+      }
+    }
+    
+    
+    
+    &_card.basic {
+      position: relative;
+      border-color: $yellow;
+    
+      ._reccomend {
+        position: absolute;
+        width: 100%;
+        top: -0.781vw;
+        left: 50%;
+        transform: translateY(-100%) translateX(-50%);
+        color: $yellow;
+        font-size: $tb20;
+        font-weight: 700;
+      }
+    
+      h3 {
+        background: $yellow;
+        padding: $tb24;
+        font-size: $tb20;
+      }
+    
+      ._product {
+        background-color: $yellow;
+      }
+    }
+    
+    &_card.pro {
+      border-color: $blue;
+    
+      h3 {
+        background: $blue;
+      }
+    
+      ._product {
+        background-color: $blue;
+      }
+    }
+  }
+}

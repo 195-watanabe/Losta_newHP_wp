@@ -1,0 +1,465 @@
+@use "../../../setting"as *;
+@use "../../../mixin"as *;
+
+.contact {
+  position: relative;
+  padding-left: 5.781vw;
+  padding-top: $pc100;
+  padding-right: 7.109vw;
+  padding-bottom: 9.375vw;
+  background-color: $white;
+}
+
+.form_container {
+  box-sizing: border-box;
+  border: $pc1 solid $black;
+  padding: 0 14.219vw;
+
+  ._stepBar {
+    display: flex;
+    // width: 39.063vw;
+    width: 50.156vw;
+    position: relative;
+    margin: $pc122 auto $pc64;
+    text-align: center;
+  }
+  
+  ._stepBar li {
+    font-size: 1.563vw;
+    font-weight: 700;
+    color: $dGray;
+    position: relative;
+    width: 33.333%;
+  }
+  
+  ._stepBar li:after {
+    background: $lGray;
+    content: "";
+    width: calc(100% - $pc48);
+    height: 0.781vw;
+    position: absolute;
+    left: calc(-50% + $pc24);
+    top: 1.484vw;
+  }
+  
+  ._stepBar li:first-child:after {
+    display: none;
+  }
+  
+  ._stepBar li span {
+    background: $lGray;
+    color: $white;
+    display: inline-block;
+    font-size: $pc24;
+    font-family: $lato;
+    font-weight: 600;
+    margin-bottom: $pc18;
+    width: $pc48;
+    line-height: $pc48;
+    border-radius: 50%;
+  }
+  
+  ._stepBar ._visited {
+    color: $yellow;
+  }
+
+  ._stepBar ._visited:after {
+    background: $lGray;
+  }
+  
+  ._stepBar ._visited span {
+    background: $yellow;
+  }
+}
+
+.form {
+  padding: 0 5.938vw;
+  font-size: $pc14;
+  line-height: 2em;
+
+  &_txt {
+    font-weight: 700;
+    font-size: $pc14;
+    line-height: 2.5em;
+    text-align: center;
+    color: $dGray;
+    margin-bottom: $pc122;
+  }
+
+  &_thanks {
+    text-align: center;
+    
+    ._header {
+      margin-top: $pc122;
+      font-size: $pc24;
+      font-weight: 700;
+      letter-spacing: .08em;
+    }
+    
+    ._txt {
+      margin-top: $pc64;
+      font-size: $pc16;
+      letter-spacing: .08em;
+      margin-bottom: 7.031vw;
+      line-height: 1.6em;
+    }
+  }
+
+  &_block {
+    position: relative;
+    margin-bottom: 5.938vw;
+
+    ._header {
+      margin-bottom: $pc16;
+      font-size: $pc16;
+      font-weight: 700;
+      color: $black;
+
+      span {
+        color: $red;
+        font-size: $pc14;
+        font-weight: 500;
+      }
+    }
+
+    ._body {
+      box-sizing: border-box;
+
+      input[type="text"],
+      input[type="password"],
+      input[type="url"],
+      input[type="tel"],
+      input[type="email"] {
+        box-sizing: border-box;
+        padding: $pc18;
+        width: 100%;
+        font-size: $pc14;
+        line-height: inherit;
+        background: $lGray;
+        border: $pc1 solid $dGray;
+        outline: none;
+      }
+
+      select {
+        padding: $pc18;
+        width: 22.578vw;
+        font-size: $pc14;
+        line-height: inherit;
+        background: $lGray;
+        border: $pc1 solid $dGray;
+        outline: none;
+      }
+
+      textarea {
+        padding: $pc18;
+        width: 100%;
+        font-size: $pc14;
+        border: $pc1 solid $dGray;
+        background: $lGray;
+        outline: none;
+      }
+    }
+
+  }
+
+  &_privacy {
+    margin-bottom: 3.281vw;
+    padding: $pc18;
+    width: 100%;
+    max-height: 8.438vw;
+    border: $pc1 solid $dGray;
+    background: $lGray;
+    overflow-y: scroll;
+    font-size: 0.938vw;
+    line-height: 1.5em;
+
+    h2 {
+      font-size: $pc14;
+      margin: 2em 0 1em;
+    }
+
+    h3 {
+      margin: 2em 0 1em;
+    }
+
+    span {
+      padding-left: 1em;
+    }
+  }
+
+  p {
+    font-size: 0.938vw;
+  }
+
+  &_submit {
+    position: relative;
+    margin-bottom: $pc122;
+
+    ._body {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  &_btn {
+    position: relative;
+    width: 22.5vw;
+    @include morebtn_white;
+    font-family: "游ゴシック体",
+    "メイリオ",
+    sans-serif;
+    line-height: 5.625vw;
+    margin: 0 10vw;
+    padding: 0;
+
+    a {
+      position: absolute;
+      display: block;
+      width: 100%;
+      // height: 100%;
+      // width: 22.5vw;
+      height: 5.625vw;
+    }
+  }
+
+  &_btn:hover {
+    color: $black;
+    background: $yellow;
+  }
+
+  &_btn._send,
+  &_btn._homeback {
+    margin-top: $pc32;
+    @include morebtn_black;
+  }
+
+  &_btn._send:hover,
+  &_btn._homeback:hover {
+    color: $black;
+    border: 0.078vw solid $black;
+    background: $yellow;
+  }
+
+  &_btn._back {
+    margin-top: $pc32;
+  }
+}
+
+// レスポンシブ
+// タブレットサイズ
+@include mq(lg) {
+  .contact {
+    padding-top: $tb64;
+    padding-left: 5.781vw;
+    padding-right: 5.781vw;
+    padding-bottom: $tb80;
+
+    .form_container {
+      border: $tb1 solid $black;
+      padding: 0 $tb64;
+    
+      ._stepBar {
+        width: 100%;
+        position: relative;
+        margin: $tb100 auto $tb80;
+        text-align: center;
+      }
+    
+      ._stepBar li {
+        font-size: $tb20;
+      }
+    
+      ._stepBar li:after {
+        content: "";
+        width: calc(100% - $tb48);
+        height: $tb9;
+        position: absolute;
+        left: calc(-50% + $tb24);
+        top: $tb24;
+      }
+    
+      ._stepBar li:first-child:after {
+        display: none;
+      }
+    
+      ._stepBar li span {
+        background: $lGray;
+        color: $white;
+        display: inline-block;
+        font-size: $tb24;
+        font-family: $lato;
+        font-weight: 600;
+        margin-bottom: $tb18;
+        width: $tb48;
+        line-height: $tb48;
+        border-radius: 50%;
+      }
+    
+      ._stepBar ._visited {
+        color: $yellow;
+      }
+    
+      ._stepBar ._visited:after {
+        background: $lGray;
+      }
+    
+      ._stepBar ._visited span {
+        background: $yellow;
+      }
+    }
+  }
+
+  .form {
+    padding: 0 $tb24;
+    font-size: $tb14;
+    line-height: 2em;
+  
+    &_txt {
+      font-size: $tb14;
+      line-height: 2.5em;
+      text-align: center;
+      color: $dGray;
+      margin-bottom: $tb80;
+    }
+  
+    &_thanks {
+      text-align: center;
+  
+      ._header {
+        margin-top: $tb92;
+        font-size: $tb20;
+        font-weight: 700;
+        letter-spacing: .08em;
+      }
+  
+      ._txt {
+        margin-top: $tb44;
+        font-size: $tb14;
+        margin-bottom: 7.031vw;
+        line-height: 1.6em;
+      }
+    }
+  
+    &_block {
+      position: relative;
+      margin-bottom: $tb64;
+  
+      ._header {
+        margin-bottom: $tb16;
+        font-size: $tb16;
+  
+        span {
+          color: $red;
+          font-size: $tb12;
+        }
+      }
+  
+      ._body {
+  
+        input[type="text"],
+        input[type="password"],
+        input[type="url"],
+        input[type="tel"],
+        input[type="email"] {
+          box-sizing: border-box;
+          padding: $tb14;
+          font-size: $tb14;
+        }
+  
+        select {
+          padding: $tb18;
+          width: 45%;
+          font-size: $tb14;
+        }
+        textarea {
+          padding: $tb16;
+          font-size: $tb14;
+        }
+      }
+  
+    }
+  
+    &_privacy {
+      margin-bottom: $tb30;
+      padding: $tb18;
+      width: 100%;
+      max-height: 14vw;
+      border: $tb1 solid $dGray;
+      font-size: $tb12;
+      line-height: 1.5em;
+  
+      h2 {
+        font-size: $tb14;
+        margin: 2em 0 1em;
+      }
+  
+      h3 {
+        margin: 2em 0 1em;
+      }
+  
+      span {
+        padding-left: 1em;
+      }
+    }
+  
+    p {
+      font-size: $tb12;
+    }
+  
+    &_submit {
+      position: relative;
+      margin-bottom: $tb100;
+  
+      ._body {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    }
+  
+    &_btn {
+      position: relative;
+      width: 28vw;
+      @include morebtn_white;
+      font-size: $tb16;
+      line-height: 3.4em;
+      margin: 0 10vw;
+      padding: 0;
+  
+      a {
+        position: absolute;
+        display: block;
+        width: 100%;
+        // height: 100%;
+        // width: 22.5vw;
+        height: 3em;
+      }
+    }
+  
+    &_btn:hover {
+      color: $black;
+      background: $yellow;
+    }
+  
+    &_btn._send,
+    &_btn._homeback {
+      margin-top: $tb24;
+      font-size: $tb16;
+      line-height: 3.44em;
+      margin: 0 10vw;
+      padding: 0;
+    }
+  
+    &_btn._send:hover,
+    &_btn._homeback:hover {
+      color: $black;
+      border: 0.078vw solid $black;
+      background: $yellow;
+    }
+  
+    &_btn._back {
+      margin-top: $tb18;
+    }
+  }
+}

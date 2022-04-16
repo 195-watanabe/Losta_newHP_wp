@@ -1,0 +1,79 @@
+// FV
+@use "../../../setting" as *;
+@use "../../../mixin" as *;
+
+.fv {
+  position: relative;
+  width: 100vw;
+  height: 56.25vw;
+  background-image: url(../../../img/fv_pic1.png);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+  
+  &::after {
+    content: "";
+    display: block;
+    width: 100vw;
+    height: 56.25vw;
+    background-color: $black;
+    opacity: .2;
+    z-index: 1;
+  }
+
+  &_movie {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 56.25vw;
+    z-index: 0;
+  }
+
+  &_container {
+    position: fixed;
+    top: 28.25vw;
+    left: calc(50% + 4.805vw);
+    width: 70vw;
+    transform: translateY(-50%) translateX(-50%);
+    z-index: 2;
+  }
+
+  &_heading {
+    @include white_bold;
+    font-family: $lato;
+    font-size: 5.625vw;
+    line-height: 150%;
+    letter-spacing: .04em;
+    z-index: 2;
+  }
+
+
+  // 文字が１文字ずつ現れるようにする
+  &_heading span {
+    opacity: 0;
+  }
+
+  &_heading.appeartext span {
+    animation:text_anime_on .4s ease-out forwards;
+  }
+
+  @keyframes text_anime_on {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+// レスポンシブ
+// タブレットサイズ
+@include mq(lg) {
+  .service {
+
+  }
+}

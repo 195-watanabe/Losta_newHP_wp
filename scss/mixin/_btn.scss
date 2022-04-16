@@ -1,0 +1,71 @@
+@use "../setting"as *;
+
+@mixin morebtn_black {
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  padding: 0;
+  background-color: $black;
+  color: $white;
+  font-weight: 600;
+  font-family: $lato;
+  font-size: $pc16;
+    text-align: center;
+  transition: .2s all;
+  border: 0.078vw solid $white;
+}
+
+@mixin morebtn_white {
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  padding: 0;
+  background-color: $white;
+  color: $black;
+  font-weight: 600;
+  font-family: $lato;
+  font-size: $pc16;
+  text-align: center;
+  transition: .2s all;
+  border: 0.078vw solid $black;
+}
+
+@mixin morebtn_black-arrow {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 0.781vw;
+  height: 0.781vw;
+  border-top: 0.156vw solid $white;
+  border-right: 0.156vw solid $white;
+  transform:translateY(-50%) translateX(-150%) rotate(45deg);
+  transition: .2s all;
+}
+
+@mixin morebtn_white-arrow {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 0.781vw;
+  height: 0.781vw;
+  border-top: 0.156vw solid $black;
+  border-right: 0.156vw solid $black;
+  transform:translateY(-50%) translateX(-150%) rotate(45deg);
+  transition: .2s all;
+}
+
+@mixin morebtn_black-hover {
+  color: $black;
+  background-color: $white;
+  border-color: $black;
+}
+
+@mixin morebtn_white-hover {
+  color: $white;
+  background-color: $black;
+  border-color: $white;
+}

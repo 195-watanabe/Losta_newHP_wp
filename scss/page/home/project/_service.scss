@@ -1,0 +1,175 @@
+@use "../../../setting"as *;
+@use "../../../mixin"as *;
+
+.service {
+  position: relative;
+  padding-top: 8.203vw;
+  padding-left: 10.78vw;
+  padding-right: $pc122;
+  background-color: $lGray;
+  z-index:10;
+
+  &_container {
+    display: inline-block;
+  }
+
+  &_heading {
+    @include section_title;
+  }
+
+  &_subheading {
+    @include section_subtitle;
+  }
+
+  &_txt {
+    display: block;
+    width: 55.781vw;
+    font-size: $pc14;
+    line-height: $pc24;
+    float: right;
+
+    a {
+      color: $blue;
+      text-decoration-line: underline;
+    }
+  }
+
+  &_lineup {
+    margin: 8.75vw auto 2.031vw;
+    width: 60.781vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &-item {
+      display: inline-block;
+      position: relative;
+      margin-bottom: 2.813vw;
+      background-color: $black;
+      color: $white;
+      font-size: 1.406vw;
+      font-weight: 700;
+      transition: .2s all;
+      text-align: center;
+      width: 17.969vw;
+      line-height: $pc64;
+    }
+  }
+
+  &_line {
+    width: 100%;
+    height: 0.234vw;
+    background-color: $black;
+  }
+
+  &_triangle {
+    box-sizing: border-box;
+    width: $pc64;
+    height: $pc48;
+    border-top: $pc24 solid $black;
+    border-right: 2.5vw solid rgba($color: #000000, $alpha: 0);
+    border-bottom: $pc24 solid rgba($color: #000000, $alpha: 0);
+    border-left: 2.5vw solid rgba($color: #000000, $alpha: 0);
+    margin: 0 auto 4.375vw;
+  }
+
+  &_message {
+    font-size: 2.031vw;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 8.438vw;
+  }
+
+  &_btn-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  &_morebtn{
+    @include morebtn_white;
+    font-family: $pc16;
+    width: 22.422vw;
+    line-height: $pc64;
+    margin-bottom: $pc122;
+
+    a {
+      height: $pc64;
+    }
+  }
+  
+  &_morebtn::after{
+    @include morebtn_white-arrow;
+  }
+
+  &_morebtn:hover {
+    @include morebtn_white-hover;
+  }
+
+  &_morebtn:hover::after {
+    border-color: $white;
+  }
+}
+
+// レスポンシブ
+// タブレットサイズ
+@include mq(lg) {
+  .service {
+
+    &_heading {
+      @include section_title_tab;
+    }
+    
+    &_subheading {
+      @include section_subtitle_tab;
+    }
+
+    &_txt {
+      width: 60.781vw;
+      font-size: $tb14;
+      line-height: 1.8em;
+    }
+
+    &_lineup {
+      margin: 10vw auto 2.031vw;
+      width: 64vw;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    
+      &-item {
+        display: inline-block;
+        position: relative;
+        margin-bottom: 2.813vw;
+        background-color: $black;
+        font-size: $tb16;
+        font-weight: 700;
+        transition: .2s all;
+        text-align: center;
+        width: 20vw;
+        line-height: 3em;
+      }
+    }
+
+    &_message {
+      font-size: $tb20;
+      margin-bottom: $tb64;
+    }
+
+    &_btn-container {
+      display: flex;
+      justify-content: center;
+    }
+    
+    &_morebtn {
+      font-size: $tb16;
+      width: 30vw;
+      line-height: 3em;
+      margin-bottom: $tb64;
+    
+      a {
+        height: $pc64;
+      }
+    }
+  }
+}
+

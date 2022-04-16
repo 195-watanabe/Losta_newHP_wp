@@ -1,0 +1,51 @@
+@use "../../../setting"as *;
+@use "../../../mixin"as *;
+
+.about {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  border-bottom: $pc1 solid $dGray;
+  background-color: $white;
+  padding-top: $pc122;
+  padding-bottom: 13.906vw;
+
+  &_heading {
+    display: inline-block;
+    font-size: 2.186vw;
+    font-weight: 700;
+    line-height: 2em;
+  }
+
+  &_txt {
+    font-size: $pc14;
+    line-height: 2.734vw;
+    width: 64.375vw;
+    margin-top: $pc64;
+    z-index: 2;
+  }
+}
+
+// レスポンシブ
+// タブレットサイズ
+@include mq(lg) {
+  .about {
+    padding-top: $tb92;
+
+    &_heading {
+      font-size: $tb20;
+      font-weight: 700;
+      line-height: 2em;
+    }
+
+    &_txt {
+      font-size: $tb14;
+      line-height: 2em;
+      width: 78vw;
+      margin-top: $tb64;
+      z-index: 2;
+    }
+  }
+}

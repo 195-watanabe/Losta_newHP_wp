@@ -1,0 +1,141 @@
+@use "../../../setting"as *;
+@use "../../../mixin"as *;
+
+.topics {
+  position: relative;
+  padding-top: 7.813vw;
+  padding-left: 10.78vw;
+  padding-bottom: 5.938vw;
+  background-image: url(../../../img/topics_pic.jpg);
+  background-position: 55% 30%;
+  overflow: hidden;
+
+  &_container {
+    display: flex;
+  }
+
+  &_left {
+    width: 22.578vw;
+  }
+
+  &_heading {
+    margin-top: 5.469vw;
+    padding-right: 1.719vw;
+    @include section_title;
+    z-index: 10;
+  }
+  
+  &_subheading {
+    @include section_subtitle;
+  }
+
+  &_morebtn {
+    @include morebtn_white;
+    margin-top: $pc122;
+    width: 14.141vw;
+    line-height: 4.688vw;
+    
+    a {
+      height: 4.688vw;
+    }
+  }
+
+  &_morebtn::after {
+    @include morebtn_white-arrow;
+  }
+  
+  &_morebtn:hover {
+    @include morebtn_white-hover;
+  }
+  
+  &_morebtn:hover::after {
+    border-color: $white;
+  }
+
+  &_right {
+    width: 59.609vw;
+  }
+
+  &_item{
+    background-color: $white;
+    margin-bottom: 0.391vw;
+    padding: 2.344vw $pc32;
+    transition: .2s ease-out;
+  }
+
+  &_item:hover{
+    transform: translateX(-3vw);
+  }
+}
+.article_date {
+  color: $dGray;
+  font-family: $lato;
+  font-size: $pc14;
+  font-weight: 600;
+}
+
+.article_title {
+  line-height: $pc24;
+  margin-top: $pc14;
+  font-size: $pc14;
+  font-weight: 500;
+}
+
+.topics::after {
+  content: "";
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  right: -10%;
+  width: 32.422vw;
+  height: 32.422vw;
+  background-color: $dGray;
+  transform: rotate(-45deg);
+  transform-origin:left top;
+}
+
+// レスポンシブ
+// タブレットサイズ
+@include mq(lg) {
+  .topics {
+
+    &_heading {
+      margin-top: 4.063vw;
+      padding-right: 1.719vw;
+      @include section_title_tab;
+    }
+
+    &_subheading {
+      @include section_subtitle_tab;
+    }
+
+    &_left {
+      width: 26vw;
+    }
+
+    &_morebtn {
+      font-size: $tb14;
+      width: 18vw;
+      line-height: 3em;
+      margin-top: $tb64;
+    }
+
+    &_item {
+      background-color: $white;
+      margin-bottom: 0.391vw;
+      padding: 2.344vw $pc32;
+      transition: .2s ease-out;
+    }
+  }
+
+  .article_date {
+    font-size: $tb14;
+    font-weight: 600;
+  }
+  
+  .article_title {
+    margin-top: $tb14;
+    line-height: 1.6em;
+    font-size: $tb14;
+  }
+}

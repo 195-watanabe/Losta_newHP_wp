@@ -1,0 +1,207 @@
+@use "../../../setting"as *;
+@use "../../../mixin"as *;
+
+.main {
+  box-sizing: border-box;
+
+}
+
+.heading {
+  text-align: center;
+  font-size: 3.281vw;
+  font-family: $lato;
+  font-weight: 600;
+  padding: $pc36 0 $pc24;
+  border-bottom: $pc1 solid $dGray;
+
+  span {
+    color: $dGray;
+    font-size: $pc16;
+    margin-top: 0.938vw;
+  }
+}
+
+.article {
+  position: relative;
+  padding-right: $pc122;
+  padding-left: 8.281vw;
+
+  &_heading {
+    font-size: $pc24;
+    font-weight: 700;
+    line-height: 2em;
+    margin-top: $pc122;
+    padding-bottom: $pc36;
+     border-bottom: $pc1 solid $dGray;
+  }
+
+  &_info {
+    margin-top: $pc24;
+
+    p {
+      display: inline-block;
+      color: $dGray;
+      font-weight: 700;
+      line-height: 3.281vw;
+    }
+    
+    ._date {
+      vertical-align: bottom;
+      font-family: $lato;
+      // font-size: 1.719vw;
+      font-size: $pc24;
+      margin-right: $pc32;
+    }
+    
+    ._tag {
+      font-size: $pc18;
+      padding: 0 $pc32;
+      border: $pc1 solid $black;
+      border-radius: $pc48;
+    }
+  }
+
+  &_container {
+    margin-top: 7.187vw;
+  }
+
+  &_img {
+    margin: 0 $pc64;
+  }
+
+  &_txt {
+    margin-top: $pc64;
+    font-size: $pc16;
+    // font-weight: 700;
+    line-height: 2em;
+  }
+}
+
+.pagenation {
+  margin-top: $pc100;
+  margin-bottom: $pc64;
+
+  &_container {
+    display: grid;
+    grid-template-columns: 1fr 39.063vw 1fr;
+    background-color: $black;
+
+    li {
+      height: 14.297vw;
+      background-color: $white;
+      text-align: center;
+      font-size: $pc14;
+      font-weight: 700;
+      line-height: 14.297vw;
+      border: $pc1 solid $black;
+      transition: .2s;
+    }
+
+    ._home {
+      color: $white;
+      background-image: url(../../../img/fv_pic5.jpg);
+      background-size: cover;
+    }
+
+    li:hover {
+      opacity: .8;
+    }
+  }
+}
+
+// レスポンシブ
+// タブレットサイズ
+@include mq(lg) {
+
+  .heading {
+    font-size: $tb36;
+    padding: $tb28 0 $tb18;
+    border-bottom: $tb1 solid $dGray;
+  
+    span {
+      font-size: $tb14;
+      margin-top: 0.938vw;
+    }
+  }
+  
+  .article {
+    position: relative;
+    padding-right: $pc122;
+    padding-left: 8.281vw;
+  
+    &_heading {
+      font-size: $tb20;
+      margin-top: $tb44;
+      padding-bottom: $tb28;
+      border-bottom: $tb1 solid $dGray;
+    }
+  
+    &_info {
+      margin-top: $tb16;
+  
+      p {
+        line-height: 2em;
+      }
+  
+      ._date {
+        vertical-align: bottom;
+        font-family: $lato;
+        font-size: $tb18;
+        margin-right: $tb24;
+      }
+  
+      ._tag {
+        font-size: $tb14;
+        padding: $tb2 $tb24;
+        border: $pc1 solid $black;
+        border-radius: $pc48;
+      }
+    }
+  
+    &_container {
+      margin-top: $tb44;
+    }
+  
+    &_img {
+      margin: 0 $tb30;
+    }
+  
+    &_txt {
+      margin-top: $tb44;
+      font-size: $tb14;
+      line-height: 2em;
+    }
+  }
+  
+  .pagenation {
+    margin-top: $tb80;
+    margin-bottom: $tb54;
+  
+    &_container {
+      display: grid;
+      grid-template-columns: 1fr 39.063vw 1fr;
+      background-color: $black;
+  
+      li {
+        height: $tb120;
+        background-color: $white;
+        text-align: center;
+        font-size: $tb14;
+        font-weight: 700;
+        line-height: $tb120;
+        border: $pc1 solid $black;
+        transition: .2s;
+      }
+  
+      ._home {
+        color: $white;
+        background-image: url(../../../img/fv_pic5.jpg);
+        background-size: cover;
+      }
+  
+      li:hover {
+        opacity: .8;
+      }
+    }
+  }
+}

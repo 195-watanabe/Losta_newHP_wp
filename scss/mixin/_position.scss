@@ -1,0 +1,21 @@
+// 上下左右真ん中寄せ
+@mixin ab_center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+// 上下真ん中寄せ
+@mixin ab_center_tb {
+  position: absolute;
+  top: 50%;
+  transform:translateY(-50%);
+}
+
+// 左右真ん中寄せ
+@mixin ab_center_rl {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}

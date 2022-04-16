@@ -1,0 +1,336 @@
+@use "../../../setting"as *;
+@use "../../../mixin"as *;
+
+.topics {
+  position: relative;
+  box-sizing: border-box;
+  padding-left: 5.781vw;
+  padding-right: 7.109vw;
+  background-color: $white;
+  border-bottom: $pc1 solid $dGray;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 13.594vw;
+    left: 0;
+    width: 100%;
+    height: $pc1;
+    background-color: $dGray;
+  }
+
+  a {
+    color: $black;
+  }
+
+  &_container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: $pc16 $pc32;
+    padding: $pc64 0;
+    margin: 0 auto;
+
+    ._item {
+      border: $pc1 solid $black;
+      text-align: center;
+      font-size: $pc16;
+      font-family: $lato;
+      font-weight: 700;
+      line-height: 3.594vw;
+    }
+
+    ._item.selected {
+      background-color: $black;
+      color: $white;
+    }
+  }
+
+  &_article {
+    display: grid;
+    padding: $pc64 $pc32;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.125vw 0.391vw;
+  }
+
+  &_item {
+    display: inline-block;
+    padding-bottom: $pc14;
+    transition: .2s;
+
+    img {
+      height: 14.063vw;
+      object-fit: cover;
+    }
+
+    p {
+      font-size: $pc14;
+      line-height: 1.8em;
+      margin: 1.563vw $pc14 0;
+    }
+
+    ._container {
+      margin: $pc18 $pc14 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      font-weight: 700;
+      font-size: $pc14;
+    }
+
+    ._tag {
+      font-size: 0.936vw;
+      padding: 0 $pc18;
+      line-height: 2.2em;
+      background-color: $black;
+      color: $white;
+      border-radius: 1.1em;
+    }
+
+    ._date {
+      color: $dGray;
+    }
+  }
+
+  &_item:hover {
+    opacity: .8;
+    background-color: $lGray;
+  }
+}
+
+// ページネーション
+.pager {
+  margin-bottom: $pc100;
+  font-size: $pc16;
+}
+
+.pager ul.pagination {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.pager .pagination li {
+  display: inline;
+  margin: 0 0.391vw;
+  display: inline-block;
+  background-color: $white;
+  width: 3.125vw;
+  height: 3.125vw;
+  text-align: center;
+  position: relative;
+
+}
+
+.pager .pagination li a {
+  vertical-align: middle;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: $pc1 solid $black;
+  text-align: center;
+  display: table;
+  color: $dGray;
+  text-decoration: none;
+  line-height: 3.125vw;
+}
+
+.pager .pagination li a span {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.pager .pagination .pre,
+.pager .pagination .next {
+  padding: 0 $pc24;
+}
+
+.pager .pagination li a:hover {
+  color: $white;
+  background: $yellow;
+}
+
+// .pager .pagination li a:hover,
+.pager .pagination li a.active {
+  color: $white;
+  background: $black;
+}
+
+@media only screen and (max-width: 767px) {
+  .pager .pagination li {
+    display: none;
+  }
+
+  .pager .pagination li.pre,
+  .pager .pagination li.next {
+    display: inline-block;
+    width: 40%;
+    height: 50px;
+    text-align: center;
+  }
+
+  .pager .pagination li.pre a,
+  .pager .pagination li.next a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .pager .pagination li.pre span::after {
+    content: "　前の10件へ";
+  }
+
+  .pager .pagination li.next span::before {
+    content: "次の10件へ　";
+  }
+
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+  /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+  background-color: #eee;
+  clip: auto !important;
+  clip-path: none;
+  color: #444;
+  display: block;
+  font-size: 1em;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}
+
+// レスポンシブ
+// タブレットサイズ
+@include mq(lg) {
+  .topics {
+    padding-top: $tb20;
+    padding-right: 5.781vw;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: $tb120;
+      left: 0;
+      width: 100%;
+      height: $pc1;
+      background-color: $dGray;
+    }
+
+    &_container {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: $tb9 $tb14;
+      padding: $tb20 0;
+
+      ._item {
+        border: $tb1 solid $black;
+        font-size: $tb14;
+        line-height: 2.4em;
+      }
+    }
+
+    &_article {
+      display: grid;
+      padding: $tb80 $tb16 $tb44;
+      grid-template-columns: repeat(2, 1fr);
+      gap: $tb36 $tb18;
+    }
+
+    &_item {
+      display: inline-block;
+      padding-bottom: $tb12;
+
+      img {
+        height: 22vw;
+        object-fit: cover;
+      }
+
+      p {
+        font-size: $tb14;
+        line-height: 1.8em;
+        margin: $tb9 $tb12 0;
+      }
+
+      ._container {
+        margin: $tb14 $tb9 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        font-weight: 700;
+        font-size: $tb14;
+      }
+      
+      ._tag {
+        font-size: $tb12;
+        padding: 0 $tb20;
+        line-height: 2.2em;
+        background-color: $black;
+        color: $white;
+      }
+    }
+  }
+
+  .pager {
+    margin-bottom: $tb100;
+    font-size: $tb16;
+  }
+
+  .pager .pagination li {
+    display: inline;
+    margin: 0 $tb5;
+    display: inline-block;
+    background-color: $white;
+    width: $tb32;
+    height: $tb32;
+    text-align: center;
+    position: relative;
+
+  }
+
+  .pager .pagination li a {
+    vertical-align: middle;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: $pc1 solid $black;
+    text-align: center;
+    display: table;
+    color: $dGray;
+    text-decoration: none;
+    line-height: 2em;
+  }
+
+  .pager .pagination li a span {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .pager .pagination .pre,
+  .pager .pagination .next {
+    padding: 0 $tb24;
+  }
+}

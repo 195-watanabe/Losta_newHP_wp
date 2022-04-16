@@ -1,0 +1,411 @@
+@use "../../../setting"as *;
+@use "../../../mixin"as *;
+
+.main {
+  box-sizing: border-box;
+
+}
+
+.heading {
+  text-align: center;
+  font-size: 3.281vw;
+  font-family: $lato;
+  font-weight: 600;
+  padding: $pc36 0 $pc24;
+  border-bottom: $pc1 solid $dGray;
+
+  span {
+    color: $dGray;
+    font-size: $pc16;
+    margin-top: 0.938vw;
+  }
+}
+
+.fv {
+  position: relative;
+  width: 100%;
+  height: 54.688vw;
+  padding-bottom: $pc122;
+  border-bottom: $pc1 solid $dGray;
+  
+  &_container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      height: 25.469vw;
+    }
+
+    &::before {
+      background: $yellow;
+      width: 50.078vw;
+      top: $pc48;
+      left: 0;
+      z-index: 1;
+    }
+
+    &::after {
+      background: $dGray;
+      width: 57.109vw;
+      bottom: 7.031vw;
+      right: 0;
+    }
+  }
+
+  &_img {
+    position: absolute;
+    top: $pc64;
+    right: $pc122;
+    width: 66.953vw;
+    z-index: 2;
+    
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: $pc2;
+      right: 0;
+      width: 100%;
+      height: 0.781vw;
+      background: $dGray;
+      filter: blur($pc18);
+      border-radius: $pc18;
+      z-index: -1;
+    }
+  }
+}
+
+.article {
+  position: relative;
+  padding-right: 7.109vw;
+  padding-left: 5.781vw;
+
+  &_description {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: $pc64;
+
+    ._left {
+      margin-left: $pc32;
+      
+      ._item {
+        width: 27.5vw;
+        display: table;
+        table-layout: fixed;
+        text-align: left;
+        font-weight: 700;
+        
+        th {
+          position: relative;
+          vertical-align: middle;
+          font-size: $pc18;
+          font-family: $lato;
+          padding: $pc32 0;
+          width: 14.375vw;
+        }
+      
+        th::after {
+          content: "";
+          position: absolute;
+          display: block;
+          top: 50%;
+          right: -0.117vw;
+          transform: translateY(-50%);
+          width: 0.234vw;
+          // height: 2.969vw;
+          height: 50%;
+          background-color: $dGray;
+          border-radius: 0.117vw;
+        }
+      
+      
+        td {
+          font-size: $pc14;
+          padding-left: $pc32;
+          vertical-align: middle;
+          width: 19.297vw;
+          font-weight: 500;
+          line-height: 2.109vw;
+          word-wrap: break-word
+        }
+      }
+    }
+
+    ._right {
+      position: relative;
+      width: 35.781vw;
+
+      ._plan {
+        display: inline-block;
+        @include white-bold;
+        font-size: $pc16;
+        line-height: 1.8em;
+        background: $black;
+        padding: $pc8 $pc32;
+
+      }
+
+      ._description {
+        background: $lGray;
+        font-size: $pc14;
+        line-height: 2em;
+        margin-top: $pc36;
+        padding: $pc24 $pc32;
+      }
+    }
+  }
+  
+  &_pc {
+    margin-top: $pc100;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $pc64 5.938vw;
+  }
+
+  &_sp {
+    margin-top: 12.344vw;
+
+    ._heading {
+      text-align: center;
+      font-size: 1.563vw;
+      color: $dGray;
+      font-weight: 700;
+    }
+
+    ._container {
+      margin-top: 5.625vw;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: $pc28 3.594vw;
+    }
+
+  }
+  
+  .pagenation {
+    margin-top: $pc100;
+    margin-bottom: $pc64;
+
+    &_container {
+      display: grid;
+      grid-template-columns: 1fr 39.063vw 1fr;
+      background-color: $black;
+
+      li {
+        height: 14.297vw;
+        background-color: $white;
+        text-align: center;
+        font-size: $pc14;
+        font-weight: 700;
+        line-height: 14.297vw;
+        border: $pc1 solid $black;
+        transition: .2s;
+      }
+
+      ._home {
+        color: $white;
+        background-image: url(../../../img/fv_pic4.jpg);
+        background-size: cover;
+      }
+
+      li:hover {
+        opacity: .8;
+      }
+    }
+  }
+}
+
+// レスポンシブ
+// タブレットサイズ
+@include mq(lg) {
+  .heading {
+    font-size: $tb36;
+    padding: $tb28 0 $tb18;
+    border-bottom: $tb1 solid $dGray;
+  
+    span {
+      font-size: $tb14;
+      margin-top: 0.938vw;
+    }
+  }
+
+  .fv {
+    height: 60vw;
+
+    &_container {
+    
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        height: 25.469vw;
+      }
+    
+      &::before {
+        background: $yellow;
+        width: 50.078vw;
+        top: $tb48;
+        left: 0;
+        z-index: 1;
+      }
+    
+      &::after {
+        background: $dGray;
+        width: 57.109vw;
+        bottom: 7.031vw;
+        right: 0;
+      }
+    }
+    
+    &_img {
+      @include ab_center_rl;
+      top: $tb64;
+      width: 70vw;
+      z-index: 2;
+    
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: $pc2;
+        right: 0;
+        width: 100%;
+        height: 0.781vw;
+        background: $dGray;
+        filter: blur($pc18);
+        border-radius: $pc18;
+        z-index: -1;
+      }
+    }
+  }
+
+  .article {
+    position: relative;
+    padding-right: 5.781vw;
+    padding-left: 5.781vw;
+  
+    &_description {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: $tb40;
+  
+      ._left {
+        margin-left: $tb24;
+  
+        ._item {
+          width: 34vw;
+  
+          th {
+            position: relative;
+            vertical-align: middle;
+            font-size: $tb14;
+            font-family: $lato;
+            padding: $tb24 0;
+            width: 18vw;
+          }
+  
+          th::after {
+            content: "";
+            position: absolute;
+            display: block;
+            top: 50%;
+            right: -0.117vw;
+            transform: translateY(-50%);
+            width: $tb3;
+            height: 50%;
+            border-radius: $tb3;
+          }
+  
+  
+          td {
+            font-size: $tb12;
+            padding-left: $pc32;
+            vertical-align: middle;
+            width: 24vw;
+            font-weight: 500;
+            line-height: 2.109vw;
+            word-wrap: break-word
+          }
+        }
+      }
+  
+      ._right {
+        position: relative;
+        width: 35.781vw;
+  
+        ._plan {
+          font-size: $tb14;
+          line-height: 1.8em;
+          background: $black;
+          padding: $tb5 $tb24;
+  
+        }
+  
+        ._description {
+          background: $lGray;
+          font-size: $tb12;
+          line-height: 1.8em;
+          margin-top: $pc36;
+          padding: $tb14 $tb24;
+        }
+      }
+    }
+  
+    &_pc {
+      margin-top: $tb80;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: $pc64 5.938vw;
+    }
+  
+    &_sp {
+      margin-top: $tb64;
+  
+      ._heading {
+        font-size: $tb24;
+      }
+  
+      ._container {
+        margin-top: 5.625vw;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: $pc28 3.594vw;
+      }
+  
+    }
+  
+    .pagenation {
+      margin-top: $tb80;
+      margin-bottom: $tb54;
+    
+      &_container {
+        display: grid;
+        grid-template-columns: 1fr 39.063vw 1fr;
+        background-color: $black;
+    
+        li {
+          height: $tb120;
+          background-color: $white;
+          text-align: center;
+          font-size: $tb14;
+          font-weight: 700;
+          line-height: $tb120;
+          border: $pc1 solid $black;
+          transition: .2s;
+        }
+    
+        ._home {
+          color: $white;
+          background-size: cover;
+        }
+    
+        li:hover {
+          opacity: .8;
+        }
+      }
+    }
+  }
+}

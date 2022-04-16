@@ -1,0 +1,266 @@
+@use "../../../setting" as *;
+@use "../../../mixin" as *;
+
+.about {
+  position: relative;
+  padding-top: 8.203vw;
+  padding-left: 10.78vw;
+  background-color: $white;
+  overflow: hidden;
+  z-index: 0;
+
+  &_line {
+    position: relative;
+    transition: .4s;
+    z-index: -1;
+
+    &-out {
+      box-sizing: border-box;
+      border-top: 0.156vw solid $dGray;
+      border-right: 0.156vw solid $dGray;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 75vw;
+      height: 60vw; //53.672vw
+    }
+    
+    &-in {
+      box-sizing: border-box;
+      border-top: 0.156vw solid $dGray;
+      border-right: 0.156vw solid $dGray;
+      position: absolute;
+      top: 6.094vw;
+      left: 0;
+      width: 66.719vw;
+      height: 50vw //47.5vw;
+    }
+  }
+
+  &_line::after,&_line::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    background-color: $white;
+    z-index: 1;
+  }
+
+  &_line::after {
+    top: 0;
+    width: 75.1vw;
+    height: 60vw;
+    // background-color: blue;
+  }
+  
+  &_line::before {
+    top: 6vw;
+    width: 66.719vw;
+    height: 50vw;
+    // background-color: red;
+    z-index: 2;
+  }
+  
+  &_line.is-animated::after {
+    animation: aboutLine 1.2s linear .2s forwards;
+  }
+  
+  &_line.is-animated::before {
+    animation: aboutLine 1.2s linear .25s forwards;
+  }
+
+  &_heading {
+    margin-top: 4.063vw;
+    padding-right: 1.719vw;
+    background-color: $white;
+    @include section_title;
+    z-index: 10;
+  }
+
+  &_subheading {
+    @include section_subtitle;
+  }
+}
+.about_container {
+  display: flex;
+  justify-content: space-between;
+
+  .container_item {
+      margin-top: $pc64;
+
+    &-txt {
+      font-size: $pc14;
+      line-height: $pc24;
+      width: 30.859vw;
+      color: $black;
+    }
+
+    
+    &.-img {
+      margin-top: 3.438vw;
+      width: 42.969vw;
+    }
+  }
+}
+
+.container_item-morebtn {
+  margin-top: 10.625vw;
+  display: flex;
+  justify-content: center;
+}
+
+// moreボタン
+.about_morebtn {
+  @include morebtn_black;
+  width: 14.063vw;
+  line-height: 3em;
+  margin-bottom: 11.563vw;
+  
+  a {
+    height: 3em;
+  }
+}
+
+.about_morebtn::after {
+  @include morebtn_black-arrow;
+}
+
+.about_morebtn:hover {
+  @include morebtn_black-hover;
+}
+
+.about_morebtn:hover::after {
+  border-color: $black;
+}
+
+// アニメーション
+@keyframes aboutLine{
+  0%{
+    transform: translate(0, 0);
+  }
+
+  49% {
+    transform: translateX(90%);
+  }
+
+  51% {
+    transform: translateX(99%) translateY(1%);
+  }
+
+  100% {
+    transform: translateX(99%) translateY(100%);
+  }
+}
+
+// レスポンシブ
+// タブレットサイズ
+@include mq(lg) {
+  .about {
+
+    &_heading {
+      margin-top: 4.063vw;
+      padding-right: 1.719vw;
+      @include section_title_tab;
+    }
+
+    &_subheading {
+      @include section_subtitle_tab;
+    }
+
+    &_line {
+      position: relative;
+      transition: .4s;
+      z-index: -1;
+    
+      &-out {
+        box-sizing: border-box;
+        border-top: 0.156vw solid $dGray;
+        border-right: 0.156vw solid $dGray;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 75vw;
+        height: 90vw; //53.672vw
+      }
+      
+      &-in {
+        box-sizing: border-box;
+        border-top: 0.156vw solid $dGray;
+        border-right: 0.156vw solid $dGray;
+        position: absolute;
+        top: 6.094vw;
+        left: 0;
+        width: 66.719vw;
+        height: 80vw //47.5vw;
+      }
+    }
+
+    &_line::after {
+      top: 0;
+      width: 75.1vw;
+      height: 90vw;
+      // background-color: blue;
+    }
+    
+    &_line::before {
+      top: 6vw;
+      width: 66.719vw;
+      height: 80vw;
+      // background-color: red;
+      z-index: 2;
+    }
+
+    
+    &_container {
+      
+      .container_item {
+        margin-top: $tb44;
+        
+        &-txt {
+          font-size: $tb14;
+          line-height: 1.8em;
+          width: 36vw;
+          color: $black;
+        }
+        
+        &.-img {
+          margin-top:$tb34;
+          width: 48vw;
+        }
+
+        &-morebtn {
+          margin-top: $tb64;
+          display: flex;
+          justify-content: center;
+        }
+        
+        // moreボタン
+      }
+    }
+
+    &_morebtn {
+      font-size: $tb16;
+      width: 26vw;
+      line-height: 3em;
+      margin-bottom: $tb64;
+    }
+  }
+}
+
+
+// レスポンシブ
+// タブレットサイズ
+// @include mq(lg) {
+//   .plan {
+//     padding-top: $tb64;
+
+//     &_heading {
+//       margin-top: 4.063vw;
+//       padding-right: 1.719vw;
+//       @include section_title_tab;
+//     }
+
+//     &_subheading {
+//       @include section_subtitle_tab;
+//     }
+//   }
+// }

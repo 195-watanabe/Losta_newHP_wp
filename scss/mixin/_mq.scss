@@ -1,0 +1,19 @@
+//ブレイクポイント
+$breakpoints: (
+  sm: 768,
+  // md: 768,
+  lg: 1025,
+);
+
+$mediaquerys: (
+  sm: "screen and (max-width: #{map-get($breakpoints,'sm')}px)",
+  // md: "screen and (max-width: #{map-get($breakpoints,'md')}px)",
+  lg: "screen and (max-width: #{map-get($breakpoints,'lg')}px)",
+);
+
+//メディアクエリ
+@mixin mq($mediaquery: sm) {
+  @media #{map-get($mediaquerys, $mediaquery)} {
+    @content;
+  }
+}

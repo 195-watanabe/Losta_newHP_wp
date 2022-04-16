@@ -1,0 +1,338 @@
+.fv {
+  position: relative;
+  width: 100%;
+  height: 39.063vw;
+  background-image: url(../../../img/fv_pic2.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+}
+.fv_title {
+  position: fixed;
+  top: 19.531vw;
+  left: calc(50% + 4.805vw);
+  transform: translateY(-50%) translateX(-50%);
+  color: #fff;
+  font-weight: 600;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  font-family: "Lato", sans-serif;
+  font-size: 3.281vw;
+  letter-spacing: 0.06em;
+  z-index: 1;
+}
+.fv_title ._heading {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
+}
+.fv_title ._sub {
+  font-size: 1.25vw;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
+  margin-top: 2.5vw;
+}
+
+@media screen and (max-width: 1025px) {
+  .fv_title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    position: fixed;
+    top: 16vw;
+    font-size: 4.688vw;
+  }
+  .fv_title ._heading {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
+  }
+  .fv_title ._sub {
+    font-size: 2.083vw;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
+    margin-top: 3.125vw;
+  }
+}
+.about {
+  position: relative;
+  box-sizing: border-box;
+  border-bottom: 0.0781vw solid #757575;
+  background-color: #fff;
+  padding-top: 5vw;
+  padding-bottom: 5.625vw;
+}
+.about_img {
+  width: 7.813vw;
+  margin: 0 auto;
+}
+.about_headding {
+  font-size: 2.186vw;
+  font-weight: 700;
+  text-align: center;
+  line-height: 4.375vw;
+  margin-top: 9.512vw;
+  z-index: 2;
+}
+.about_txt {
+  font-size: 1.094vw;
+  line-height: 2.734vw;
+  width: 64.375vw;
+  margin: 5vw auto 0;
+  z-index: 2;
+}
+.about_sign {
+  width: 16.953vw;
+  margin: 2.188vw 12.973vw 0 auto;
+  z-index: 2;
+}
+.about::after {
+  content: "";
+  position: absolute;
+  opacity: 0.06;
+  bottom: -8%;
+  left: -10%;
+  z-index: 1;
+  width: 37.656vw;
+  height: 37.656vw;
+  background-image: url(../../../img/logo_icon_b.png);
+  background-size: contain;
+  filter: blur(0.4vw);
+}
+
+@media screen and (max-width: 1025px) {
+  .about {
+    padding-top: 8.333vw;
+    padding-bottom: 8.333vw;
+  }
+  .about_img {
+    width: 10.417vw;
+    margin: 0 auto;
+  }
+  .about_headding {
+    font-size: 2.604vw;
+    text-align: center;
+    line-height: 2em;
+    margin-top: 6.51vw;
+    z-index: 2;
+  }
+  .about_txt {
+    font-size: 1.823vw;
+    line-height: 2em;
+    width: 80%;
+    margin: 5.208vw auto 0;
+    z-index: 2;
+  }
+  .about_sign {
+    width: 20.833vw;
+    margin: 3.646vw 12.973vw 0 auto;
+    z-index: 2;
+  }
+  .about::after {
+    left: -6%;
+  }
+}
+.company {
+  position: relative;
+  padding-top: 9.512vw;
+  padding-left: 10.78vw;
+  padding-bottom: 17.5vw;
+  background-color: #fff;
+  z-index: 1;
+}
+.company_heading {
+  display: inline-block;
+  color: #000;
+  font-weight: 600;
+  font-family: "Lato", sans-serif;
+  font-size: 2.813vw;
+}
+.company_subheading {
+  margin-top: 1.875vw;
+  color: #F1C407;
+  font-size: 1.25vw;
+  font-weight: 800;
+}
+.company_container {
+  margin-top: 7.188vw;
+  margin-left: 10.78vw;
+}
+.company_item {
+  font-size: 1.406vw;
+  text-align: left;
+}
+.company_item th {
+  position: relative;
+  vertical-align: middle;
+  padding: 2.813vw 0;
+  width: 14.141vw;
+}
+.company_item th::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 50%;
+  right: -0.117vw;
+  transform: translateY(-50%);
+  width: 0.234vw;
+  height: 2.969vw;
+  background-color: #757575;
+  border-radius: 0.117vw;
+}
+.company_item td {
+  padding-left: 2.5vw;
+  vertical-align: middle;
+  width: 41.719vw;
+  font-weight: 500;
+  line-height: 2.109vw;
+}
+.company_item:nth-child(3) th::after, .company_item:nth-child(5) th::after {
+  height: 6.094vw;
+}
+
+@media screen and (max-width: 1025px) {
+  .company_heading {
+    margin-top: 4.063vw;
+    padding-right: 1.719vw;
+    font-size: 3.385vw;
+  }
+  .company_subheading {
+    margin-top: 1.875vw;
+    font-size: 1.823vw;
+  }
+  .company_container {
+    margin-top: 10.417vw;
+    margin-left: 8.333vw;
+  }
+  .company_item {
+    font-size: 2.344vw;
+    text-align: left;
+  }
+  .company_item th {
+    position: relative;
+    vertical-align: middle;
+    padding: 4.688vw 0;
+    width: 15.625vw;
+  }
+  .company_item th::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: -0.117vw;
+    transform: translateY(-50%);
+    width: 0.26vw;
+    height: 5.729vw;
+    background-color: #757575;
+    border-radius: 0.26vw;
+  }
+  .company_item td {
+    padding-left: 2.5vw;
+    vertical-align: middle;
+    width: auto;
+    font-weight: 500;
+    line-height: 1.8em;
+  }
+  .company_item:nth-child(3) th::after, .company_item:nth-child(5) th::after {
+    height: 10.417vw;
+  }
+}
+.access {
+  position: relative;
+  padding-bottom: 11.875vw;
+  background-color: #fff;
+  overflow: hidden;
+}
+.access_heading {
+  padding-left: 10.78vw;
+  display: inline-block;
+  color: #000;
+  font-weight: 600;
+  font-family: "Lato", sans-serif;
+  font-size: 2.813vw;
+}
+.access_subheading {
+  padding-left: 10.78vw;
+  margin-top: 1.875vw;
+  color: #F1C407;
+  font-size: 1.25vw;
+  font-weight: 800;
+}
+.access_map {
+  position: relative;
+  margin-top: 3.75vw;
+  width: 100%;
+  height: 35.156vw;
+}
+.access_map ._address {
+  position: absolute;
+  box-sizing: border-box;
+  top: 60%;
+  right: 0;
+  width: 34.531vw;
+  padding: 1.094vw 2.813vw;
+  color: #fff;
+  font-size: 1.094vw;
+  line-height: 2em;
+  background-color: #000;
+}
+.access_map ._station {
+  position: absolute;
+  box-sizing: border-box;
+  bottom: -3.75vw;
+  right: -4vw;
+  width: 34.531vw;
+  padding: 1.094vw 2.813vw;
+  color: #fff;
+  font-size: 1.094vw;
+  line-height: 2em;
+  background-color: #000;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+  background-color: #F3F3F3;
+}
+
+@media screen and (max-width: 1025px) {
+  .access {
+    padding-bottom: 13.021vw;
+  }
+  .access_heading {
+    margin-top: 4.063vw;
+    padding-right: 1.719vw;
+    font-size: 3.385vw;
+  }
+  .access_subheading {
+    margin-top: 1.875vw;
+    font-size: 1.823vw;
+  }
+  .access_map {
+    position: relative;
+    margin-top: 6.25vw;
+    width: 100%;
+    height: 46vw;
+  }
+  .access_map ._address {
+    position: absolute;
+    box-sizing: border-box;
+    top: 50%;
+    right: 0;
+    width: 42vw;
+    padding: 1.563vw 2.604vw;
+    color: #fff;
+    font-size: 1.823vw;
+    line-height: 2em;
+    background-color: #000;
+  }
+  .access_map ._station {
+    position: absolute;
+    box-sizing: border-box;
+    bottom: -6.25vw;
+    right: -4vw;
+    width: 42vw;
+    padding: 1.823vw 4.688vw;
+    color: #fff;
+    font-size: 1.823vw;
+    line-height: 2em;
+    background-color: #000;
+  }
+}

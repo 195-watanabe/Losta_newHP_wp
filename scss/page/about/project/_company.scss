@@ -1,0 +1,130 @@
+@use "../../../setting"as *;
+@use "../../../mixin"as *;
+
+.company {
+  position: relative;
+  padding-top: $pc122;
+  padding-left: 10.78vw;
+  padding-bottom: 17.5vw;
+  background-color: $white;
+  z-index: 1;
+
+  &_heading {
+    @include section_title;
+  }
+
+  &_subheading {
+    @include section_subtitle;
+  }
+
+  &_container {
+    margin-top: 7.188vw;
+    margin-left: 10.78vw;
+  }
+
+  &_item {
+    font-size: $pc18;
+    text-align: left;
+
+    th {
+      position: relative;
+      vertical-align: middle;
+      padding: $pc36 0;
+      width: 14.141vw;
+    }
+
+    th::after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 50%;
+      right: -0.117vw;
+      transform: translateY(-50%);
+      width: 0.234vw;
+      height: 2.969vw;
+      background-color: $dGray;
+      border-radius: 0.117vw;
+    }
+
+    
+    td {
+      padding-left: $pc32;
+      vertical-align: middle;
+      width: 41.719vw;
+      font-weight: 500;
+      line-height: 2.109vw;
+    }
+  }
+
+  &_item:nth-child(3),
+  &_item:nth-child(5) {
+
+    th::after{
+      height: 6.094vw;
+    }
+  }
+}
+
+// レスポンシブ
+// タブレットサイズ
+@include mq(lg) {
+  .company {
+
+    &_heading {
+      margin-top: 4.063vw;
+      padding-right: 1.719vw;
+      @include section_title_tab;
+    }
+
+    &_subheading {
+      @include section_subtitle_tab;
+    }
+
+    &_container {
+      margin-top: $tb80;
+      margin-left: $tb64;
+    }
+    
+    &_item {
+      font-size: $tb18;
+      text-align: left;
+    
+      th {
+        position: relative;
+        vertical-align: middle;
+        padding: $tb36 0;
+        width: $tb120;
+      }
+    
+      th::after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 50%;
+        right: -0.117vw;
+        transform: translateY(-50%);
+        width: $tb2;
+        height: $tb44;
+        background-color: $dGray;
+        border-radius: $tb2;
+      }
+    
+    
+      td {
+        padding-left: $pc32;
+        vertical-align: middle;
+        width: auto;
+        font-weight: 500;
+        line-height: 1.8em;
+      }
+    }
+    
+    &_item:nth-child(3),
+    &_item:nth-child(5) {
+    
+      th::after {
+        height: $tb80;
+      }
+  }
+}
+}

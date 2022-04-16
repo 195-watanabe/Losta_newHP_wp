@@ -1,0 +1,13 @@
+@use "../setting/" as *;
+@use "../mixin/" as *;
+
+.wrapper {
+  margin-left: 9.609vw;
+}
+
+@include mq(lg) {
+  .wrapper {
+    margin-left: 0 !important;
+  }
+}
+

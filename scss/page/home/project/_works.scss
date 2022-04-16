@@ -1,0 +1,214 @@
+@use "../../../setting"as *;
+@use "../../../mixin"as *;
+
+.works {
+  position: relative;
+  height: auto;
+
+  &_container {
+    background-color: $white;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_msg {
+  padding-left: 10.78vw;
+  padding-top: 11.875vw;
+  }
+
+  &_heading {
+    @include section_title;
+  }
+
+  &_subheading {
+    @include section_subtitle;
+  }
+
+  &_txt {
+    margin-top: $pc64;
+    width: 22.5vw;
+    font-size: $pc14;
+    line-height: $pc24;
+  }
+
+  &_img {
+    width: 51.25vw;
+  }
+  
+  &_slidercontainer {
+    position: relative;
+    background-color: $white;
+    padding-bottom: 27.656vw;
+  }
+  
+  &_slidewrapper {
+    position: absolute;
+    top: -50px;
+    width: 100%;
+    height: 25.781vw;
+    overflow: hidden;
+  }
+
+  &_slide {
+    position: relative;
+    width: 85%;
+    padding-left: 15%;
+  }
+  
+  &_slider-item {
+    width: 33.125vw;
+    // height: 19.841vw;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.12);
+    
+    & img {
+      width: 100%;
+    }
+
+    a {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+    }
+  }
+}
+
+.slideitem_heading {
+  font-size: $pc14;
+  line-height: $pc24;
+  margin-top: $pc14;
+}
+
+.slideitem_txt {
+  font-size: 0.938vw;
+  line-height: 1.563vw;
+  margin-bottom: $pc14;
+}
+
+.works_btnarea {
+  position: relative;
+  transform: translateY(-2px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: $white;
+  padding-bottom: $pc122;
+}
+
+.works_morebtn {
+  @include morebtn_black;
+  font-family: $pc16;
+  width: 22.422vw;
+  line-height: $pc64;
+
+  a {
+    height: $pc64;
+  }
+}
+
+.works_morebtn::after {
+  @include morebtn_black-arrow;
+}
+
+.works_morebtn:hover {
+  @include morebtn_black-hover;
+}
+
+.works_morebtn:hover::after {
+  border-color: $black;
+}
+
+// swiper関連
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: rgba(225, 225, 225, 0.8);
+  color: $dGray;
+  padding: 2vw 0.5vw;
+  top: 7.2vw;
+}
+
+@include mq(lg) {
+  .works {
+
+    &_msg {
+      padding-left: 10.78vw;
+      padding-top: 6vw;
+    }
+
+    &_heading {
+      margin-top: 4.063vw;
+      padding-right: 1.719vw;
+      @include section_title_tab;
+    }
+    
+    &_subheading {
+      @include section_subtitle_tab;
+    }
+
+    &_txt {
+      margin-top: $tb40;
+      width: 30vw;
+      font-size: $tb14;
+      line-height: 1.6em;
+    }
+
+    &_slidercontainer {
+      position: relative;
+      background-color: $white;
+      padding-bottom: 48vw;
+    }
+    
+    &_slidewrapper {
+      position: absolute;
+      top: -50px;
+      width: 100%;
+      height: 50vw;
+      overflow: hidden;
+    }
+    
+    &_slide {
+      position: relative;
+      width: 60%;
+      padding-left: 20%;
+    }
+    
+    &_slider-item {
+      position: relative;
+      // width: 33.125vw;
+      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.12);
+    
+      & img {
+        width: 100%;
+      }
+    }
+
+    .slideitem_heading {
+      font-size: $tb16;
+      line-height: 1.8em;
+      margin-top: $tb14;
+    }
+    
+    .slideitem_txt {
+      font-size: $tb12;
+      line-height: 1.4em;
+      margin-bottom: $tb16  ;
+    }
+
+    &_morebtn {
+      font-size: $tb16;
+      width: 26vw;
+      line-height: 3em;
+    
+      a {
+        height: 100%;
+      }
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    padding: 2vw 0.5vw;
+    margin: 0 2vw;
+    top: 30%;
+  }
+}

@@ -1,0 +1,93 @@
+@use "../../../setting"as *;
+@use "../../../mixin"as *;
+
+.lineup {
+  position: relative;
+  padding-top: $pc122;
+  padding-right: 12.891vw;
+  padding-left: 10.78vw;
+  padding-bottom: $pc122;
+  // padding-bottom: 17.5vw;
+  background-color: $lGray;
+  z-index: 1;
+
+  &_heading {
+    @include section_title;
+  }
+
+  &_subheading {
+    @include section_subtitle;
+  }
+
+  &_container {
+    margin-top: $pc64;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $pc32;
+  }
+
+  &_item {
+    position: relative;
+
+    img {
+      height: 19.531vw;
+    }
+  }
+
+  ._txt {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    color: $white;
+    font-weight: 600;
+    font-size: 1.562vw;
+    line-height: 2.5em;
+    background-color: rgba($black, .7);
+  }
+}
+
+// レスポンシブ
+// タブレットサイズ
+@include mq(lg) {
+  .lineup {
+  padding-top: $tb64;
+
+    &_heading {
+      margin-top: 4.063vw;
+      padding-right: 1.719vw;
+      @include section_title_tab;
+    }
+
+    &_subheading {
+      @include section_subtitle_tab;
+    }
+
+    &_container {
+      margin-top: $tb44;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: $tb12;
+    }
+    
+    &_item {
+      position: relative;
+    
+      img {
+        height: $tb160;
+      }
+    }
+    
+    ._txt {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      text-align: center;
+      color: $white;
+      font-weight: 600;
+      font-size: $tb16;
+      line-height: 2.5em;
+      background-color: rgba($black, .7);
+  }
+}
+}

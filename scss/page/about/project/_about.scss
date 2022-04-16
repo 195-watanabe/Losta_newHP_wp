@@ -1,0 +1,93 @@
+@use "../../../setting"as *;
+@use "../../../mixin"as *;
+
+.about {
+  position: relative;
+  box-sizing: border-box;
+  border-bottom: $pc1 solid $dGray;
+  background-color: $white;
+  padding-top: $pc64;
+  padding-bottom: 5.625vw;
+
+  &_img {
+    width: $pc100;
+    margin: 0 auto;
+  }
+
+  &_headding {
+    font-size: 2.186vw;
+    font-weight: 700;
+    text-align: center;
+    line-height: 4.375vw;
+    margin-top: $pc122;
+    z-index: 2;
+  }
+
+  &_txt {
+    font-size: $pc14;
+    line-height: 2.734vw;
+    width: 64.375vw;
+    margin: $pc64 auto 0;
+    z-index: 2;
+  }
+
+  &_sign {
+    width: 16.953vw;
+    margin: 2.188vw 12.973vw 0 auto;
+    z-index: 2;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    opacity: .06;
+    bottom: -8%;
+    left: -10%;
+    z-index: 1;
+    width: 37.656vw;
+    height: 37.656vw;
+    background-image: url(../../../img/logo_icon_b.png);
+    background-size: contain;
+    filter: blur(.4vw)
+  }
+}
+
+// レスポンシブ
+// タブレットサイズ
+@include mq(lg) {
+  .about {
+    padding-top: $tb64;
+    padding-bottom: $tb64;
+
+    &_img {
+      width: $tb80;
+      margin: 0 auto;
+    }
+    
+    &_headding {
+      font-size: $tb20;
+      text-align: center;
+      line-height: 2em;
+      margin-top: $tb50;
+      z-index: 2;
+    }
+    
+    &_txt {
+      font-size: $tb14;
+      line-height: 2em;
+      width: 80%;
+      margin: $tb40 auto  0;
+      z-index: 2;
+    }
+    
+    &_sign {
+      width: $tb160;
+      margin: $tb28 12.973vw 0 auto;
+      z-index: 2;
+    }
+    
+    &::after {
+      left: -6%;
+    }
+  }
+}

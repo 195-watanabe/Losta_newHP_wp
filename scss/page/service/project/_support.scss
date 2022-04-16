@@ -1,0 +1,205 @@
+@use "../../../setting"as *;
+@use "../../../mixin"as *;
+
+.support {
+  position: relative;
+  padding-top: $pc122;
+  padding-right: $pc122;
+  padding-left: 10.78vw;
+  padding-bottom: $pc122;
+  background-color: $white;
+  // z-index: 1;
+
+  &_heading {
+    @include section_title;
+  }
+
+  &_subheading {
+    @include section_subtitle;
+  }
+
+  &_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: $pc64;
+  }
+
+  &_left {
+
+    ._heading {
+      width: 33.359vw;
+      box-sizing: border-box;
+      font-size: 1.641vw;
+      line-height: 1.8em;
+      padding-left: $pc28;
+      border-left: 0.938vw solid $yellow;
+    }
+
+    ._txt {
+      width: 39.219vw;
+      font-size: $pc18;
+      line-height: 2em;
+      margin-top: $pc100;
+    }
+  }
+
+  &_right {
+    width: 22.656vw;
+  }
+
+  &_container {
+    width: 100%;
+    display: flex;
+  }
+
+  &_card {
+    flex: 0 0 100%;
+    text-align: center;
+    border: 3px solid $black;
+    padding-bottom: $pc48;
+    box-sizing: border-box;
+    margin: 0 auto;
+  
+    h3 {
+      display: block;
+      background: $black;
+      @include white_bold;
+      font-size: 1.563vw;
+      padding: $pc18;
+      margin: 0;
+    }
+  
+    h4 {
+      font-size: $pc64;
+      margin: 0 auto;
+      padding: $pc28 0;
+  
+      span {
+        font-size: $pc24;
+      }
+      
+      span:nth-child(2) {
+        font-size: $pc36;
+      }
+    }
+  
+    ._product {
+      margin: 0 0.547vw;
+      color: $white;
+      font-size: 1.641vw;
+      font-weight: 600;
+      line-height: 4.219vw;
+      background-color: $black;
+      border-radius: 0.781vw;
+    }
+  
+    p {
+      font-size: $pc18;
+      font-weight: 500;
+      line-height: 2em;
+  
+      span {
+        color: $black;
+        font-weight: 700;
+        line-height: 6.094vw;
+      }
+    }
+  }
+}
+
+// レスポンシブ
+// タブレットサイズ
+@include mq(lg) {
+  .support {
+    padding-top: $tb64;
+
+    &_heading {
+      margin-top: 4.063vw;
+      padding-right: 1.719vw;
+      @include section_title_tab;
+    }
+
+    &_subheading {
+      @include section_subtitle_tab;
+    }
+
+    &_wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: $tb40;
+    }
+    
+    &_left {
+    
+      ._heading {
+        width: 40vw;
+        box-sizing: border-box;
+        font-size: $tb18;
+        line-height: 1.8em;
+        padding-left: $pc28;
+        border-left: 0.938vw solid $yellow;
+      }
+    
+      ._txt {
+        width: 39.219vw;
+        font-size: $tb14;
+        line-height: 2em;
+        margin-top: $tb44;
+      }
+    }
+    
+    &_right {
+      width: 30vw;
+    }
+    
+    &_container {
+      width: 100%;
+      display: flex;
+    }
+    
+    &_card {
+      flex: 0 0 100%;
+      text-align: center;
+      border: 3px solid $black;
+      padding-bottom: $tb64;
+      box-sizing: border-box;
+      margin: 0 auto;
+    
+      h3 {
+        font-size: $tb16;
+        padding: $tb18;
+        margin: 0;
+      }
+    
+      h4 {
+        font-size: $tb54;
+        margin: 0 auto;
+        padding: $tb20 0;
+      
+        span {
+          font-size: $tb20;
+        }
+    
+        span:nth-child(2) {
+          font-size: $tb36;
+        }
+      }
+    
+      ._product {
+        font-size: $tb16;
+        line-height: 2.5em;
+        border-radius: .5em;
+      }
+    
+      p {
+        font-size: $tb14;
+    
+        span {
+          line-height: 3.2em;
+        }
+      }
+    }
+  }
+}
