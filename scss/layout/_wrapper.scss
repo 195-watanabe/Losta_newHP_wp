@@ -11,3 +11,10 @@
   }
 }
 
+@include mq(sm) {
+  .wrapper {
+    padding-left: $sp16 !important;
+    padding-right: $sp16 !important;
+  }
+}
+

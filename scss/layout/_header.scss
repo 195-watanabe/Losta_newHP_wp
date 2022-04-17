@@ -382,3 +382,131 @@
     }
   }
 }
+
+// レスポンシブ
+// スマホサイズ
+@include mq(sm) {
+
+  .header {
+    box-sizing: border-box;
+    width: 20.833vw;
+    height: 17.222vw;
+    top: 0;
+    right: 20.833vw;
+
+    &_logo {
+      width: $sp28;
+      top: 50%;
+      transform: translateY(-50%) translateX(-50%);
+    }
+  }
+
+  .openbtn,
+  .openbtn._active {
+    width: $sp32;
+    height: 6.944vw;
+    margin: 5.278vw 6.111vw;
+    top: 0;
+    left: auto;
+    right: 0;
+    transform: none;
+
+    span {
+      height: $sp3;
+      border-radius: $sp3;
+    }
+
+    span:nth-of-type(2) {
+      top: $sp12;
+    }
+
+    span:nth-of-type(3) {
+      top: $sp24;
+    }
+  }
+
+  .openbtn::after {
+    content: "";
+    position: absolute;
+    width: 20.833vw;
+    height: 17.222vw;
+    background-color: $white;
+    z-index: -1;
+    top: -5.278vw;
+    right: -6.111vw;
+    transition: .4s;
+  }
+
+  .openbtn._active::after {
+    opacity: 0;
+  }
+
+  .openbtn._active {
+    span:nth-of-type(1) {
+      transform: translateY($sp12) rotate(45deg);
+    }
+
+    span:nth-of-type(2) {
+      transform: translateX(-5vw);
+      opacity: 0;
+    }
+
+    span:nth-of-type(3) {
+      transform: translateY(-$sp12) rotate(-45deg);
+
+    }
+  }
+
+  .scrolldown,
+  .topbtn {
+    display: none;
+  }
+
+  // ハンバーガーメニュー
+  .gnav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transform: translate(-100%);
+    background-color: $black;
+    transition: 0.6s ease-in-out all;
+    width: 100vw;
+    height: 100vh;
+
+    &_logo {
+      position: absolute;
+      top: $sp64;
+      left: 50%;
+      transform: translateX(-50%);
+      width: $sp54;
+    }
+  }
+
+  .list {
+    top: 51.111vw;
+    width: 51.111vw;
+    height: 75.833vw;
+
+    &_item {
+
+      a {
+        font-size: $sp24;
+      }
+    }
+  }
+
+  .sns {
+    position: absolute;
+    bottom: $tb100;
+    width: 27.222vw;
+
+    &_item {
+      width: 9.167vw;
+    }
+
+    &_item:nth-child(1) {
+      width: 11.389vw;
+    }
+  }
+}

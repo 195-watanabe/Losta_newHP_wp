@@ -16,6 +16,7 @@ var swiper = new Swiper('.swiper-container', {
     }
   },
   loop: true,
+  loopedSlides: 2,
   speed: 1200,
   autoplay: {
       delay: 3000,

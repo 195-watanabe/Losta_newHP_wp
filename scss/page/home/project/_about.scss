@@ -244,6 +244,111 @@
       margin-bottom: $tb64;
     }
   }
+
+  .about_morebtn::after {
+    width: $sp10;
+    height: $sp10;
+    border-width: $sp1;
+  }
+}
+
+// レスポンシブ
+// スマホサイズ
+@include mq(sm) {
+  .about {
+    padding-top: $sp18;
+    padding-left: 0;
+
+    &_heading {
+      margin-top: $sp12;
+      padding-right: $sp5;
+      @include section_title_tab;
+      font-size: $sp28
+    }
+    
+    &_subheading {
+      @include section_subtitle_tab;
+      font-size: $sp18
+    }
+
+    &_line {
+      position: relative;
+      transition: .4s;
+      z-index: -1;
+    
+      &-out {
+        border-top: $sp1 solid $dGray;
+        border-right: $sp1 solid $dGray;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 88.889vw;
+        height: 70vw;
+      }
+      
+      &-in {
+        box-sizing: border-box;
+        border-top: $sp1 solid $dGray;
+        border-right: $sp1 solid $dGray;
+        position: absolute;
+        top: $sp28;
+        left: 0;
+        width: 80.556vw;
+        height: 70vw //47.5vw;
+      }
+    }
+
+    &_line::after {
+      top: 0;
+      width: 88.889vw;
+      height: 70vw;
+      // background-color: blue;
+    }
+    
+    &_line::before {
+      top: 6vw;
+      width: 80.556vw;
+      height: 70vw;
+      // background-color: red;
+      z-index: 2;
+    }
+
+    
+    &_container {
+
+      flex-direction: column-reverse;
+      margin-top: $sp24;
+      
+      .container_item {
+        
+        &-txt {
+          font-size: $sp14;
+          line-height: 1.8em;
+          width: 100%;
+        }
+        
+        &.-img {
+          margin-top:0;
+          width: 100%;
+        }
+
+        &-morebtn {
+          margin-top: $sp36;
+          display: flex;
+          justify-content: center;
+        }
+        
+        // moreボタン
+      }
+    }
+
+    &_morebtn {
+      font-size: $sp16;
+      width: 52.222vw;
+      line-height: 3em;
+      margin-bottom: $sp64;
+    }
+  }
 }
 
 
