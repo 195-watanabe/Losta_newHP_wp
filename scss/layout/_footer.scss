@@ -223,6 +223,14 @@
   .footer {
     margin-left: 0 !important;
 
+    &_contact::before,
+    &_contact::after {
+      display: none;
+    }
+
+    &_contact:hover {
+      color: $black;
+    }
     
     .contact_container {
       
@@ -319,6 +327,148 @@
       ._txt {
         margin-right: 7.188vw;
         font-size: $tb14;
+      }
+    }
+  }
+}
+
+// レスポンシブ
+// スマホサイズ
+@include mq(sm) {
+  .footer {
+
+    &_contact {
+      height: 90.556vw;
+    
+      a {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 4.689vw;
+      }
+    }
+    
+    .contact_container {
+      width: 100%;
+      @include ab_center;
+      text-align: center;
+    
+      ._heading {
+        font-size: $sp28;
+      }
+    
+      ._subtitle {
+        font-size: $sp12;
+        margin-top: $sp12;
+      }
+    
+      ._txt {
+        text-align: center;
+        width: 62.333vw;
+        font-size: $sp14;
+        margin: $sp24 auto 0;
+      }
+      
+      ._morebtn {
+        @include morebtn_white;
+        font-size: $sp16;
+        width: 52.222vw;
+        line-height: 3em;
+        margin-bottom: $sp48;
+      }
+
+      ._morebtn:hover {
+        @include morebtn_white-hover;
+        background-color: $yellow;
+      }
+      
+      ._morebtn::after {
+        @include morebtn_white-arrow;
+        width: $sp10;
+        height: $sp10;
+        border-width: $sp1;
+      }
+    }
+
+    &_works {
+            height: 90.556vw;
+    }
+    
+    .works_container {
+      box-sizing: border-box;
+      padding: 14.444vw 21.667vw;
+    
+      ._heading {
+        font-size: $sp28;
+        // width: 40.278vw;
+      }
+    
+      ._heading::after {
+        @include ab_center_rl;
+        bottom: -$sp10;
+        width: 26vw;
+        height: $sp1;
+      }
+    
+      ._subtitle {
+        font-size: $sp12;
+        margin-top: $sp18;
+      }
+    
+      ._morebtn {
+        font-size: $sp16;
+        width: 52.222vw;
+        line-height: 3em;
+        margin-top: $sp24;
+        margin-bottom: 0;
+      }
+    
+      ._morebtn::after {
+        width: $sp10;
+        height: $sp10;
+        border-width: $sp1;
+      }
+    }
+    
+    &_container {
+      box-sizing: border-box;
+      height: 26.111vw;
+      padding-top: $sp20;
+      padding-bottom: $sp36 ;
+    
+      ._logo {
+        margin-left: $sp28;
+    
+        &-img {
+          width: $sp36;
+        }
+    
+        &-txt {
+          font-size: $sp24;
+          margin-left: $sp14;
+        }
+      }
+    
+      ._sns {
+        display: flex;
+        justify-content: space-between;
+        width: 22.222vw;
+        margin-right: $sp30;
+    
+        &-twitter {
+          width: $sp30;
+        }
+    
+        &-instagram {
+          width: $sp24;
+        }
+      }
+    
+      ._txt {
+        position: absolute;
+        bottom: $sp12;
+        margin-left: $sp28;
+        font-size: $sp12;
       }
     }
   }

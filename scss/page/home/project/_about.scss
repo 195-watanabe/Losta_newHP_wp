@@ -244,20 +244,15 @@
       margin-bottom: $tb64;
     }
   }
-
-  .about_morebtn::after {
-    width: $sp10;
-    height: $sp10;
-    border-width: $sp1;
-  }
 }
 
 // レスポンシブ
 // スマホサイズ
 @include mq(sm) {
   .about {
-    padding-top: $sp18;
-    padding-left: 0;
+    padding-top: $sp48;
+    padding-left: $sp16 !important;
+    padding-right: $sp16 !important;
 
     &_heading {
       margin-top: $sp12;
@@ -268,7 +263,8 @@
     
     &_subheading {
       @include section_subtitle_tab;
-      font-size: $sp18
+      margin-top: $sp10;
+      font-size: $sp14;
     }
 
     &_line {
@@ -349,23 +345,10 @@
       margin-bottom: $sp64;
     }
   }
+
+  .about_morebtn::after {
+    width: $sp10;
+    height: $sp10;
+    border-width: $sp1;
+  }
 }
-
-
-// レスポンシブ
-// タブレットサイズ
-// @include mq(lg) {
-//   .plan {
-//     padding-top: $tb64;
-
-//     &_heading {
-//       margin-top: 4.063vw;
-//       padding-right: 1.719vw;
-//       @include section_title_tab;
-//     }
-
-//     &_subheading {
-//       @include section_subtitle_tab;
-//     }
-//   }
-// }

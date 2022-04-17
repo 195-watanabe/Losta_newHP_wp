@@ -75,7 +75,7 @@
 }
 
 .article_title {
-  line-height: $pc24;
+  line-height: 1.6em;
   margin-top: $pc14;
   font-size: $pc14;
   font-weight: 500;
@@ -137,5 +137,80 @@
     margin-top: $tb14;
     line-height: 1.6em;
     font-size: $tb14;
+  }
+}
+
+// レスポンシブ
+// スマホサイズ
+@include mq(sm) {
+  .topics {
+    padding-top: $sp48;
+    padding-left: $sp16 !important;
+    padding-right: $sp16 !important;
+
+    &_heading {
+      margin-top: $sp12;
+      padding-right: $sp5;
+      @include section_title_tab;
+      font-size: $sp28
+    }
+
+    &_subheading {
+      @include section_subtitle_tab;
+      margin-top: $sp10;
+      font-size: $sp14;
+    }
+
+    &_container {
+      display: block;
+      position: relative;
+    }
+
+    &_morebtn {
+      @include ab_center_rl;
+      bottom: -26.667vw;
+      font-size: $sp16;
+      width: 52.222vw;
+      line-height: 3em;
+      margin: 0;
+    
+      a {
+        height: 3em;
+      }
+    }
+    
+    &_morebtn::after {
+      width: $sp10;
+      height: $sp10;
+      border-width: $sp1;
+    }
+    
+    &_right {
+      width: 100%;
+      margin-top: $sp24;
+      margin-bottom: $sp144;
+    }
+    
+    &_item {
+      margin-bottom: $sp5;
+      padding: $sp20;
+    }
+    
+    &_item:hover {
+      transform: translateX(0);
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .article_date {
+    font-size: $sp12;
+  }
+  
+  .article_title {
+    margin-top: $sp10;
+    font-size: $sp14;
   }
 }

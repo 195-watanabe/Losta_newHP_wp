@@ -173,3 +173,122 @@
   }
 }
 
+// レスポンシブ
+// スマホサイズ
+@include mq(sm) {
+  .service {
+    padding-top: $sp48;
+    padding-left: $sp16 !important;
+    padding-right: $sp16 !important;
+
+    &_container {
+      display: block;
+    }
+
+    &_heading {
+      margin-top: $sp12;
+      padding-right: $sp5;
+      @include section_title_tab;
+      font-size: $sp28
+    }
+
+    &_subheading {
+      @include section_subtitle_tab;
+      margin-top: $sp10;
+      font-size: $sp14;
+    }
+
+    &_txt {
+      margin-top: 5.833vw;
+      display: block;
+      width: 100%;
+      font-size: $sp14;
+      line-height: 1.8em;
+    }
+
+    &_lineup {
+      margin: 0 auto $sp8;
+      padding-top: $sp48;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    
+      &-item {
+        margin-bottom: $sp18;
+        font-size: $sp16;
+        font-weight: 700;
+        width: 45.000vw;
+        line-height: 3em;
+      }
+    }
+    
+    &_line {
+      height: $sp3;
+    } 
+    
+    &_triangle {
+      box-sizing: border-box;
+      width: $sp24;
+      height: $sp18;
+      border-top: $sp12 solid $black;
+      border-right: 4.667vw solid rgba($color: #000000, $alpha: 0);
+      border-bottom: $sp12 solid rgba($color: #000000, $alpha: 0);
+      border-left: 4.667vw solid rgba($color: #000000, $alpha: 0);
+      margin: 0 auto 4.375vw;
+    }
+    
+    &_message {
+      font-size: $sp20;
+      margin-bottom: $sp48;
+      padding: 0 $sp32;
+      font-weight: 600;
+      line-height: 1.6em;
+    }
+
+    &_btn-container {
+      display: flex;
+      justify-content: center;
+    }
+    
+    &_morebtn {
+      font-size: $sp16;
+      width: 52.222vw;
+      line-height: 3em;
+      margin-bottom: $sp48;
+    
+      a {
+        height: 3em;
+      }
+    }
+
+    &_morebtn::after {
+      width: $sp10;
+      height: $sp10;
+      border-width: $sp1;
+    }
+  }
+}
+
+// // レスポンシブ
+// // スマホサイズ
+// @include mq(sm) {
+//   .service {
+//     padding-top: $sp48;
+//     padding-left: $sp16 !important;
+//     padding-right: $sp16 !important;
+
+//     &_heading {
+//       margin-top: $sp12;
+//       padding-right: $sp5;
+//       @include section_title_tab;
+//       font-size: $sp28
+//     }
+
+//     &_subheading {
+//       @include section_subtitle_tab;
+//       margin-top: $sp10;
+//       font-size: $sp14;
+//     }
+//   }
+// }

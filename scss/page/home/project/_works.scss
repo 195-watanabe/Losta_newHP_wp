@@ -212,3 +212,134 @@
     top: 30%;
   }
 }
+
+// レスポンシブ
+// スマホサイズ
+@include mq(sm) {
+  .works {
+    padding-top: $sp48;
+    padding-left: $sp16 !important;
+    padding-right: $sp16 !important;
+
+    &_msg {
+      padding-left: 0vw;
+      padding-top: 0vw;
+    }
+
+    &_heading {
+      margin-top: $sp12;
+      padding-right: $sp5;
+      @include section_title_tab;
+      font-size: $sp28
+    }
+
+    &_subheading {
+      @include section_subtitle_tab;
+      margin-top: $sp10;
+      font-size: $sp14;
+    }
+
+    &_txt {
+      margin-top: 5.833vw;
+      width: 100%;
+      font-size: $sp14;
+      line-height: 1.6em;
+    }
+    
+    &_img {
+      display: none;
+    }
+    
+    &_slidercontainer {
+      position: relative;
+      margin-top: $sp28;
+      background-color: $white;
+      padding-bottom: 65.278vw;
+      margin-bottom: 13vw;
+    }
+    
+    &_slidewrapper {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 65.278vw;
+      overflow: hidden;
+    }
+    
+    &_slide {
+      position: relative;
+      width: 83.889vw;
+      padding-left: $sp12;
+    }
+    
+    &_slider-item {
+      width: 83.889vw;
+      // height: 19.841vw;
+      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.12);
+    
+      & img {
+        width: 100%;
+      }
+    
+      a {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+      }
+    }
+
+    .slideitem_heading {
+      font-size: $sp12;
+      line-height: 1.5em;
+      margin-top: $sp10;
+    }
+    
+    .slideitem_txt {
+      font-size: $sp14;
+      line-height: 1.5em;
+      margin-bottom: $sp10;
+    }
+
+    &_btnarea {
+      padding-bottom: 0;
+    }
+
+    &_morebtn {
+      font-size: $sp16;
+      width: 52.222vw;
+      line-height: 3em;
+      margin-bottom: $sp48;
+    
+      a {
+        height: 3em;
+      }
+    }
+    
+    &_morebtn::after {
+      width: $sp10;
+      height: $sp10;
+      border-width: $sp1;
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    padding: $sp5 0.5vw;
+    @include ab_center_tb
+  }
+
+  .swiper-button-prev {
+    left: -$sp5;
+  }
+
+  .swiper-button-next {
+    right: -$sp5;
+  }
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: $sp36 !important;
+  }
+}
+
