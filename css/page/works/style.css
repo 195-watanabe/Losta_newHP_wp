@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .fv {
   position: relative;
   width: 100%;
@@ -50,6 +49,29 @@
     font-size: 2.083vw;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
     margin-top: 3.125vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .fv {
+    height: 100vh;
+  }
+  .fv_title {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 91.111vw;
+    transform: translateY(-50%) translateX(-50%);
+    z-index: 2;
+  }
+  .fv_title ._heading {
+    font-size: 11.667vw;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    z-index: 2;
+  }
+  .fv_title ._sub {
+    font-size: 4.444vw;
+    margin-top: 2.222vw;
   }
 }
 .work {
@@ -190,33 +212,6 @@
   background: #000;
 }
 
-@media only screen and (max-width: 767px) {
-  .pager .pagination li {
-    display: none;
-  }
-
-  .pager .pagination li.pre,
-.pager .pagination li.next {
-    display: inline-block;
-    width: 40%;
-    height: 50px;
-    text-align: center;
-  }
-
-  .pager .pagination li.pre a,
-.pager .pagination li.next a {
-    width: 100%;
-    text-align: center;
-  }
-
-  .pager .pagination li.pre span::after {
-    content: "　前の10件へ";
-  }
-
-  .pager .pagination li.next span::before {
-    content: "次の10件へ　";
-  }
-}
 /* Text meant only for screen readers. */
 .screen-reader-text {
   border: 0;
@@ -359,5 +354,93 @@
   .pager .pagination .pre,
 .pager .pagination .next {
     padding: 0 3.125vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .work {
+    box-sizing: border-box;
+    padding-top: 6.667vw;
+    padding-left: 4.444vw !important;
+    padding-right: 4.444vw !important;
+  }
+  .work::before {
+    top: 61.111vw;
+  }
+  .work_container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.333vw 4.444vw;
+    padding: 3.333vw 0;
+  }
+  .work_container ._item {
+    border: 0.278vw solid #000;
+    font-size: 4.444vw;
+    line-height: 12.5vw;
+  }
+  .work_article {
+    display: grid;
+    padding: 13.333vw 0;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 13.333vw 0;
+  }
+  .work_item {
+    display: inline-block;
+  }
+  .work_item img {
+    width: 100%;
+    height: 54.722vw;
+    object-fit: cover;
+  }
+  .work_item ._container {
+    font-size: 3.889vw;
+  }
+  .work_item ._left {
+    width: 55.556vw;
+    margin-top: 3.333vw;
+    margin-left: 3.889vw;
+  }
+  .work_item ._left span {
+    font-size: 3.333vw;
+  }
+  .work_item ._right {
+    width: 23.889vw;
+    line-height: 8.333vw;
+    margin-right: 3.333vw;
+  }
+
+  .pager {
+    margin-bottom: 13.333vw;
+    font-size: 3.889vw;
+  }
+
+  .pager .pagination li {
+    margin: 0 0.833vw;
+    width: 9.444vw;
+    height: 9.444vw;
+  }
+
+  .pager .pagination li a {
+    line-height: 9.444vw;
+  }
+
+  .pager .pagination li a span {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .pager .pagination .pre,
+.pager .pagination .next {
+    padding: 0 4.444vw;
+  }
+
+  .pager .pagination li a:hover {
+    color: #fff;
+    background: #F1C407;
+  }
+
+  .pager .pagination li a.active {
+    color: #fff;
+    background: #000;
   }
 }

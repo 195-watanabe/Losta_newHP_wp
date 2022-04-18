@@ -409,3 +409,78 @@
     }
   }
 }
+
+// // レスポンシブ
+// // スマホサイズ
+@include mq(sm) {
+  .heading {
+    font-size: $sp42;
+    padding: 23.889vw 0 $sp54;
+    border-bottom: $sp1 solid $dGray;
+  
+    span {
+      color: $dGray;
+      font-size: $pc16;
+      margin-top: 0.938vw;
+    }
+  }
+
+  .fv {
+    position: relative;
+    width: 100%;
+    height: 88.889vw;
+    padding-bottom: 0;
+    border-bottom: $sp1 solid $dGray;
+  
+    &_container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+  
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: $sp120;
+      }
+  
+      &::before {
+        background: $yellow;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+  
+      &::after {
+        background: $dGray;
+        top: $sp120;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  
+    &_img {
+      position: absolute;
+      top: $sp24;
+      padding-left: $sp16 !important;
+      padding-right: $sp16 !important;
+      right: 0;
+      width: $sp328;
+      z-index: 2;
+  
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: $pc2;
+        right: 0;
+        width: $sp328;
+        height: 0.781vw;
+        background: $dGray;
+        filter: blur($pc18);
+        border-radius: $pc18;
+        z-index: -1;
+      }
+    }
+  }
+}

@@ -91,3 +91,49 @@
   }
 }
 }
+
+// // レスポンシブ
+// // スマホサイズ
+@include mq(sm) {
+  .lineup {
+    padding-top: $sp48;
+    padding-left: $sp16 !important;
+    padding-right: $sp16 !important;
+    padding-bottom: $sp48;
+
+    &_heading {
+      margin-top: $sp12;
+      padding-right: $sp5;
+      @include section_title_tab;
+      font-size: $sp28
+    }
+
+    &_subheading {
+      @include section_subtitle_tab;
+      margin-top: $sp10;
+      font-size: $sp14;
+    }
+
+    &_container {
+      display: block;
+      margin-top: $sp48;
+    }
+
+    &_item {
+      position: relative;
+      margin-top: $sp24;
+    
+      img {
+        height: 53.333vw;
+      }
+
+      ._txt {
+        font-size: $sp16;
+      }
+    }
+
+    &_item:nth-child(1) {
+      margin-top: 0;
+    }
+  }
+}

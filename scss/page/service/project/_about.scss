@@ -49,3 +49,29 @@
     }
   }
 }
+
+// // レスポンシブ
+// // スマホサイズ
+@include mq(sm) {
+  .about {
+    padding-top: $sp48;
+    padding-left: $sp16 !important;
+    padding-right: $sp16 !important;
+
+    &_heading {
+      font-size: $sp18;
+      margin-top: $sp36;
+    }
+
+    &_txt {
+      font-size: $sp14;
+      width: 100%;
+      margin: $sp36 0;
+    }
+
+    &_sign {
+      width: $sp156;
+      margin: 0 0 0 auto;
+    }
+  }
+}

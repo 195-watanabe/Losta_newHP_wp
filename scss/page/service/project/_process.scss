@@ -173,3 +173,93 @@
     }
   }
 }
+
+// // レスポンシブ
+// // スマホサイズ
+@include mq(sm) {
+  .process {
+    padding-top: $sp48;
+    padding-left: $sp16 !important;
+    padding-right: $sp16 !important;
+
+    &_top {
+      display: block;
+    }
+
+    &_heading {
+      margin-top: $sp12;
+      padding-right: $sp5;
+      @include section_title_tab;
+      font-size: $sp28
+    }
+
+    &_subheading {
+      @include section_subtitle_tab;
+      margin-top: $sp10;
+      font-size: $sp14;
+    }
+
+    &_msg {
+      margin-top: $sp24;
+      margin-left: 0;
+      font-size: $sp14;
+      line-height: 1.6em;
+    }
+    
+    &_container {
+      position: relative;
+      width: 100%;
+      margin: $sp126 0 0;
+    }
+    
+    &_step {
+      position: relative;
+      padding-top: $sp18;
+      padding-bottom: 26.111vw;
+    
+      ._step {
+        left: -$sp1;
+        font-size: $sp20;
+        padding: $sp8 0;
+    
+        span {
+          font-size: $sp42;
+        }
+      }
+    
+      ._title {
+        font-size: $sp20;
+        margin-left: $sp28;
+        padding: $sp8 $sp16;
+      }
+    
+      ._txt {
+        width: 77.222vw;
+        margin-top: $sp32;
+        margin-left: $sp28;
+        font-size: $sp16;
+        line-height: 1.8em;
+      }
+    
+      .border-line {
+        /*線の位置*/
+        position: absolute;
+        left: $sp2;
+        top: 0;
+        width: $sp1;
+        /*線の太さ*/
+        height: 0;
+        /*はじめは高さを0に*/
+        background: $black;
+      }
+    }
+    
+    &_step:nth-child(1) {
+      margin-top: 16vw;
+    }
+
+    &_step:nth-child(6) {
+      padding-bottom: $sp48;
+    }
+  }
+}

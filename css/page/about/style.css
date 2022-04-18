@@ -51,6 +51,29 @@
     margin-top: 3.125vw;
   }
 }
+@media screen and (max-width: 767px) {
+  .fv {
+    height: 100vh;
+  }
+  .fv_title {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 91.111vw;
+    transform: translateY(-50%) translateX(-50%);
+    z-index: 2;
+  }
+  .fv_title ._heading {
+    font-size: 11.667vw;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    z-index: 2;
+  }
+  .fv_title ._sub {
+    font-size: 4.444vw;
+    margin-top: 2.222vw;
+  }
+}
 .about {
   position: relative;
   box-sizing: border-box;
@@ -63,7 +86,7 @@
   width: 7.813vw;
   margin: 0 auto;
 }
-.about_headding {
+.about_heading {
   font-size: 2.186vw;
   font-weight: 700;
   text-align: center;
@@ -106,7 +129,7 @@
     width: 10.417vw;
     margin: 0 auto;
   }
-  .about_headding {
+  .about_heading {
     font-size: 2.604vw;
     text-align: center;
     line-height: 2em;
@@ -127,6 +150,36 @@
   }
   .about::after {
     left: -6%;
+  }
+  .about::after {
+    background-repeat: no-repeat;
+    bottom: -4.444vw;
+    left: -4.444vw;
+    width: 100%;
+    height: 77.222vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .about {
+    padding-top: 13.333vw;
+    padding-left: 4.444vw !important;
+    padding-right: 4.444vw !important;
+  }
+  .about_img {
+    width: 23.333vw;
+  }
+  .about_heading {
+    font-size: 5vw;
+    margin-top: 10vw;
+  }
+  .about_txt {
+    font-size: 3.889vw;
+    width: 100%;
+    margin: 10vw 0;
+  }
+  .about_sign {
+    width: 43.333vw;
+    margin: 0 0 0 auto;
   }
 }
 .company {
@@ -234,6 +287,63 @@
     height: 10.417vw;
   }
 }
+@media screen and (max-width: 767px) {
+  .company {
+    padding-top: 13.333vw;
+    padding-left: 4.444vw !important;
+    padding-right: 4.444vw !important;
+  }
+  .company_heading {
+    margin-top: 3.333vw;
+    padding-right: 1.389vw;
+    font-size: 3.385vw;
+    font-size: 7.778vw;
+  }
+  .company_subheading {
+    margin-top: 1.875vw;
+    font-size: 1.823vw;
+    margin-top: 2.778vw;
+    font-size: 3.889vw;
+  }
+  .company_container {
+    margin-top: 15vw;
+    margin-left: 0;
+  }
+  .company_item {
+    font-size: 4.444vw;
+  }
+  .company_item th {
+    padding: 5.556vw 0;
+    width: 23.333vw;
+  }
+  .company_item th::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 0.833vw;
+    height: 10vw;
+    border-radius: 0.833vw;
+  }
+  .company_item td {
+    padding-left: 7.778vw;
+    width: 59.444vw;
+  }
+  .company_item:nth-child(3) th {
+    padding: 17.778vw 0;
+  }
+  .company_item:nth-child(3) th::after {
+    height: 33.333vw;
+  }
+  .company_item:nth-child(5) th {
+    padding: 11.667vw 0;
+  }
+  .company_item:nth-child(5) th::after {
+    height: 21.667vw;
+  }
+}
 .access {
   position: relative;
   padding-bottom: 11.875vw;
@@ -334,5 +444,51 @@
     font-size: 1.823vw;
     line-height: 2em;
     background-color: #000;
+  }
+}
+@media screen and (max-width: 767px) {
+  .access {
+    padding-top: 0;
+    padding-bottom: 67.5vw;
+  }
+  .access_heading {
+    padding-left: 4.444vw;
+    padding-right: 4.444vw;
+    margin-top: 3.333vw;
+    padding-right: 1.389vw;
+    font-size: 3.385vw;
+    font-size: 7.778vw;
+  }
+  .access_subheading {
+    padding-left: 4.444vw;
+    padding-right: 4.444vw;
+    margin-top: 1.875vw;
+    font-size: 1.823vw;
+    margin-top: 2.778vw;
+    font-size: 3.889vw;
+  }
+  .access_map {
+    position: relative;
+    margin-top: 13.333vw;
+    width: 100%;
+    height: 70vw;
+  }
+  .access_map ._address {
+    position: absolute;
+    box-sizing: border-box;
+    top: 84%;
+    right: 0;
+    width: 91.944vw;
+    padding: 3.333vw 6.667vw;
+    font-size: 3.889vw;
+  }
+  .access_map ._station {
+    position: absolute;
+    box-sizing: border-box;
+    bottom: -51.667vw;
+    right: 0;
+    width: 91.944vw;
+    padding: 3.333vw 6.667vw;
+    font-size: 3.889vw;
   }
 }

@@ -128,3 +128,80 @@
   }
 }
 }
+
+// // レスポンシブ
+// // スマホサイズ
+@include mq(sm) {
+  .company {
+    padding-top: $sp48;
+    padding-left: $sp16 !important;
+    padding-right: $sp16 !important;
+
+    &_heading {
+      margin-top: $sp12;
+      padding-right: $sp5;
+      @include section_title_tab;
+      font-size: $sp28
+    }
+
+    &_subheading {
+      @include section_subtitle_tab;
+      margin-top: $sp10;
+      font-size: $sp14;
+    }
+
+    &_container {
+      margin-top: $sp54;
+      margin-left: 0;
+    }
+    
+    &_item {
+      font-size: $sp16;
+    
+      th {
+        padding: $sp20 0 ;
+        width: $sp84;
+      }
+
+      th::after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: $sp3;
+        height: $sp36;
+        border-radius: $sp3;
+      }
+    
+    
+      td {
+        padding-left: $sp28;
+        width: 59.444vw;
+      }
+    }
+    
+    &_item:nth-child(3) {
+
+      th {
+        padding: $sp64 0;
+      }
+      
+      th::after {
+        height: 33.333vw;
+      }
+    }
+    
+    &_item:nth-child(5) {
+
+      th {
+        padding: $sp42 0;
+      }
+    
+      th::after {
+        height: 21.667vw;
+      }
+    }
+  }
+}

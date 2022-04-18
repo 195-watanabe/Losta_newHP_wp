@@ -158,35 +158,6 @@
   background: $black;
 }
 
-@media only screen and (max-width: 767px) {
-  .pager .pagination li {
-    display: none;
-  }
-
-  .pager .pagination li.pre,
-  .pager .pagination li.next {
-    display: inline-block;
-    width: 40%;
-    height: 50px;
-    text-align: center;
-  }
-
-  .pager .pagination li.pre a,
-  .pager .pagination li.next a {
-    width: 100%;
-    text-align: center;
-  }
-
-  .pager .pagination li.pre span::after {
-    content: "　前の10件へ";
-  }
-
-  .pager .pagination li.next span::before {
-    content: "次の10件へ　";
-  }
-
-}
-
 /* Text meant only for screen readers. */
 .screen-reader-text {
   border: 0;
@@ -333,4 +304,130 @@
   .pager .pagination .next {
     padding: 0 $tb24;
   }
+}
+
+// // レスポンシブ
+// // スマホサイズ
+@include mq(sm) {
+  .topics {
+    box-sizing: border-box;
+    padding-top: $sp24;
+    padding-left: $sp16 !important;
+    padding-right: $sp16 !important;
+
+    &::before {
+      top: 61.111vw;
+    }
+
+    &_container {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: $sp12 $sp16;
+      padding: $sp12 0;
+
+      ._item {
+        border: $sp1 solid $black;
+        font-size: $sp16;
+        line-height: 12.500vw;
+      }
+    }
+
+    &_article {
+      display: grid;
+      padding: $sp48 0;
+      grid-template-columns: repeat(1, 1fr);
+      gap: $sp48 0;
+    }
+
+    &_item {
+      display: inline-block;
+
+      img {
+        width: 100%;
+        height: 54.722vw;
+        object-fit: cover;
+      }
+
+      p {
+        width: auto;
+        font-size: $sp14;
+        margin:$sp12 $sp14 0;
+      }
+
+      ._tag {
+        font-size: $sp12;
+        padding: 0 $sp18;
+      }
+
+      ._container {
+        margin-top: $sp10;
+        font-size: $sp14;
+      }
+    }
+
+  }
+
+  .pager {
+    margin-bottom: $sp48;
+    font-size: $sp14;
+  }
+
+  .pager .pagination li {
+    margin: 0 $sp3;
+    width: 9.444vw;
+    height: 9.444vw;
+
+  }
+
+  .pager .pagination li a {
+    line-height: 9.444vw;
+  }
+
+  .pager .pagination li a span {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .pager .pagination .pre,
+  .pager .pagination .next {
+    padding: 0 $sp16;
+  }
+
+  .pager .pagination li a:hover {
+    color: $white;
+    background: $yellow;
+  }
+
+  // .pager .pagination li a:hover,
+  .pager .pagination li a.active {
+    color: $white;
+    background: $black;
+  }
+
+  // .pager .pagination li {
+  //   display: none;
+  // }
+
+  // .pager .pagination li.pre,
+  // .pager .pagination li.next {
+  //   display: inline-block;
+  //   width: 40%;
+  //   height: 50px;
+  //   text-align: center;
+  // }
+
+  // .pager .pagination li.pre a,
+  // .pager .pagination li.next a {
+  //   width: 100%;
+  //   text-align: center;
+  // }
+
+  // .pager .pagination li.pre span::after {
+  //   content: "";
+  // }
+
+  // .pager .pagination li.next span::before {
+  //   content: "";
+  // }
 }

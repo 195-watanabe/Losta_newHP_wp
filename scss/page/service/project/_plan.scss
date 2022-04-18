@@ -29,6 +29,10 @@
     // flex-wrap: nowrap;
   }
 
+  &_container._planSp {
+    display: none;
+  }
+
   &_card {
     flex: 0 0 31%;
     text-align: center;
@@ -148,9 +152,14 @@
       // overflow: scroll;
       // flex-wrap: nowrap;
     }
-    
+
+    &_container._planSp {
+      display: none;
+    }
+
     &_card {
       flex: 0 0 31%;
+      width: 100%;
       text-align: center;
       border: 3px solid $dGray;
       padding-bottom: $tb28;
@@ -225,6 +234,132 @@
     
       ._product {
         background-color: $blue;
+      }
+    }
+  }
+}
+
+// // レスポンシブ
+// // スマホサイズ
+@include mq(sm) {
+  .plan {
+    padding-top: $sp48;
+    padding-left: $sp16 !important;
+    padding-right: $sp16 !important;
+
+    &_heading {
+      margin-top: $sp12;
+      padding-right: $sp5;
+      @include section_title_tab;
+      font-size: $sp28
+    }
+
+    &_subheading {
+      @include section_subtitle_tab;
+      margin-top: $sp10;
+      font-size: $sp14;
+    }
+
+    &_container {
+      width: 72.421vw;
+      display: none;
+      // overflow: scroll;
+      // flex-wrap: nowrap;
+    }
+
+
+    &_container._planSp {
+      display: block;
+      width: 100%;
+      height: 133.333vw;
+      margin-top: $sp64;
+      overflow: hidden;
+    }
+    
+    .swiper_wrapper {
+      width: 100%;
+    }
+
+    &_container._planSp {
+      display: block;
+      width: 100%;
+      height: 133.333vw;
+    }
+    
+    .swiper_wrapper {
+      width: 100%;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      background-size: contain;
+      display: block;
+      box-sizing: border-box;
+      top: 60%;
+      width: $sp40;
+      height: $sp40;
+      color: $white;
+      background-color: $black;
+      border-radius: $sp20;
+    }
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      display: block;
+      box-sizing: border-box;
+      font-size: $sp20;
+      width: $sp20;
+      height: $sp20;
+      color: $white;
+    }
+    .swiper-button-prev::after {
+      margin: $sp10 $sp10 $sp10 $sp14;
+    }
+    .swiper-button-next::after {
+      margin: $sp10 $sp10 $sp10 $sp16;
+    }
+
+    &_card {
+      flex: none;
+      padding-bottom: $sp48;
+      box-sizing: border-box;
+      margin: 0 auto;
+    
+      h3 {
+        display: block;
+        background: $dGray;
+        @include white_bold;
+        font-size: $sp20;
+        padding: $sp16;
+        margin: 0;
+      }
+    
+      h4 {
+        font-size: $sp54;
+        margin: 0 auto;
+        padding: $sp24 0;
+    
+        span {
+          font-size: $sp20
+        }
+      }
+    
+      ._product {
+        margin: 0 $sp5;
+        font-size: $sp18;
+        line-height: 2.5em;
+        border-radius: $sp10;
+      }
+    
+      p {
+        font-size: $sp16;
+        line-height: 2em;
+        
+        span {
+          display: block;
+          line-height: 1em;
+          margin-top: $sp28;
+        }
       }
     }
   }

@@ -30,4 +30,15 @@ var swiper = new Swiper('.swiper-container', {
   }
 });
 
+var swiper = new Swiper('._planSp', {
+  slidesPerView: 1,
+  initialSlide: 0, 
+  loop: true,
+  loopedSlides: 2,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  }
+});
+
 
