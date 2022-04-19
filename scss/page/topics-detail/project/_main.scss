@@ -205,3 +205,88 @@
     }
   }
 }
+
+// // レスポンシブ
+// // スマホサイズ
+@include mq(sm) {
+  .heading {
+    font-size: $sp42;
+    padding: 23.889vw 0 $sp54;
+    border-bottom: $sp1 solid $dGray;
+  
+    span {
+      color: $dGray;
+      font-size: $pc16;
+      margin-top: 0.938vw;
+    }
+  }
+
+  .article {
+    position: relative;
+    padding: 0;
+    
+    &_heading {
+      font-size: $sp18;
+      margin-top: $sp24;
+      padding-left: $sp16 !important;
+      padding-right: $sp16 !important;
+      padding-bottom: $sp24;
+      border-bottom: $sp1 solid $dGray;
+    }
+    
+    &_info {
+      padding-left: $sp16 !important;
+      padding-right: $sp16 !important;
+      margin-top: $tb16;
+      
+      p {
+        line-height: 2em;
+      }
+      
+      ._date {
+        font-size: $sp16;
+        margin-right: $sp18;
+        line-height: $sp28;
+      }
+      
+      ._tag {
+        font-size: $sp12;
+        padding: 0 5.833vw;
+        line-height: $sp24;
+        border: $sp1 solid $black;
+        border-radius: $sp24;
+      }
+    }
+
+    &_container {
+      margin-top: $sp48;
+      padding-left: $sp16 !important;
+      padding-right: $sp16 !important;
+    }
+    
+    &_img {
+      margin: $sp48 0 0;
+    }
+    
+    &_txt {
+      margin-top: $sp48;
+      font-size: $sp16;
+      line-height: 2em;
+    }
+    
+    .pagenation {
+      margin-top: $sp64;
+      margin-bottom: $sp48;
+      
+      &_container {
+        display: grid;
+        grid-template-columns: 1fr 39.063vw 1fr;
+        background-color: $black;
+        
+        li {
+          font-size: $sp12;
+        }
+      }
+    }
+  }
+}

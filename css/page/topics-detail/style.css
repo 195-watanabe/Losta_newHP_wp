@@ -170,3 +170,73 @@
     opacity: 0.8;
   }
 }
+@media screen and (max-width: 767px) {
+  .heading {
+    font-size: 11.667vw;
+    padding: 23.889vw 0 15vw;
+    border-bottom: 0.278vw solid #757575;
+  }
+  .heading span {
+    color: #757575;
+    font-size: 1.25vw;
+    margin-top: 0.938vw;
+  }
+
+  .article {
+    position: relative;
+    padding: 0;
+  }
+  .article_heading {
+    font-size: 5vw;
+    margin-top: 6.667vw;
+    padding-left: 4.444vw !important;
+    padding-right: 4.444vw !important;
+    padding-bottom: 6.667vw;
+    border-bottom: 0.278vw solid #757575;
+  }
+  .article_info {
+    padding-left: 4.444vw !important;
+    padding-right: 4.444vw !important;
+    margin-top: 2.083vw;
+  }
+  .article_info p {
+    line-height: 2em;
+  }
+  .article_info ._date {
+    font-size: 4.444vw;
+    margin-right: 5vw;
+    line-height: 7.778vw;
+  }
+  .article_info ._tag {
+    font-size: 3.333vw;
+    padding: 0 5.833vw;
+    line-height: 6.667vw;
+    border: 0.278vw solid #000;
+    border-radius: 6.667vw;
+  }
+  .article_container {
+    margin-top: 13.333vw;
+    padding-left: 4.444vw !important;
+    padding-right: 4.444vw !important;
+  }
+  .article_img {
+    margin: 13.333vw 0 0;
+  }
+  .article_txt {
+    margin-top: 13.333vw;
+    font-size: 4.444vw;
+    line-height: 2em;
+  }
+  .article .pagenation {
+    margin-top: 17.778vw;
+    margin-bottom: 13.333vw;
+  }
+  .article .pagenation_container {
+    display: grid;
+    grid-template-columns: 1fr 39.063vw 1fr;
+    background-color: #000;
+  }
+  .article .pagenation_container li {
+    font-size: 3.333vw;
+  }
+}

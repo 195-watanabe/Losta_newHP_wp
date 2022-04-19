@@ -63,3 +63,43 @@
     }
   }
 } 
+
+// レスポンシブ
+// スマホサイズ
+@include mq(sm) {
+  .fv {
+    height: 100vh;
+    background-image: url(../../../img/fv_pic9.jpg);
+
+    &_title {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 91.111vw;
+      transform: translateY(-50%) translateX(-50%);
+      z-index: 2;
+
+      ._heading {
+        font-size: $sp42;
+        line-height: 150%;
+        letter-spacing: .04em;
+        z-index: 2;
+      }
+
+      ._sub {
+        font-size: $sp16;
+        margin-top: $sp8;
+      }
+    }
+  }
+
+  .fv._hidden {
+    height: 17.222vw;
+    background-image: none;
+    background-color: $white;
+
+    &_title {
+      display: none;
+    }
+  }
+}

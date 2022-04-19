@@ -483,4 +483,112 @@
       }
     }
   }
+
+  .article {
+    position: relative;
+    padding-left: $sp16 !important;
+    padding-right: $sp16 !important;
+  
+    &_description {
+      display: block;
+      margin-top: $sp42;
+  
+      ._left {
+        margin-left: 0;
+  
+        ._item {
+          width: 100%;
+  
+          th {
+            font-size: $sp14;
+            padding: $sp24 0;
+            width: 39.444vw;
+          }
+  
+          th::after {
+            content: "";
+            position: absolute;
+            display: block;
+            top: 50%;
+            right: -0.417vw;
+            transform: translateY(-50%);
+            width: $sp3;
+            height: 50%;
+            border-radius: $sp2;
+          }
+  
+  
+          td {
+            font-size: $sp12;
+            padding-left: $sp28;
+            width: 51.667vw;
+            line-height: 1.8em;
+            word-wrap: break-word;
+          }
+        }
+      }
+  
+      ._right {
+        width: 100%;
+        margin-top: $sp48;
+        text-align: center;
+  
+        ._plan {
+          display: inline-block;
+          @include white-bold;
+          font-size: $sp14;
+          line-height: 2em;
+          padding: $sp8 $sp42;
+          margin: 0 auto;
+  
+        }
+  
+        ._description {
+          text-align: left;
+          font-size: $sp16;
+          line-height: 2em;
+          margin-top: $sp48;
+          padding: $sp12 $sp14;
+        }
+      }
+    }
+  
+    &_pc {
+      margin-top: $sp48;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: $sp24 0;
+    }
+  
+    &_sp {
+      margin-top: $sp48;
+  
+      ._heading {
+        font-size: $sp16;
+      }
+  
+      ._container {
+        margin-top: $sp28;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: $sp16 $sp28;
+      }
+  
+    }
+  
+    .pagenation {
+      margin-top: $sp64;
+      margin-bottom: $sp48;
+  
+      &_container {
+        display: grid;
+        grid-template-columns: 1fr 39.063vw 1fr;
+        background-color: $black;
+  
+        li {
+          font-size: $sp12;
+        }
+      }
+    }
+  }
 }

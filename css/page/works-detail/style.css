@@ -408,4 +408,94 @@
     border-radius: 1.406vw;
     z-index: -1;
   }
+
+  .article {
+    position: relative;
+    padding-left: 4.444vw !important;
+    padding-right: 4.444vw !important;
+  }
+  .article_description {
+    display: block;
+    margin-top: 11.667vw;
+  }
+  .article_description ._left {
+    margin-left: 0;
+  }
+  .article_description ._left ._item {
+    width: 100%;
+  }
+  .article_description ._left ._item th {
+    font-size: 3.889vw;
+    padding: 6.667vw 0;
+    width: 39.444vw;
+  }
+  .article_description ._left ._item th::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: -0.417vw;
+    transform: translateY(-50%);
+    width: 0.833vw;
+    height: 50%;
+    border-radius: 0.556vw;
+  }
+  .article_description ._left ._item td {
+    font-size: 3.333vw;
+    padding-left: 7.778vw;
+    width: 51.667vw;
+    line-height: 1.8em;
+    word-wrap: break-word;
+  }
+  .article_description ._right {
+    width: 100%;
+    margin-top: 13.333vw;
+    text-align: center;
+  }
+  .article_description ._right ._plan {
+    display: inline-block;
+    color: #fff;
+    font-weight: 600;
+    font-size: 3.889vw;
+    line-height: 2em;
+    padding: 2.222vw 11.667vw;
+    margin: 0 auto;
+  }
+  .article_description ._right ._description {
+    text-align: left;
+    font-size: 4.444vw;
+    line-height: 2em;
+    margin-top: 13.333vw;
+    padding: 3.333vw 3.889vw;
+  }
+  .article_pc {
+    margin-top: 13.333vw;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 6.667vw 0;
+  }
+  .article_sp {
+    margin-top: 13.333vw;
+  }
+  .article_sp ._heading {
+    font-size: 4.444vw;
+  }
+  .article_sp ._container {
+    margin-top: 7.778vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4.444vw 7.778vw;
+  }
+  .article .pagenation {
+    margin-top: 17.778vw;
+    margin-bottom: 13.333vw;
+  }
+  .article .pagenation_container {
+    display: grid;
+    grid-template-columns: 1fr 39.063vw 1fr;
+    background-color: #000;
+  }
+  .article .pagenation_container li {
+    font-size: 3.333vw;
+  }
 }

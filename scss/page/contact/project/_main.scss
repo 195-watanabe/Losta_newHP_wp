@@ -463,3 +463,201 @@
     }
   }
 }
+
+// // レスポンシブ
+// // スマホサイズ
+@include mq(sm) {
+  .contact {
+    padding: $sp48 $sp16;
+  
+    .form_container {
+      border: $sp1 solid $black;
+      padding: 0;
+  
+      ._stepBar {
+        width: 100%;
+        margin: $sp48 auto;
+      }
+  
+      ._stepBar li {
+        font-size: $sp16;
+      }
+  
+      ._stepBar li:after {
+        content: "";
+        width: calc(100% - $sp32);
+        height: $sp8;
+        position: absolute;
+        left: calc(-50% + $sp16);
+        top: $sp12;
+      }
+  
+      ._stepBar li span {
+        font-size: $sp14;
+        margin-bottom: $sp8;
+        width: $sp32;
+        line-height: $sp32;
+      }
+    }
+  }
+  
+  .form {
+    padding: 0 $sp28;
+
+    &_txt {
+      padding: 0 $sp28;
+      font-size: $sp14;
+      line-height: 2em;
+      margin-bottom: $sp48;
+    }
+    
+    // サンクスページ
+    &_thanks {
+      text-align: center;
+      padding: 0 $sp28;
+      
+      ._header {
+        margin-top: $sp48;
+        font-size: $sp16;
+        line-height: 1.6em;
+        padding: 0;
+      }
+      
+      ._txt {
+        text-align: left;
+        margin-top: $sp48;
+        font-size: $sp14;
+        margin-bottom: $sp48;
+        line-height: 1.6em;
+        padding: 0;
+      }
+    }
+    
+    &_block {
+      position: relative;
+      margin-bottom: $sp32;
+      font-size: $sp14;
+  
+      ._header {
+        margin-bottom: $sp16;
+        font-size: $sp16;
+  
+        span {
+          color: $red;
+          font-size: $sp12;
+        }
+      }
+  
+      ._body {
+  
+        input[type="text"],
+        input[type="password"],
+        input[type="url"],
+        input[type="tel"],
+        input[type="email"] {
+          box-sizing: border-box;
+          padding: $sp10;
+          font-size: $sp14;
+        }
+  
+        select {
+          padding: $sp10;
+          width: 59.444vw;
+          font-size: $sp14;
+        }
+  
+        textarea {
+          box-sizing: border-box;
+          width: 75.000vw;
+          max-height: 33.333vw;
+          padding: $sp10;
+          font-size: $sp14;
+        }
+      }
+      
+    }
+    
+    &_privacy {
+      box-sizing: border-box;
+      margin-bottom: $sp28;
+      padding: $sp10 $sp12;
+      width: 100%;
+      max-height: 38.889vw;
+      border: $sp1 solid $dGray;
+      font-size: $sp12;
+      line-height: 1.5em;
+  
+      h2 {
+        font-size: $sp14;
+        margin: 2em 0 1em;
+      }
+  
+      h3 {
+        margin: 2em 0 1em;
+      }
+  
+      span {
+        padding-left: 1em;
+      }
+    }
+  
+    p {
+      font-size: $sp12;
+    }
+  
+    &_submit {
+      margin-top: $sp48;
+      margin-bottom: $sp48;
+  
+      ._body {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    }
+  
+    &_btn {
+      position: relative;
+      width: 52.222vw;
+      @include morebtn_white;
+      font-size: $sp16;
+      line-height: 12.222vw;
+      margin: 0 10vw;
+      padding: 0;
+  
+      a {
+        position: absolute;
+        display: block;
+        width: 100%;
+        // height: 100%;
+        // width: 22.5vw;
+        line-height: 12.222vw;
+      }
+    }
+  
+    &_btn:hover {
+      color: $black;
+      background: $yellow;
+    }
+  
+    &_btn._send,
+    &_btn._homeback {
+      font-size: $sp16;
+      line-height: 12.222vw;
+      margin: 0 10vw;
+      padding: 0;
+    }
+  
+    &_btn._send:hover,
+    &_btn._homeback:hover {
+      color: $black;
+      border: $sp1 solid $black;
+      background: $yellow;
+    }
+    
+    &_btn._back {
+      margin-top: $sp18;
+      border: $sp1 solid $black;
+    }
+  }
+}
