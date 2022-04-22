@@ -3,7 +3,7 @@
   position: relative;
   width: 100%;
   height: 39.063vw;
-  background-image: url(../../../img/fv_pic3.jpg);
+  background-image: url(../../../img/fv_pic3-min.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-position: 50% 50%;
@@ -54,7 +54,7 @@
 @media screen and (max-width: 767px) {
   .fv {
     height: 100vh;
-    background-image: url(../../../img/fv_pic8.jpg);
+    background-image: url(../../../img/fv_pic8-min.jpg);
   }
   .fv_title {
     position: fixed;
@@ -536,7 +536,7 @@
   margin: 0;
 }
 .plan_card h4 {
-  font-size: 5vw;
+  font-size: 3.75vw;
   margin: 0 auto;
   padding: 2.188vw 0;
 }
@@ -634,7 +634,7 @@
     padding: 2.344vw;
   }
   .plan_card h4 {
-    font-size: 7.031vw;
+    font-size: 5.729vw;
     margin: 0 auto;
     padding: 2.604vw 0;
   }
@@ -768,7 +768,7 @@
     margin: 0;
   }
   .plan_card h4 {
-    font-size: 15vw;
+    font-size: 11.111vw;
     margin: 0 auto;
     padding: 6.667vw 0;
   }
@@ -789,6 +789,14 @@
     display: block;
     line-height: 1em;
     margin-top: 7.778vw;
+  }
+  .plan_card.basic h3 {
+    display: block;
+    color: #fff;
+    font-weight: 600;
+    font-size: 5.556vw;
+    padding: 4.444vw;
+    margin: 0;
   }
 }
 .support {
@@ -857,7 +865,7 @@
   margin: 0;
 }
 .support_card h4 {
-  font-size: 5vw;
+  font-size: 3.75vw;
   margin: 0 auto;
   padding: 2.188vw 0;
 }
@@ -941,7 +949,7 @@
     margin: 0;
   }
   .support_card h4 {
-    font-size: 7.031vw;
+    font-size: 5.729vw;
     margin: 0 auto;
     padding: 2.604vw 0;
   }
@@ -1023,7 +1031,7 @@
     margin: 0;
   }
   .support_card h4 {
-    font-size: 15vw;
+    font-size: 11.111vw;
     margin: 0 auto;
     padding: 6.667vw 0;
   }

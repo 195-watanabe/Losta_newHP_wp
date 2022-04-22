@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   height: 39.063vw;
-  background-image: url(../../../img/fv_pic2.jpg);
+  background-image: url(../../../img/fv_pic2-min.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -94,6 +94,9 @@
   margin-top: 9.512vw;
   z-index: 2;
 }
+.about_heading br:nth-child(2) {
+  display: none;
+}
 .about_txt {
   font-size: 1.094vw;
   line-height: 2.734vw;
@@ -171,6 +174,9 @@
   .about_heading {
     font-size: 5vw;
     margin-top: 10vw;
+  }
+  .about_heading br:nth-child(2) {
+    display: inline;
   }
   .about_txt {
     font-size: 3.889vw;

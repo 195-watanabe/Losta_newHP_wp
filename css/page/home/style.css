@@ -264,7 +264,7 @@
   font-family: "Lato", sans-serif;
   font-size: 1.25vw;
   text-align: center;
-  transition: 0.2s all;
+  transition: 0.4s all;
   border: 0.078vw solid #fff;
   width: 14.063vw;
   line-height: 3em;
@@ -285,13 +285,14 @@
   border-top: 0.156vw solid #fff;
   border-right: 0.156vw solid #fff;
   transform: translateY(-50%) translateX(-150%) rotate(45deg);
-  transition: 0.2s all;
+  transition: 0.4s all;
 }
 
 .about_morebtn:hover {
   color: #000;
   background-color: #fff;
   border-color: #000;
+  transition: 0.4s all;
 }
 
 .about_morebtn:hover::after {
@@ -558,9 +559,8 @@
   font-family: "Lato", sans-serif;
   font-size: 1.25vw;
   text-align: center;
-  transition: 0.2s all;
+  transition: 0.4s all;
   border: 0.078vw solid #000;
-  font-family: 1.25vw;
   width: 22.422vw;
   line-height: 5vw;
   margin-bottom: 9.512vw;
@@ -579,12 +579,13 @@
   border-top: 0.156vw solid #000;
   border-right: 0.156vw solid #000;
   transform: translateY(-50%) translateX(-150%) rotate(45deg);
-  transition: 0.2s all;
+  transition: 0.4s all;
 }
 .service_morebtn:hover {
   color: #fff;
   background-color: #000;
   border-color: #fff;
+  transition: 0.4s all;
 }
 .service_morebtn:hover::after {
   border-color: #fff;
@@ -821,7 +822,7 @@
   font-family: "Lato", sans-serif;
   font-size: 1.25vw;
   text-align: center;
-  transition: 0.2s all;
+  transition: 0.4s all;
   border: 0.078vw solid #fff;
   font-family: 1.25vw;
   width: 22.422vw;
@@ -842,13 +843,14 @@
   border-top: 0.156vw solid #fff;
   border-right: 0.156vw solid #fff;
   transform: translateY(-50%) translateX(-150%) rotate(45deg);
-  transition: 0.2s all;
+  transition: 0.4s all;
 }
 
 .works_morebtn:hover {
   color: #000;
   background-color: #fff;
   border-color: #000;
+  transition: 0.4s all;
 }
 
 .works_morebtn:hover::after {
@@ -1050,7 +1052,7 @@
   padding-top: 7.813vw;
   padding-left: 10.78vw;
   padding-bottom: 5.938vw;
-  background-image: url(../../../img/topics_pic.jpg);
+  background-image: url(../../../img/topics_pic-min.jpg);
   background-position: 55% 30%;
   overflow: hidden;
 }
@@ -1087,7 +1089,7 @@
   font-family: "Lato", sans-serif;
   font-size: 1.25vw;
   text-align: center;
-  transition: 0.2s all;
+  transition: 0.4s all;
   border: 0.078vw solid #000;
   margin-top: 9.512vw;
   width: 14.141vw;
@@ -1107,12 +1109,13 @@
   border-top: 0.156vw solid #000;
   border-right: 0.156vw solid #000;
   transform: translateY(-50%) translateX(-150%) rotate(45deg);
-  transition: 0.2s all;
+  transition: 0.4s all;
 }
 .topics_morebtn:hover {
   color: #fff;
   background-color: #000;
   border-color: #fff;
+  transition: 0.4s all;
 }
 .topics_morebtn:hover::after {
   border-color: #fff;
@@ -1312,6 +1315,9 @@
   line-height: 2.5vw;
   font-size: 1.094vw;
 }
+.faq_btnarea {
+  text-align: right;
+}
 .faq_btn {
   display: inline-block;
   position: relative;
@@ -1323,7 +1329,7 @@
   font-family: "Lato", sans-serif;
   font-size: 1.25vw;
   text-align: center;
-  transition: 0.2s all;
+  transition: 0.4s all;
   border: 0.078vw solid #fff;
   width: 22.422vw;
   line-height: 4.688vw;
@@ -1334,6 +1340,7 @@
   color: #000;
   background-color: #fff;
   border-color: #000;
+  transition: 0.4s all;
 }
 
 @media screen and (max-width: 1025px) {

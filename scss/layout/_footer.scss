@@ -108,7 +108,7 @@
   }
   
   &_works {
-    background-image: url(../img/footer_pic.jpg);
+    background-image: url(../img/footer_pic-min.jpg);
     background-position: 60% 60%;
     background-size: cover;
     width: 100%;
@@ -194,7 +194,7 @@
         display: inline-block;
         font-size: $pc24;
         font-weight: 700;
-        margin-left: $pc32;
+        margin-left: $pc16;
       }
     }
 
@@ -306,7 +306,7 @@
     
         &-txt {
           font-size: $tb24;
-          margin-left: $tb32;
+          margin-left: $tb16;
         }
       }
     

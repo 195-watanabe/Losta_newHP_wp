@@ -83,7 +83,7 @@
 }
 .pagenation_container ._home {
   color: #fff;
-  background-image: url(../../../img/fv_pic5.jpg);
+  background-image: url(../../../img/fv_pic5-min.jpg);
   background-size: cover;
 }
 .pagenation_container li:hover {
@@ -163,7 +163,7 @@
   }
   .pagenation_container ._home {
     color: #fff;
-    background-image: url(../../../img/fv_pic5.jpg);
+    background-image: url(../../../img/fv_pic5-min.jpg);
     background-size: cover;
   }
   .pagenation_container li:hover {
@@ -178,7 +178,7 @@
   }
   .heading span {
     color: #757575;
-    font-size: 1.25vw;
+    font-size: 4.444vw;
     margin-top: 0.938vw;
   }
 

@@ -189,6 +189,7 @@ a {
 
 button {
   cursor: pointer !important;
+  transition: 0.4s;
 }
 button a {
   position: absolute;
@@ -334,6 +335,12 @@ li {
   width: 5vw;
   height: 5vw;
 }
+.topbtn a {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
 .topbtn a span {
   position: absolute;
   width: 100%;
@@ -368,13 +375,13 @@ li {
 .gnav {
   position: fixed;
   top: 0;
-  left: 0;
+  left: -50%;
   z-index: 1000;
-  transform: translate(-100%);
   background-color: #000;
   transition: 0.6s ease-in-out all;
   width: 51.25vw;
   height: 100vh;
+  overflow: scroll;
 }
 .gnav_logo {
   position: absolute;
@@ -407,22 +414,22 @@ li {
 
 .sns {
   position: absolute;
-  bottom: 5.313vw;
+  top: 49.063vw;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   display: flex;
   justify-content: space-between;
-  width: 6.719vw;
+  width: 7.5vw;
 }
 .sns_item {
-  width: 1.875vw;
+  width: 2.5vw;
 }
 .sns_item:nth-child(1) {
-  width: 2.278vw;
+  width: 3vw;
 }
 
 .gnav._active {
-  transform: translate(0%);
+  transform: translateX(100%);
 }
 
 @media screen and (max-width: 1025px) {
@@ -467,6 +474,10 @@ li {
     top: 4.167vw;
   }
 
+  .gnav._active {
+    transform: translateX(100%);
+  }
+
   .openbtn::after {
     content: "";
     position: absolute;
@@ -501,11 +512,7 @@ li {
 
   .gnav {
     position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    transform: translate(-100%);
-    background-color: #000;
+    left: -100%;
     transition: 0.6s ease-in-out all;
     width: 100vw;
     height: 100vh;
@@ -533,7 +540,7 @@ li {
 
   .sns {
     position: absolute;
-    bottom: 13.021vw;
+    top: 114vw;
     width: 20.313vw;
   }
   .sns_item {
@@ -615,11 +622,6 @@ li {
 
   .gnav {
     position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    transform: translate(-100%);
-    background-color: #000;
     transition: 0.6s ease-in-out all;
     width: 100vw;
     height: 100vh;
@@ -643,8 +645,9 @@ li {
 
   .sns {
     position: absolute;
-    bottom: 13.021vw;
+    top: 151.667vw;
     width: 27.222vw;
+    padding-bottom: 11.111vw;
   }
   .sns_item {
     width: 9.167vw;
@@ -746,7 +749,7 @@ li {
   font-family: "Lato", sans-serif;
   font-size: 1.25vw;
   text-align: center;
-  transition: 0.2s all;
+  transition: 0.4s all;
   border: 0.078vw solid #fff;
   width: 22.422vw;
   line-height: 4.689vw;
@@ -765,12 +768,13 @@ li {
   border-top: 0.156vw solid #fff;
   border-right: 0.156vw solid #fff;
   transform: translateY(-50%) translateX(-150%) rotate(45deg);
-  transition: 0.2s all;
+  transition: 0.4s all;
 }
 .footer .footer_contact:hover ._morebtn {
   color: #000;
   background-color: #fff;
   border-color: #000;
+  transition: 0.4s all;
   transition-delay: 0.4s;
   transition: 1s;
 }
@@ -778,7 +782,7 @@ li {
   border-color: #000;
 }
 .footer_works {
-  background-image: url(../img/footer_pic.jpg);
+  background-image: url(../img/footer_pic-min.jpg);
   background-position: 60% 60%;
   background-size: cover;
   width: 100%;
@@ -828,7 +832,7 @@ li {
   font-family: "Lato", sans-serif;
   font-size: 1.25vw;
   text-align: center;
-  transition: 0.2s all;
+  transition: 0.4s all;
   border: 0.078vw solid #fff;
   width: 22.422vw;
   line-height: 4.689vw;
@@ -845,12 +849,13 @@ li {
   border-top: 0.156vw solid #fff;
   border-right: 0.156vw solid #fff;
   transform: translateY(-50%) translateX(-150%) rotate(45deg);
-  transition: 0.2s all;
+  transition: 0.4s all;
 }
 .footer .works_container ._morebtn:hover {
   color: #000;
   background-color: #fff;
   border-color: #000;
+  transition: 0.4s all;
   background-color: #F1C407;
 }
 .footer .works_container ._morebtn:hover::after {
@@ -877,7 +882,7 @@ li {
   display: inline-block;
   font-size: 1.875vw;
   font-weight: 700;
-  margin-left: 2.5vw;
+  margin-left: 1.25vw;
 }
 .footer_container ._sns {
   display: flex;
@@ -964,7 +969,7 @@ li {
   }
   .footer_container ._logo-txt {
     font-size: 3.125vw;
-    margin-left: 4.167vw;
+    margin-left: 2.083vw;
   }
   .footer_container ._sns {
     display: flex;
@@ -1024,7 +1029,7 @@ li {
     font-family: "Lato", sans-serif;
     font-size: 1.25vw;
     text-align: center;
-    transition: 0.2s all;
+    transition: 0.4s all;
     border: 0.078vw solid #000;
     font-size: 4.444vw;
     width: 52.222vw;
@@ -1035,6 +1040,7 @@ li {
     color: #fff;
     background-color: #000;
     border-color: #fff;
+    transition: 0.4s all;
     background-color: #F1C407;
   }
   .footer .contact_container ._morebtn::after {
@@ -1048,7 +1054,7 @@ li {
     border-top: 0.156vw solid #000;
     border-right: 0.156vw solid #000;
     transform: translateY(-50%) translateX(-150%) rotate(45deg);
-    transition: 0.2s all;
+    transition: 0.4s all;
     width: 2.778vw;
     height: 2.778vw;
     border-width: 0.278vw;

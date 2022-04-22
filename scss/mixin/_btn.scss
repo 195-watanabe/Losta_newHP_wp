@@ -11,7 +11,7 @@
   font-family: $lato;
   font-size: $pc16;
     text-align: center;
-  transition: .2s all;
+  transition: .4s all;
   border: 0.078vw solid $white;
 }
 
@@ -26,7 +26,7 @@
   font-family: $lato;
   font-size: $pc16;
   text-align: center;
-  transition: .2s all;
+  transition: .4s all;
   border: 0.078vw solid $black;
 }
 
@@ -41,7 +41,7 @@
   border-top: 0.156vw solid $white;
   border-right: 0.156vw solid $white;
   transform:translateY(-50%) translateX(-150%) rotate(45deg);
-  transition: .2s all;
+  transition: .4s all;
 }
 
 @mixin morebtn_white-arrow {
@@ -55,17 +55,19 @@
   border-top: 0.156vw solid $black;
   border-right: 0.156vw solid $black;
   transform:translateY(-50%) translateX(-150%) rotate(45deg);
-  transition: .2s all;
+  transition: .4s all;
 }
 
 @mixin morebtn_black-hover {
   color: $black;
   background-color: $white;
   border-color: $black;
+  transition: .4s all;
 }
 
 @mixin morebtn_white-hover {
   color: $white;
   background-color: $black;
   border-color: $white;
+  transition: .4s all;
 }

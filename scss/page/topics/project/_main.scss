@@ -374,7 +374,7 @@
   }
 
   .pager .pagination li {
-    margin: 0 $sp3;
+    margin: 0 $sp2;
     width: 9.444vw;
     height: 9.444vw;
 
@@ -404,30 +404,4 @@
     color: $white;
     background: $black;
   }
-
-  // .pager .pagination li {
-  //   display: none;
-  // }
-
-  // .pager .pagination li.pre,
-  // .pager .pagination li.next {
-  //   display: inline-block;
-  //   width: 40%;
-  //   height: 50px;
-  //   text-align: center;
-  // }
-
-  // .pager .pagination li.pre a,
-  // .pager .pagination li.next a {
-  //   width: 100%;
-  //   text-align: center;
-  // }
-
-  // .pager .pagination li.pre span::after {
-  //   content: "";
-  // }
-
-  // .pager .pagination li.next span::before {
-  //   content: "";
-  // }
 }

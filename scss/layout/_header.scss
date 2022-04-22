@@ -149,6 +149,13 @@
   width: 5vw;
   height: 5vw;
 
+  a {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
   a span {
     position: absolute;
     width: 100%;
@@ -187,13 +194,13 @@
 .gnav {
   position: fixed;
   top: 0;
-  left: 0;
+  left: -50%;
   z-index: 1000;
-  transform: translate(-100%);
    background-color: $black;
   transition: 0.6s ease-in-out all;
   width: 51.25vw;
   height: 100vh;
+  overflow: scroll;
 
   &_logo {
     position: absolute;
@@ -228,24 +235,24 @@
 
 .sns {
   position: absolute;
-  bottom: 5.313vw;
+  top: 49.063vw;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   display: flex;
   justify-content: space-between;
-  width: 6.719vw;
+  width: 7.5vw;
 
   &_item {
-    width: 1.875vw;
+    width: 2.5vw;
   }
   &_item:nth-child(1) {
-    width: 2.278vw;
+    width: 3vw;
   }
 }
 
 // ハンバーガーメニュー展開
 .gnav._active {
-  transform: translate(0%);
+  transform: translateX(100%);
 }
 
 // レスポンシブ
@@ -295,6 +302,11 @@
     }
   }
 
+  // ハンバーガーメニュー展開
+  .gnav._active {
+    transform: translateX(100%);
+  }
+
   .openbtn::after {
     content: "";
     position: absolute;
@@ -335,11 +347,7 @@
   // ハンバーガーメニュー
   .gnav {
     position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    transform: translate(-100%);
-    background-color: $black;
+    left: -100%;
     transition: 0.6s ease-in-out all;
     width: 100vw;
     height: 100vh;
@@ -370,7 +378,7 @@
   
   .sns {
     position: absolute;
-    bottom: $tb100;
+    top: 114vw;
     width: 20.313vw;
   
     &_item {
@@ -465,11 +473,6 @@
   // ハンバーガーメニュー
   .gnav {
     position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    transform: translate(-100%);
-    background-color: $black;
     transition: 0.6s ease-in-out all;
     width: 100vw;
     height: 100vh;
@@ -498,8 +501,9 @@
 
   .sns {
     position: absolute;
-    bottom: $tb100;
+    top: 151.667vw;
     width: 27.222vw;
+    padding-bottom: $sp40;
 
     &_item {
       width: 9.167vw;

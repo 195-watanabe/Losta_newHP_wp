@@ -21,6 +21,10 @@
     line-height: 4.375vw;
     margin-top: $pc122;
     z-index: 2;
+    
+    br:nth-child(2) {
+      display: none;
+    }
   }
 
   &_txt {
@@ -115,6 +119,10 @@
     &_heading {
       font-size: $sp18;
       margin-top: $sp36;
+
+      br:nth-child(2) {
+        display: inline;
+      }
     }
 
     &_txt {

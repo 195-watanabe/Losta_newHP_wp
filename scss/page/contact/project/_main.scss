@@ -624,6 +624,7 @@
       line-height: 12.222vw;
       margin: 0 10vw;
       padding: 0;
+      transition: .4s all;
   
       a {
         position: absolute;
@@ -638,6 +639,7 @@
     &_btn:hover {
       color: $black;
       background: $yellow;
+      transition: .4s all;
     }
   
     &_btn._send,
@@ -646,6 +648,7 @@
       line-height: 12.222vw;
       margin: 0 10vw;
       padding: 0;
+      transition: .4s all;
     }
   
     &_btn._send:hover,
@@ -653,11 +656,13 @@
       color: $black;
       border: $sp1 solid $black;
       background: $yellow;
+      transition: .4s all;
     }
     
     &_btn._back {
       margin-top: $sp18;
       border: $sp1 solid $black;
+      transition: .4s all;
     }
   }
 }

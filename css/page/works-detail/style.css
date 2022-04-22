@@ -178,7 +178,7 @@
 }
 .article .pagenation_container ._home {
   color: #fff;
-  background-image: url(../../../img/fv_pic4.jpg);
+  background-image: url(../../../img/fv_pic4-min.jpg);
   background-size: cover;
 }
 .article .pagenation_container li:hover {
@@ -353,7 +353,7 @@
   }
   .heading span {
     color: #757575;
-    font-size: 1.25vw;
+    font-size: 4.444vw;
     margin-top: 0.938vw;
   }
 
