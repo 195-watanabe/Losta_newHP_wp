@@ -65,7 +65,10 @@
 // スマホサイズ
 @include mq(sm) {
   .fv {
-    height: 100vh;
+    background-size: cover;
+    min-height: 100vh;
+    /* Fallback */
+    min-height: calc(var(--vh, 1vh) * 100);
 
     &_title {
       position: fixed;

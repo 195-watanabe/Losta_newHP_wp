@@ -146,7 +146,14 @@ $(window).on('scroll', function(){
   ScrollTimelineAnime();// 線が伸びる関数を呼ぶ
 });
 
-// ページが読み込まれたらすぐに動かしたい場合の記述
-// $(window).on('load', function(){
-//   ScrollTimelineAnime();// 線が伸びる関数を呼ぶ
-// });
+// CSS変数
+const setFillHeight = () => {
+  const vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+// 画面のサイズ変動があった時に高さを再計算する
+window.addEventListener('resize', setFillHeight);
+
+// 初期化
+setFillHeight();

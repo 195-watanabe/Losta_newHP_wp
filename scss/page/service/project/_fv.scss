@@ -65,7 +65,9 @@
 // スマホサイズ
 @include mq(sm) {
   .fv {
-    height: 100vh;
+    min-height: 100vh;
+    /* Fallback */
+    min-height: calc(var(--vh, 1vh) * 100);
     background-image: url(../../../img/fv_pic8-min.jpg);
 
     &_title {

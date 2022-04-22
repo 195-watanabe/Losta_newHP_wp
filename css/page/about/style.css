@@ -13,7 +13,9 @@
   position: fixed;
   top: 19.531vw;
   left: calc(50% + 4.805vw);
-  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+      -ms-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
   color: #fff;
   font-weight: 600;
   display: inline-block;
@@ -37,7 +39,9 @@
   .fv_title {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
     position: fixed;
     top: 16vw;
     font-size: 4.688vw;
@@ -53,14 +57,18 @@
 }
 @media screen and (max-width: 767px) {
   .fv {
-    height: 100vh;
+    min-height: 100vh;
+    /* Fallback */
+    min-height: calc(var(--vh, 1vh) * 100);
   }
   .fv_title {
     position: fixed;
     top: 50%;
     left: 50%;
     width: 91.111vw;
-    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
+        -ms-transform: translateY(-50%) translateX(-50%);
+            transform: translateY(-50%) translateX(-50%);
     z-index: 2;
   }
   .fv_title ._heading {
@@ -76,7 +84,8 @@
 }
 .about {
   position: relative;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border-bottom: 0.0781vw solid #757575;
   background-color: #fff;
   padding-top: 5vw;
@@ -120,7 +129,8 @@
   height: 37.656vw;
   background-image: url(../../../img/logo_icon_b.png);
   background-size: contain;
-  filter: blur(0.4vw);
+  -webkit-filter: blur(0.4vw);
+          filter: blur(0.4vw);
 }
 
 @media screen and (max-width: 1025px) {
@@ -229,7 +239,9 @@
   display: block;
   top: 50%;
   right: -0.117vw;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
   width: 0.234vw;
   height: 2.969vw;
   background-color: #757575;
@@ -276,7 +288,9 @@
     display: block;
     top: 50%;
     right: -0.117vw;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
     width: 0.26vw;
     height: 5.729vw;
     background-color: #757575;
@@ -328,7 +342,9 @@
     display: block;
     top: 50%;
     right: 0;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
     width: 0.833vw;
     height: 10vw;
     border-radius: 0.833vw;
@@ -379,7 +395,8 @@
 }
 .access_map ._address {
   position: absolute;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   top: 60%;
   right: 0;
   width: 34.531vw;
@@ -391,7 +408,8 @@
 }
 .access_map ._station {
   position: absolute;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   bottom: -3.75vw;
   right: -4vw;
   width: 34.531vw;
@@ -429,7 +447,8 @@
   }
   .access_map ._address {
     position: absolute;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     top: 50%;
     right: 0;
     width: 42vw;
@@ -441,7 +460,8 @@
   }
   .access_map ._station {
     position: absolute;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     bottom: -6.25vw;
     right: -4vw;
     width: 42vw;
@@ -481,7 +501,8 @@
   }
   .access_map ._address {
     position: absolute;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     top: 84%;
     right: 0;
     width: 91.944vw;
@@ -490,7 +511,8 @@
   }
   .access_map ._station {
     position: absolute;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     bottom: -51.667vw;
     right: 0;
     width: 91.944vw;
