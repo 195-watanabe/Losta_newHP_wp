@@ -24,47 +24,48 @@ $(window).scroll(function () {
 
 // TOPのFV
 // eachTextAnimeにappeartextというクラス名を付ける定義
-function EachTextAnimeControl() {
-  $('.fvtxt1').each(function () {
-    var elemPos = $(this).offset().top - 50;
-    var scroll = $(window).scrollTop();
-    var windowHeight = $(window).height();
-    if (scroll >= elemPos - windowHeight) {
-      $(this).addClass("appeartext");
-      $('.fvtxt2').delay(2200).queue(function(){
-    $(this).addClass('appeartext');
-})
+// function EachTextAnimeControl() {
+//   $('.fvtxt1').each(function () {
+//     var elemPos = $(this).offset().top - 50;
+//     var scroll = $(window).scrollTop();
+//     var windowHeight = $(window).height();
+//     if (scroll >= elemPos - windowHeight) {
+//       $(this).addClass("appeartext");
+//       $('.fvtxt2').delay(2200).queue(function(){
+//     $(this).addClass('appeartext');
+// })
 
-    } else {
-      $(this).removeClass("appeartext");
-    }
-  });
-}
+//     } else {
+//       $(this).removeClass("appeartext");
+//     }
+//   });
+// }
 
-$(window).on('load', function () {
-  //spanタグを追加する
-  var element = $(".fv_heading");
-  element.each(function () {
-    var text = $(this).text();
-    var textbox = "";
-    text.split('').forEach(function (t, i) {
-      if (t !== " ") {
-        if (i < 10) {
-          textbox += '<span style="animation-delay:.' + i + 's;">' + t + '</span>';
-        } else {
-          var n = i / 15;
-          textbox += '<span style="animation-delay:' + n + 's;">' + t + '</span>';
-        }
+// $(window).on('load', function () {
+//   //spanタグを追加する
+//   var element = $(".fv_heading");
+//   element.each(function () {
+//     var text = $(this).text();
+//     var textbox = "";
+//     text.split('').forEach(function (t, i) {
+//       if (t !== " ") {
+//         if (i < 10) {
+//           textbox += '<span style="animation-delay:.' + i + 's;">' + t + '</span>';
+//         } else {
+//           var n = i / 15;
+//           textbox += '<span style="animation-delay:' + n + 's;">' + t + '</span>';
+//         }
 
-      } else {
-        textbox += t;
-      }
-    });
-    $(this).html(textbox);
-  });
+//       } else {
+//         textbox += t;
+//       }
+//     });
+//     $(this).html(textbox);
+//   });
 
-  EachTextAnimeControl();/* アニメーション用の関数を呼ぶ*/
-});
+//   EachTextAnimeControl();/* アニメーション用の関数を呼ぶ*/
+// });
+
 
 // TOPのAboutの背景の線の動き
 var $target = $('.about_line');//アニメーションさせたい要素
@@ -145,6 +146,7 @@ function ScrollTimelineAnime(){
 $(window).on('scroll', function(){
   ScrollTimelineAnime();// 線が伸びる関数を呼ぶ
 });
+
 
 // CSS変数
 const setFillHeight = () => {

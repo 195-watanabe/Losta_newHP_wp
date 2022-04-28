@@ -11,6 +11,7 @@
   background-position: center;
   background-size: cover;
   z-index: -1;
+  overflow: hidden;
   
   &::after {
     content: "";
@@ -56,23 +57,23 @@
 
 
   // 文字が１文字ずつ現れるようにする
-  &_heading span {
-    opacity: 0;
-  }
+  // &_heading span {
+  //   opacity: 0;
+  // }
 
-  &_heading.appeartext span {
-    animation:text_anime_on .4s ease-out forwards;
-  }
+  // &_heading.appeartext span {
+  //   animation:text_anime_on .4s ease-out forwards;
+  // }
 
-  @keyframes text_anime_on {
-    0% {
-      opacity: 0;
-    }
+  // @keyframes text_anime_on {
+  //   0% {
+  //     opacity: 0;
+  //   }
   
-    100% {
-      opacity: 1;
-    }
-  }
+  //   100% {
+  //     opacity: 1;
+  //   }
+  // }
 }
 
 // レスポンシブ
@@ -81,14 +82,14 @@
   .fv {
     min-height: 100vh;
     /* Fallback */
-    min-height: calc(var(--vh, 1vh) * 100);
-
+    //min-height: calc(var(--vh, 1vh) * 100);
+    
     &::after {
       height: 100vh;
     }
     
     &_movie {
-      position: fixed;
+      position: absolute;
       top: 0;
       left: 0;
       width: 100vw;
@@ -98,7 +99,7 @@
     }
 
     &_container {
-      position: fixed;
+      position: absolute;
       top: 50%;
       left: 50%;
       width: 91.111vw;
@@ -135,7 +136,7 @@
         color: $white;
         opacity: 0;
         animation: appear 1s ease-in-out forwards;
-        animation-delay: 4.8s;
+        animation-delay: .4s;
       }
       
       span:nth-of-type(2) {
@@ -147,7 +148,7 @@
         background-color: $white;
         height: 33.333vw;
         animation: pathmove 1.8s ease-in-out infinite;
-        animation-delay: 4.8s;
+        animation-delay: .4s;
         opacity: 0;
       }
     }

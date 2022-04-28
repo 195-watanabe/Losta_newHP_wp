@@ -65,14 +65,13 @@
 // スマホサイズ
 @include mq(sm) {
   .fv {
-    // height: 100vh;
+    background:url(https://xs651965.xsrv.jp/img/fv_pic5-min.jpg) no-repeat 15% 50%/cover scroll;
     min-height: 100vh;
     /* Fallback */
-    min-height: calc(var(--vh, 1vh) * 100);
-    background-position: 15% 50%;
+    //min-height: calc(var(--vh, 1vh) * 100);
 
     &_title {
-      position: fixed;
+      position: absolute;
       top: 50%;
       left: 50%;
       width: 91.111vw;
