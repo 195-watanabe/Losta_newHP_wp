@@ -756,7 +756,7 @@
   top: -50px;
   width: 100%;
   height: 25.781vw;
-  overflow: hidden;
+  margin-bottom: 3vw;
 }
 .works_slide {
   position: relative;
@@ -769,6 +769,7 @@
 }
 .works_slider-item img {
   width: 100%;
+  height: 17.5vw;
 }
 .works_slider-item a {
   position: absolute;
@@ -781,12 +782,14 @@
   font-size: 1.094vw;
   line-height: 1.875vw;
   margin-top: 1.094vw;
+  padding: 0 1vw;
 }
 
 .slideitem_txt {
-  font-size: 0.938vw;
-  line-height: 1.563vw;
-  margin-bottom: 1.094vw;
+  font-size: 1.094vw;
+  line-height: 1.5em;
+  margin-top: 0.5vw;
+  padding: 0 1vw 1vw;
 }
 
 .works_btnarea {
@@ -896,6 +899,7 @@
   }
   .works_slider-item img {
     width: 100%;
+    height: 33.073vw;
   }
   .works .slideitem_heading {
     font-size: 2.083vw;
@@ -903,9 +907,9 @@
     margin-top: 1.823vw;
   }
   .works .slideitem_txt {
-    font-size: 1.563vw;
-    line-height: 1.4em;
-    margin-bottom: 2.083vw;
+    font-size: 1.823vw;
+    line-height: 2em;
+    margin-bottom: 1.823vw;
   }
   .works_morebtn {
     font-size: 2.083vw;
@@ -958,15 +962,14 @@
     position: relative;
     margin-top: 7.778vw;
     background-color: #fff;
-    padding-bottom: 65.278vw;
-    margin-bottom: 13vw;
+    padding-bottom: 74vw;
+    margin-bottom: 13.333vw;
   }
   .works_slidewrapper {
     position: absolute;
     top: 0;
     width: 100%;
-    height: 65.278vw;
-    overflow: hidden;
+    height: 163.333vw;
   }
   .works_slide {
     position: relative;
@@ -979,6 +982,7 @@
   }
   .works_slider-item img {
     width: 100%;
+    height: 50vw;
   }
   .works_slider-item a {
     position: absolute;
@@ -992,9 +996,9 @@
     margin-top: 2.778vw;
   }
   .works .slideitem_txt {
-    font-size: 3.889vw;
+    font-size: 3.333vw;
     line-height: 1.5em;
-    margin-bottom: 2.778vw;
+    margin: 1.389vw 0 2.778vw;
   }
   .works_btnarea {
     padding-bottom: 0;

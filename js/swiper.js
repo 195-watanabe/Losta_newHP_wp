@@ -33,6 +33,7 @@ var swiper = new Swiper('.swiper-container', {
 var swiper = new Swiper('._planSp', {
   slidesPerView: 1,
   loop: true,
+  initialSlide: 0,
   loopedSlides: 2,
   speed: 1200,
   autoplay: {
@@ -40,8 +41,6 @@ var swiper = new Swiper('._planSp', {
       disableOnInteraction: false,
     },
   spaceBetween: 33,
-  initialSlide: 0,
-  loopedSlides: 2,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',

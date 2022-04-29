@@ -1,4 +1,4 @@
-.fv {
+.fv._works {
   position: relative;
   width: 100%;
   height: 39.063vw;
@@ -9,7 +9,7 @@
   background-size: cover;
   z-index: -1;
 }
-.fv_title {
+.fv._works_title {
   position: fixed;
   top: 19.531vw;
   left: calc(50% + 4.805vw);
@@ -24,17 +24,17 @@
   letter-spacing: 0.06em;
   z-index: 1;
 }
-.fv_title ._heading {
+.fv._works_title ._heading {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
 }
-.fv_title ._sub {
+.fv._works_title ._sub {
   font-size: 1.25vw;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
   margin-top: 2.5vw;
 }
 
 @media screen and (max-width: 1025px) {
-  .fv_title {
+  .fv._works_title {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -42,22 +42,22 @@
     top: 16vw;
     font-size: 4.688vw;
   }
-  .fv_title ._heading {
+  .fv._works_title ._heading {
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
   }
-  .fv_title ._sub {
+  .fv._works_title ._sub {
     font-size: 2.083vw;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
     margin-top: 3.125vw;
   }
 }
 @media screen and (max-width: 767px) {
-  .fv {
+  .fv._works {
     background: url(https://xs651965.xsrv.jp/img/fv_pic4-min.jpg) no-repeat center/cover scroll;
     min-height: 100vh;
     /* Fallback */
   }
-  .fv_title {
+  .fv._works_title {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -65,13 +65,13 @@
     transform: translateY(-50%) translateX(-50%);
     z-index: 2;
   }
-  .fv_title ._heading {
+  .fv._works_title ._heading {
     font-size: 11.667vw;
     line-height: 150%;
     letter-spacing: 0.04em;
     z-index: 2;
   }
-  .fv_title ._sub {
+  .fv._works_title ._sub {
     font-size: 4.444vw;
     margin-top: 2.222vw;
   }
@@ -100,15 +100,27 @@
   gap: 1.25vw 2.5vw;
   padding: 5vw 0;
 }
-.work_container ._item {
+.work_container ._item,
+.work_container li {
   border: 0.0781vw solid #000;
   text-align: center;
   font-size: 1.25vw;
   font-weight: 700;
   line-height: 3.594vw;
 }
-.work_container ._item.selected {
+.work_container ._item a,
+.work_container li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.work_container .selected,
+.work_container .current-menu-item {
   background-color: #000;
+  color: #fff;
+}
+.work_container .selected a,
+.work_container .current-menu-item a {
   color: #fff;
 }
 .work_article {
@@ -177,6 +189,20 @@
   height: 3.125vw;
   text-align: center;
   position: relative;
+  border: 0.0781vw solid #000;
+}
+.pager .pagination li span {
+  vertical-align: middle;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: table;
+  color: #757575;
+  text-decoration: none;
+  line-height: 3.125vw;
 }
 
 .pager .pagination li a {
@@ -186,7 +212,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  border: 0.0781vw solid #000;
   text-align: center;
   display: table;
   color: #757575;
@@ -194,7 +219,7 @@
   line-height: 3.125vw;
 }
 
-.pager .pagination li a span {
+.pager .pagination li span {
   display: table-cell;
   vertical-align: middle;
 }
@@ -209,7 +234,7 @@
   background: #F1C407;
 }
 
-.pager .pagination li a.active {
+.pager .pagination li.active a {
   color: #fff;
   background: #000;
 }
@@ -331,6 +356,7 @@
     height: 4.167vw;
     text-align: center;
     position: relative;
+    border: 0.0781vw solid #000;
   }
 
   .pager .pagination li a {
@@ -340,7 +366,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-    border: 0.0781vw solid #000;
     text-align: center;
     display: table;
     color: #757575;
@@ -441,7 +466,7 @@
     background: #F1C407;
   }
 
-  .pager .pagination li a.active {
+  .pager .pagination li.active a {
     color: #fff;
     background: #000;
   }

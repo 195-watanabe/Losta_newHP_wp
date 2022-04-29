@@ -98,98 +98,7 @@
   }
 }
 
-// ページネーション
-.pager {
-  margin-bottom: $pc100;
-  font-size: $pc16;
-}
 
-.pager ul.pagination {
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-
-.pager .pagination li {
-  display: inline;
-  margin: 0 0.391vw;
-  display: inline-block;
-  background-color: $white;
-  width: 3.125vw;
-  height: 3.125vw;
-  text-align: center;
-  position: relative;
-
-}
-
-.pager .pagination li a {
-  vertical-align: middle;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: $pc1 solid $black;
-  text-align: center;
-  display: table;
-  color: $dGray;
-  text-decoration: none;
-  line-height: 3.125vw;
-}
-
-.pager .pagination li a span {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.pager .pagination .pre,
-.pager .pagination .next {
-  padding: 0 $pc24;
-}
-
-.pager .pagination li a:hover {
-  color: $white;
-  background: $yellow;
-}
-
-// .pager .pagination li a:hover,
-.pager .pagination li a.active {
-  color: $white;
-  background: $black;
-}
-
-/* Text meant only for screen readers. */
-.screen-reader-text {
-  border: 0;
-  clip: rect(1px, 1px, 1px, 1px);
-  clip-path: inset(50%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute !important;
-  width: 1px;
-  word-wrap: normal !important;
-  /* Many screen reader and browser combinations announce broken words as they would appear visually. */
-}
-
-.screen-reader-text:focus {
-  background-color: #eee;
-  clip: auto !important;
-  clip-path: none;
-  color: #444;
-  display: block;
-  font-size: 1em;
-  height: auto;
-  left: 5px;
-  line-height: normal;
-  padding: 15px 23px 14px;
-  text-decoration: none;
-  top: 5px;
-  width: auto;
-  z-index: 100000;
-  /* Above WP toolbar. */
-}
 
 // レスポンシブ
 // タブレットサイズ
@@ -262,49 +171,8 @@
       }
     }
   }
-
-  .pager {
-    margin-bottom: $tb100;
-    font-size: $tb16;
-  }
-
-  .pager .pagination li {
-    display: inline;
-    margin: 0 $tb5;
-    display: inline-block;
-    background-color: $white;
-    width: $tb32;
-    height: $tb32;
-    text-align: center;
-    position: relative;
-
-  }
-
-  .pager .pagination li a {
-    vertical-align: middle;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: $pc1 solid $black;
-    text-align: center;
-    display: table;
-    color: $dGray;
-    text-decoration: none;
-    line-height: 2em;
-  }
-
-  .pager .pagination li a span {
-    display: table-cell;
-    vertical-align: middle;
-  }
-
-  .pager .pagination .pre,
-  .pager .pagination .next {
-    padding: 0 $tb24;
-  }
 }
+
 
 // // レスポンシブ
 // // スマホサイズ
@@ -368,40 +236,5 @@
 
   }
 
-  .pager {
-    margin-bottom: $sp48;
-    font-size: $sp14;
-  }
-
-  .pager .pagination li {
-    margin: 0 $sp2;
-    width: 9.444vw;
-    height: 9.444vw;
-
-  }
-
-  .pager .pagination li a {
-    line-height: 9.444vw;
-  }
-
-  .pager .pagination li a span {
-    display: table-cell;
-    vertical-align: middle;
-  }
-
-  .pager .pagination .pre,
-  .pager .pagination .next {
-    padding: 0 $sp16;
-  }
-
-  .pager .pagination li a:hover {
-    color: $white;
-    background: $yellow;
-  }
-
-  // .pager .pagination li a:hover,
-  .pager .pagination li a.active {
-    color: $white;
-    background: $black;
-  }
+  
 }

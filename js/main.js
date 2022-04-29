@@ -86,37 +86,37 @@ $(window).on('scroll', function() {//スクロールしたとき
 }).trigger('scroll');
 
 // Google Map
-function initMap() {
-  var latlng = new google.maps.LatLng( 35.55330126959252, 139.61958645714833 );//中心の緯度, 経度
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 18,//ズームの調整
-    center: latlng,//上で設定した中心
-    streetViewControl: false,
-    mapTypeControl: false,
-    zoomControl: false,
-    fullscreenControl: false,
-  });
+// function initMap() {
+//   var latlng = new google.maps.LatLng( 35.55330126959252, 139.61958645714833 );//中心の緯度, 経度
+//   var map = new google.maps.Map(document.getElementById('map'), {
+//     zoom: 18,//ズームの調整
+//     center: latlng,//上で設定した中心
+//     streetViewControl: false,
+//     mapTypeControl: false,
+//     zoomControl: false,
+//     fullscreenControl: false,
+//   });
   
-  //マーカーの設定
-  var marker = new google.maps.Marker({
-    position: latlng,
-    map: map,
-    icon: new google.maps.MarkerImage(
-      '../img/icon_map.png',//マーカー画像URL
-      new google.maps.Size(80, 80),//マーカー画像のサイズ
-      new google.maps.Point(0, 0),//マーカー画像表示の起点（変更しない）
-    ),  
-  });
-  //彩度の設定
-var mapStyle = [{
-    "stylers": [{
-    "saturation": -100 //彩度を無しにしている
-}]
-}];
-var mapType = new google.maps.StyledMapType(mapStyle);
-    map.mapTypes.set( 'GrayScaleMap', mapType);
-    map.setMapTypeId( 'GrayScaleMap' );
-}
+//   //マーカーの設定
+//   var marker = new google.maps.Marker({
+//     position: latlng,
+//     map: map,
+//     icon: new google.maps.MarkerImage(
+//       '<?php echo esc_url( get_template_directory_uri() ); ?>/img/icon_map.png',//マーカー画像URL
+//       new google.maps.Size(80, 80),//マーカー画像のサイズ
+//       new google.maps.Point(0, 0),//マーカー画像表示の起点（変更しない）
+//     ),  
+//   });
+//   //彩度の設定
+// var mapStyle = [{
+//     "stylers": [{
+//     "saturation": -100 //彩度を無しにしている
+// }]
+// }];
+// var mapType = new google.maps.StyledMapType(mapStyle);
+//     map.mapTypes.set( 'GrayScaleMap', mapType);
+//     map.setMapTypeId( 'GrayScaleMap' );
+// }
 
 //線が伸びるための設定を関数でまとめる
 function ScrollTimelineAnime(){
