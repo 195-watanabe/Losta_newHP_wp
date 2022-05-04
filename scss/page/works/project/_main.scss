@@ -20,37 +20,45 @@
   }
 
 
-  &_container {
+  &_content {
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: $pc16 $pc32;
+    height: 114.875vw;
+    position: relative;
+    clear: both;
+    z-index: 1;
     padding: $pc64 0;
     
-    ._item,
-    li {
+    ._menu {
+      box-sizing: border-box;
+      display:block;
+      width: 10.82vw;
       border: $pc1 solid $black;
       text-align: center;
       font-size: $pc16;
       font-weight: 700;
       line-height: 3.594vw;
+      float:left;
+      list-style:none;
+      cursor: pointer;
+
       
-      a {
-        display: block;
-        width: 100%;
-        height: 100%;
-      }
-    }
-    
-    .selected,
-    .current-menu-item{
-      background-color: $black;
-      color: $white;
-      
-      a {
+      &._active,
+      &._hover {
+        background-color: $black;
         color: $white;
       }
     }
+
+    .mr {
+      margin-right: $pc32;
+    }
+  }
+
+  .tabcontent {
+    width: 100%;
+    position: absolute;
+    top: 13.594vw;
+    left: 0;
   }
 
   &_article {
@@ -65,6 +73,13 @@
     padding-bottom: $pc14;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.12);
     transition: .2s;
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding-bottom: $pc14;
+    }
     
     img {
       width: 34.267vw;
@@ -85,9 +100,11 @@
       line-height: 1.8em;
       margin-top: $pc14;
       margin-left: $pc14;
-
+      font-size: $pc14;
+      
       span {
         font-size: 0.938vw;
+        // font-size: $pc14;
       }
     }
 
@@ -102,82 +119,58 @@
   }
 
   &_item:hover {
-    opacity: .8;
+    opacity: .8 !important;
     box-shadow: none;
   }
 }
 
 // ページネーション
-.pager {
+.pagination {
+  width: 100%;
+  position: absolute;
   margin-bottom: $pc100;
-  font-size: $pc16;
-}
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  
 
-.pager ul.pagination {
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-
-.pager .pagination li {
-  display: inline;  
-  margin: 0 0.391vw;
-  display: inline-block;
-  background-color: $white;
-  width: 3.125vw;
-  height: 3.125vw;
-  text-align: center;
-  position: relative;
-  border: $pc1 solid $black;
-
-  span {
-    vertical-align: middle;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  a {
+    transition: .2s;
+    font-size: $pc16;
     text-align: center;
-    display: table;
-    color: $dGray;
-    text-decoration: none;
     line-height: 3.125vw;
+    margin: 0 0.391vw;
+    display: inline-block;
+    background-color: $white;
+    // height: 3.125vw;
+    position: relative;
+    border: $pc1 solid $black;
+    color: $dGray;
+    transition: .2s;
+    padding: 0 1.115vw;
   }
   
-}
-
-.pager .pagination li a {
-  vertical-align: middle;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  display: table;
-  color: $dGray;
-  text-decoration: none;
-  line-height: 3.125vw;
-}
-
-.pager .pagination li  span {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.pager .pagination .pre,
-.pager .pagination  .next{
-  padding: 0 $pc24;
-}
-
-.pager .pagination li a:hover{
-  color: $white;
-  background: $yellow;
-}
-// .pager .pagination li a:hover,
-.pager .pagination li.active a {
-  color: $white;
-  background: $black;
+  .disabled {
+    opacity: 0;
+  }
+  
+  a:hover{
+    color: $white;
+    background: $yellow;
+  }
+  
+  .active {
+    a {
+      color: $white;
+      background-color: $black;
+    }
+    
+    a:hover {
+      cursor: default !important;
+      background: $black;
+    }
+  }
+  
 }
 
 /* Text meant only for screen readers. */
@@ -217,7 +210,6 @@
 // タブレットサイズ
 @include mq(lg) {
   .work {
-    padding-top: $tb20;
     padding-right: 5.781vw;
 
     &::before {
@@ -230,33 +222,57 @@
       background-color: $dGray;
     }
 
-    &_container {
+    &_content {
       width: 100%;
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: $tb9 $tb14;
-      padding: $tb20 0;
+      height: 136.875vw;
+      position: relative;
+      clear: both;
+      z-index: 1;
+      padding: $pc64 0;
+      // display: grid;
+      // grid-template-columns: repeat(6, 1fr);
+      // gap: $pc16 $pc32;
+      // padding: $pc64 0;
     
-      ._item {
+      ._menu {
+        box-sizing: border-box;
+        display: block;
+        width: 12.65vw;
         border: $tb1 solid $black;
+        text-align: center;
         font-size: $tb14;
+        font-weight: 700;
         line-height: 2.4em;
+        float: left;
+        list-style: none;
+        cursor: pointer;
+    
+    
+        &._active,
+        &._hover {
+          background-color: $black;
+          color: $white;
+        }
       }
-    }
-
-    &_article {
-      display: grid;
-      padding: $tb80 $tb16 $tb44;
-      grid-template-columns: repeat(2, 1fr);
-      gap: $tb36 $tb18;
+    
+      .mr {
+        margin-right: $pc32;
+      }
     }
     
     &_item {
       display: inline-block;
       padding-bottom: $tb12 ;
-    
+      
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding-bottom: $tb12 ;
+      }
+  
       img {
-        width: 40vw;
+        width: 100%;
         height: 22vw;
         object-fit: cover;
       }
@@ -266,76 +282,91 @@
         justify-content: space-between;
         align-items: flex-end;
         font-weight: 700;
-        font-size: $pc14;
+        font-size: $tb14;
       }
     
       ._left {
-        width: 19.844vw;
-        line-height: 1.8em;
-        margin-top: $pc14;
-        margin-left: $pc14;
-    
+        width: 24.844vw;
+        line-height: 1.6em;
+        margin-top: $tb14;
+        margin-left: $tb14;
+        font-size: $tb14;
+        
         span {
-          font-size: 0.938vw;
+          margin-top: $tb14;
+          font-size: $tb12;
         }
       }
     
       ._right {
         width: 9.063vw;
         color: $dGray;
-        border: $pc1 solid $dGray;
+        border: $tb1 solid $dGray;
         text-align: center;
-        line-height: $pc32;
-        margin-right: $pc14;
+        font-size: $tb12;
+        line-height: 2.4em;
+        margin-right: $tb14;
       }
     }
-    
+  
     &_item:hover {
-      opacity: .8;
+      opacity: .8 !important;
       box-shadow: none;
+    }
+
+
+    &_article {
+      display: grid;
+      padding: $tb64 0;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4.219vw 3.906vw;
     }
   }
 
-  .pager {
-    margin-bottom: $tb100;
-    font-size: $tb16;
-  }
-  
-  .pager .pagination li {
-    display: inline;
-    margin: 0 $tb5;
-    display: inline-block;
-    background-color: $white;
-    width: $tb32;
-    height: $tb32;
-    text-align: center;
-    position: relative;
-    border: $pc1 solid $black;
-  
-  }
-  
-  .pager .pagination li a {
-    vertical-align: middle;
-    position: absolute;
-    top: 0;
-    left: 0;
+  // ページネーション
+  .pagination {
     width: 100%;
-    height: 100%;
-    text-align: center;
-    display: table;
-    color: $dGray;
-    text-decoration: none;
-    line-height: 2em;
-  }
+    position: absolute;
+    margin-bottom: $tb100;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
   
-  .pager .pagination li a span {
-    display: table-cell;
-    vertical-align: middle;
-  }
   
-  .pager .pagination .pre,
-  .pager .pagination .next {
-    padding: 0 $tb24;
+    a {
+      font-size: $tb16;
+      text-align: center;
+      line-height: 2em;
+      margin: 0 0.42vw;
+      display: inline-block;
+      background-color: $white;
+      position: relative;
+      border: $tb1 solid $black;
+      color: $dGray;
+      transition: .2s;
+      padding: 0 1.2vw;
+    }
+  
+    .disabled {
+      opacity: 0;
+    }
+  
+    a:hover {
+      color: $white;
+      background: $yellow;
+    }
+  
+    .active {
+      a {
+        color: $white;
+        background-color: $black;
+      }
+  
+      a:hover {
+        cursor: default !important;
+        background: $black;
+      }
+    }
   }
 }
 
@@ -344,37 +375,67 @@
 @include mq(sm) {
   .work {
     box-sizing: border-box;
-    padding-top: $sp24;
     padding-left: $sp16 !important;
     padding-right: $sp16 !important;
 
     &::before {
-      top: 61.111vw ;
+      top: 50vw ;
     }
 
-    &_container {
+    &_content {
       width: 100%;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: $sp12 $sp16;
-      padding: $sp12 0;
+      height: 598vw;
+      padding: 5vw 0 $sp48;
+      position: relative;
+      clear: both;
+      z-index: 1;
     
-      ._item {
+      ._menu {
+        box-sizing: border-box;
+        display: block;
+        width: 44%;
         border: $sp1 solid $black;
         font-size: $sp16;
-        line-height: 12.500vw;
+        margin: 0 $sp16 $sp10;
+        margin-right: 0;
+    
+    
+        &._active,
+        &._hover {
+          background-color: $black;
+          color: $white;
+        }
       }
+    
+      .mr {
+        margin-right: 0;
+      }
+    }
+
+    .tabcontent {
+      width: 100%;
+      position: absolute;
+      top: 45vw;
+      left: 0;
     }
 
     &_article {
       display: grid;
-      padding: $sp48 0;
+      padding: $sp48 0 $sp32;
       grid-template-columns: repeat(1, 1fr);
-      gap: $sp48 0;
+      gap: $sp24 0;
     }
     
     &_item {
       display: inline-block;
+      padding-bottom: $sp14;
+      
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding-bottom: $sp14;
+      }
     
       img {
         width: 100%;
@@ -390,8 +451,10 @@
         width: 55.556vw;
         margin-top: $sp12;
         margin-left: $sp14;
-    
+        font-size: $sp14;
+        
         span {
+          margin-top: $sp12;
           font-size: $sp12;
         }
       }
@@ -404,40 +467,45 @@
     }
   }
 
-  .pager {
-    margin-bottom: $sp48;
-    font-size: $sp14;
-  }
+  // ページネーション
+  .pagination {
+    position: absolute;
+    margin-bottom: $sp32;
   
-  .pager .pagination li {
-    margin: 0 $sp2;
-    width: 9.444vw;
-    height: 9.444vw;
   
-  }
+    a {
+      font-size: $sp14;
+      text-align: center;
+      line-height: 2em;
+      margin: 0 $sp3;
+      display: inline-block;
+      background-color: $white;
+      position: relative;
+      border: $tb1 solid $black;
+      color: $dGray;
+      transition: .2s;
+      padding: 0 $sp10;
+    }
   
-  .pager .pagination li a {
-    line-height: 9.444vw;
-  }
+    .disabled {
+      opacity: 0;
+    }
   
-  .pager .pagination li a span {
-    display: table-cell;
-    vertical-align: middle;
-  }
+    a:hover {
+      color: $white;
+      background: $yellow;
+    }
   
-  .pager .pagination .pre,
-  .pager .pagination .next {
-    padding: 0 $sp16;
-  }
+    .active {
+      a {
+        color: $white;
+        background-color: $black;
+      }
   
-  .pager .pagination li a:hover {
-    color: $white;
-    background: $yellow;
-  }
-  
-  // .pager .pagination li a:hover,
-  .pager .pagination li.active a {
-    color: $white;
-    background: $black;
+      a:hover {
+        cursor: default !important;
+        background: $black;
+      }
+    }
   }
 }

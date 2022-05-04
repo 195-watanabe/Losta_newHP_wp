@@ -2,7 +2,7 @@
 @use "../../../setting"as *;
 @use "../../../mixin"as *;
 
-.fv._works {
+.fv {
   position: relative;
   width: 100%;
   height: 39.063vw;
@@ -40,7 +40,7 @@
 }
 
 @include mq(lg) {
-  .fv._works {
+  .fv {
 
     &_title {
       @include ab_center_rl;
@@ -64,7 +64,7 @@
 // レスポンシブ
 // スマホサイズ
 @include mq(sm) {
-  .fv._works {
+  .fv {
     background:url(https://xs651965.xsrv.jp/img/fv_pic4-min.jpg) no-repeat center/cover scroll;
     min-height: 100vh;
     /* Fallback */

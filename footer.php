@@ -36,10 +36,13 @@
   <?php wp_footer(); ?>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="<?php echo get_template_directory_uri();?>/js/main.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="<?php echo get_template_directory_uri();?>/js/swiper.js"></script>
-  <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/smoothScroll.js"></script>
+    <script src="<?php echo get_template_directory_uri();?>/js/main.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="<?php echo get_template_directory_uri();?>/js/swiper.js"></script>
+    <?php if ( !is_category() ): ?>
+      <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/smoothScroll.js"></script>
+    <?php endif; ?>
+    <script src="<?php echo get_template_directory_uri();?>/js/paginathing.min.js"></script>
   </body>
   
   </html>

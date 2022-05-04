@@ -31,13 +31,20 @@
   <?php if ( is_page('service') ): ?>
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/page/service/style.css"></link>
   <?php endif; ?>
-  <?php if ( is_category() ): ?>
+  <?php if ( is_category('works') ): ?>
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/page/works/style.css"></link>
-  <?php endif; ?>
-  <?php if ( is_category() ): ?>
+  <?php elseif ( is_category('topics') ): ?>
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/page/topics/style.css"></link>
-  <?php endif; ?>
-  <?php if ( is_page('contact') ): ?>
+  <?php 
+  $post = $wp_query->post;
+  elseif ( in_category(6) || post_is_in_descendant_category(6)): ?> 
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/page/works-detail/style.css"></link>
+    <?php 
+  $post = $wp_query->post;
+  elseif ( in_category(5) || post_is_in_descendant_category(5)): ?> 
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/page/topics-detail/style.css"></link>
+    <?php endif; ?> 
+    <?php if ( is_page('contact') ): ?>
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/page/contact/style.css"></link>
   <?php endif; ?>
   <link rel="preconnect" href="https://fonts.googleapis.com">

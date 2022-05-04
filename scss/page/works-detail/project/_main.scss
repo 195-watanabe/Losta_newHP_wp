@@ -21,6 +21,14 @@
   }
 }
 
+.title {
+  font-size: $pc28;
+  text-align: center;
+  line-height: 1.4em;
+  padding: 0 20%;
+  padding-top: $pc48;
+}
+
 .fv {
   position: relative;
   width: 100%;
@@ -59,8 +67,8 @@
   &_img {
     position: absolute;
     top: $pc64;
-    right: $pc122;
-    width: 66.953vw;
+    right: 17.5vw;
+    width: 58.359vw;
     z-index: 2;
     
     &::after {
@@ -74,6 +82,41 @@
       filter: blur($pc18);
       border-radius: $pc18;
       z-index: -1;
+    }
+    
+    .thumbnail_pc {
+      position: absolute;
+      top: $pc28;
+      right: 3.125vw;
+      width: 52.734vw ;
+      height: 30.55vw;
+      z-index: 3;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .thumbnail_sp {
+      position: absolute;
+      top: 19.5vw;
+      right: -$pc100;
+      position: absolute;
+      right: -$pc100;
+      width: 14.063vw;
+      height: 28.125vw;
+      z-index: 4;
+      
+      .wp-post-image {
+        position: absolute;
+        top: 4.688vw;
+        right: 0.781vw;
+        width: 12.509vw;
+        height: 19.203vw;
+        object-fit: cover;
+      }
     }
   }
 }
@@ -188,32 +231,62 @@
   .pagenation {
     margin-top: $pc100;
     margin-bottom: $pc64;
-
+    
     &_container {
+      box-sizing: border-box;
       display: grid;
       grid-template-columns: 1fr 39.063vw 1fr;
-      background-color: $black;
-
+      // background-color: $black;
+      
       li {
         height: 14.297vw;
-        background-color: $white;
         text-align: center;
-        font-size: $pc14;
-        font-weight: 700;
-        line-height: 14.297vw;
-        border: $pc1 solid $black;
         transition: .2s;
-      }
+        background-color: $white;
+        
+        a {
+          transition: .2s;
+          font-size: $pc14;
+          font-weight: 700;
+          line-height: 14.297vw;
+          display: block;
+          width: 100%;
+          height: 100%;
+          border: $pc1 solid $black;
+        }
+        
+        .hidden {
+          border: none;
+          color: $white;
+          cursor: default !important;
+        }
 
+        .hidden:hover {
+          background-color: $white;
+        }
+        
+        a:hover {
+          background-color: $yellow;
+        }
+      }
+      
       ._home {
+        border: $pc1 solid $black;
         color: $white;
         background-image: url(../../../img/fv_pic4-min.jpg);
         background-size: cover;
+        
+        a:hover {
+          background-color: transparent;
+          background-image: url(../../../img/fv_pic4-min.jpg);
+          background-size: cover;
+        }
       }
 
-      li:hover {
-        opacity: .8;
+      ._home:hover {
+        opacity: .7;
       }
+
     }
   }
 }
@@ -230,6 +303,13 @@
       font-size: $tb14;
       margin-top: 0.938vw;
     }
+  }
+
+  .title {
+    font-size: $tb28;
+    text-align: center;
+    padding: 0 8%;
+    padding-top: $tb48;
   }
 
   .fv {
@@ -277,6 +357,39 @@
         filter: blur($pc18);
         border-radius: $pc18;
         z-index: -1;
+      }
+
+      .thumbnail_pc {
+        position: absolute;
+        top: $tb24;
+        right: 4vw;
+        width: 62vw;
+        height: 36.5vw;
+        z-index: 3;
+      
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      
+      .thumbnail_sp {
+        position: absolute;
+        top: 29.8vw;
+        right: -$tb40;
+        width: 14.063vw;
+        height: 28.125vw;
+        z-index: 4;
+      
+        .wp-post-image {
+          position: absolute;
+          top: 4.688vw;
+          right: 0.781vw;
+          width: 12.509vw;
+          height: 19.203vw;
+          object-fit: cover;
+        }
       }
     }
   }
@@ -425,6 +538,14 @@
     }
   }
 
+  .title {
+    font-size: $sp20;
+    line-height: 1.8em;
+    text-align: center;
+    padding: 0 4% $sp36;
+    padding-top: $sp36;
+  }
+
   .fv {
     position: relative;
     width: 100%;
@@ -481,6 +602,39 @@
         border-radius: $pc18;
         z-index: -1;
       }
+
+      .thumbnail_pc {
+        position: absolute;
+        top: $sp12;
+        right: $sp36;
+        width: 80vw;
+        height: 48vw;
+        z-index: 3;
+      
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      
+      .thumbnail_sp {
+        position: absolute;
+        top: 34.7vw;
+        right: $sp8;
+        width: 20vw;
+        height: 28.125vw;
+        z-index: 4;
+      
+        .wp-post-image {
+          position: absolute;
+          top: 6.6vw;
+          right: 1vw;
+          width: 17.98vw;
+          height: 27vw;
+          object-fit: cover;
+        }
+      }
     }
   }
 
@@ -521,7 +675,7 @@
           td {
             font-size: $sp12;
             padding-left: $sp28;
-            width: 51.667vw;
+            width: 47.667vw;
             line-height: 1.8em;
             word-wrap: break-word;
           }
@@ -558,6 +712,10 @@
       display: grid;
       grid-template-columns: repeat(1, 1fr);
       gap: $sp24 0;
+
+      img {
+        height: 100%;
+      }
     }
   
     &_sp {

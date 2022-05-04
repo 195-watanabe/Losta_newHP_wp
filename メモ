@@ -1,46 +1,9 @@
-    <ul class = "work_article">
-      <?php query_posts('posts_per_page=2'); ?>
-      <?php if(have_posts()): while(have_posts()):the_post(); ?>
-        <a href="<?php the_permalink(); ?>">
-            <li class="work_item">
-              <?php if(has_post_thumbnail()): ?>
-              <?php the_post_thumbnail( 'large',  array("alt" => get_the_title())); ?>
-              <?php endif; ?>
-              <div class="_container">
-                <p class="_left">
-                  <!-- 記事タイトル -->
-                  <span>
-                    <?php
-                  if(mb_strlen($post->post_title, 'UTF-8')>15){
-                    $title= mb_substr($post->post_title, 0, 15, 'UTF-8');
-                    echo $title.'……';
-                  }else{
-                    echo $post->post_title;
-                  }
-                  ?>
-                  </span><br>
-                  <!-- 記事本文 -->
-                  <?php
-                  if(mb_strlen($post->post_content,'UTF-8')>25){
-                    $content= str_replace('\n', '', mb_substr(strip_tags($post-> post_content), 0, 25,'UTF-8'));
-                    echo $content.'…';
-                  }else{
-                    echo str_replace('\n', '', strip_tags($post->post_content));
-                  }
-                  ?>
-                </p>
-                <div class="_right">
-                  <?php
-                    $cats = get_the_category();
-                    foreach($cats as $cat){
-                    if ( 6 === $cat->parent ) {
-                    echo esc_html( $cat->cat_name );
-                    }
-                    }
-                  ?>
-                </div>
-              </div>
-            </li>
-          </a> 
-      <?php endwhile; endif; ?>
-    </ul>
+＊プラグイン
+Smart Custom Fields
+
+worksの記事詳細ページ用のカスタムフィールドを2つ作成（繰り返し有）
+グループ名: pc_item
+カスタムフィールドの名前: pc_img
+
+グループ名: sp_item
+カスタムフィールドの名前: sp_img
