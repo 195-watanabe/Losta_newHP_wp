@@ -158,3 +158,14 @@ $(function() {
     firstLast: false,
 	})
 });
+
+// ページネーション
+$(function() {
+	$('.topics_article').paginathing({//親要素のclassを記述
+    perPage: 6,//1ページあたりの表示件数
+		prevText:'PREV',//1つ前のページへ移動するボタンのテキスト
+		nextText:'NEXT',//1つ次のページへ移動するボタンのテキスト
+    activeClass: 'active',//現在のページ番号に任意のclassを付与できます
+    firstLast: false,
+	})
+});

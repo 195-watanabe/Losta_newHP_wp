@@ -19,56 +19,77 @@
     background-color: $dGray;
   }
 
-  a {
-    color: $black;
-  }
-
-  &_container {
+  &_content {
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: $pc16 $pc32;
+    height: 114.875vw;
+    position: relative;
+    clear: both;
+    z-index: 1;
     padding: $pc64 0;
-    margin: 0 auto;
-
-    ._item {
+  
+    ._menu {
+      box-sizing: border-box;
+      display: block;
+      width: 11.016vw;
       border: $pc1 solid $black;
       text-align: center;
       font-size: $pc16;
-      font-family: $lato;
       font-weight: 700;
       line-height: 3.594vw;
+      float: left;
+      list-style: none;
+      cursor: pointer;
+  
+  
+      &._active,
+      &._hover {
+        background-color: $black;
+        color: $white;
+      }
     }
-
-    ._item.selected {
-      background-color: $black;
-      color: $white;
+  
+    .mr {
+      margin-right: 5.468vw;
     }
   }
 
+  .tabcontent {
+    width: 100%;
+    position: absolute;
+    top: 13.594vw;
+    left: 0;
+  }
+  
   &_article {
     display: grid;
     padding: $pc64 $pc32;
     grid-template-columns: repeat(3, 1fr);
-    gap: 3.125vw 0.391vw;
+    gap: 4vw 0.391vw;
   }
 
   &_item {
     display: inline-block;
-    padding-bottom: $pc14;
+    padding-bottom: $pc8;
     transition: .2s;
 
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding-bottom: $pc8;
+    }
+  
     img {
       height: 14.063vw;
       object-fit: cover;
     }
-
+  
     p {
       font-size: $pc14;
       line-height: 1.8em;
       margin: 1.563vw $pc14 0;
     }
-
+  
     ._container {
       margin: $pc18 $pc14 0;
       display: flex;
@@ -77,7 +98,7 @@
       font-weight: 700;
       font-size: $pc14;
     }
-
+  
     ._tag {
       font-size: 0.936vw;
       padding: 0 $pc18;
@@ -86,7 +107,7 @@
       color: $white;
       border-radius: 1.1em;
     }
-
+  
     ._date {
       color: $dGray;
     }
@@ -96,6 +117,88 @@
     opacity: .8;
     background-color: $lGray;
   }
+}
+
+// ページネーション
+.pagination {
+  width: 100%;
+  position: absolute;
+  margin-bottom: $pc100;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+
+
+  a {
+    transition: .2s;
+    font-size: $pc16;
+    text-align: center;
+    line-height: 3.125vw;
+    margin: 0 0.391vw;
+    display: inline-block;
+    background-color: $white;
+    // height: 3.125vw;
+    position: relative;
+    border: $pc1 solid $black;
+    color: $dGray;
+    transition: .2s;
+    padding: 0 1.115vw;
+  }
+
+  .disabled {
+    opacity: 0;
+  }
+
+  a:hover {
+    color: $white;
+    background: $yellow;
+  }
+
+  .active {
+    a {
+      color: $white;
+      background-color: $black;
+    }
+
+    a:hover {
+      cursor: default !important;
+      background: $black;
+    }
+  }
+
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+  /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+  background-color: #eee;
+  clip: auto !important;
+  clip-path: none;
+  color: #444;
+  display: block;
+  font-size: 1em;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
 }
 
 
@@ -117,42 +220,59 @@
       background-color: $dGray;
     }
 
-    &_container {
+    &_content {
       width: 100%;
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: $tb9 $tb14;
-      padding: $tb20 0;
-
-      ._item {
+      height: 146vw;
+      position: relative;
+      clear: both;
+      z-index: 1;
+      padding: $pc64 0;
+    
+      ._menu {
+        box-sizing: border-box;
+        display: block;
+        width: 12.65vw;
         border: $tb1 solid $black;
+        text-align: center;
         font-size: $tb14;
+        font-weight: 700;
         line-height: 2.4em;
+        float: left;
+        list-style: none;
+        cursor: pointer;
+    
+    
+        &._active,
+        &._hover {
+          background-color: $black;
+          color: $white;
+        }
+      }
+    
+      .mr {
+        margin-right: $pc32;
       }
     }
 
     &_article {
-      display: grid;
-      padding: $tb80 $tb16 $tb44;
-      grid-template-columns: repeat(2, 1fr);
-      gap: $tb36 $tb18;
+      padding-bottom: $tb32;
     }
 
     &_item {
       display: inline-block;
       padding-bottom: $tb12;
-
+    
       img {
         height: 22vw;
         object-fit: cover;
       }
-
+      
       p {
         font-size: $tb14;
         line-height: 1.8em;
         margin: $tb9 $tb12 0;
       }
-
+      
       ._container {
         margin: $tb14 $tb9 0;
         display: flex;
@@ -168,6 +288,112 @@
         line-height: 2.2em;
         background-color: $black;
         color: $white;
+      }
+    }
+      
+      
+    // ページネーション
+    .pagination {
+      width: 100%;
+      position: absolute;
+      margin-bottom: $tb100;
+      display: flex;
+      justify-content: center;
+      box-sizing: border-box;
+    
+    
+      a {
+        font-size: $tb16;
+        text-align: center;
+        line-height: 2em;
+        margin: 0 0.42vw;
+        display: inline-block;
+        background-color: $white;
+        position: relative;
+        border: $tb1 solid $black;
+        color: $dGray;
+        transition: .2s;
+        padding: 0 1.2vw;
+      }
+    
+      .disabled {
+        opacity: 0;
+      }
+    
+      a:hover {
+        color: $white;
+        background: $yellow;
+      }
+    
+      .active {
+        a {
+          color: $white;
+          background-color: $black;
+        }
+    
+        a:hover {
+          cursor: default !important;
+          background: $black;
+        }
+      }
+    }
+    
+    &_item:hover {
+      opacity: .8 !important;
+      box-shadow: none;
+    }
+    
+    
+    &_article {
+      display: grid;
+      padding: $tb64 0;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4.219vw 3.906vw;
+    }
+  }
+
+  // ページネーション
+  .pagination {
+    width: 100%;
+    position: absolute;
+    margin-bottom: $tb100;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+  
+  
+    a {
+      font-size: $tb16;
+      text-align: center;
+      line-height: 2em;
+      margin: 0 0.42vw;
+      display: inline-block;
+      background-color: $white;
+      position: relative;
+      border: $tb1 solid $black;
+      color: $dGray;
+      transition: .2s;
+      padding: 0 1.2vw;
+    }
+  
+    .disabled {
+      opacity: 0;
+    }
+  
+    a:hover {
+      color: $white;
+      background: $yellow;
+    }
+  
+    .active {
+      a {
+        color: $white;
+        background-color: $black;
+      }
+  
+      a:hover {
+        cursor: default !important;
+        background: $black;
       }
     }
   }
@@ -187,54 +413,125 @@
       top: 61.111vw;
     }
 
-    &_container {
+    &_content {
       width: 100%;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: $sp12 $sp16;
-      padding: $sp12 0;
-
-      ._item {
+      height: 620vw;
+      padding: 5vw 0 $sp48;
+      position: relative;
+      clear: both;
+      z-index: 1;
+    
+      ._menu {
+        box-sizing: border-box;
+        display: block;
+        width: 44%;
         border: $sp1 solid $black;
         font-size: $sp16;
-        line-height: 12.500vw;
+        margin: 0 $sp16 $sp10;
+        margin-right: 0;
+    
+    
+        &._active,
+        &._hover {
+          background-color: $black;
+          color: $white;
+        }
+      }
+    
+      .mr {
+        margin-right: 0;
       }
     }
-
+    
+    .tabcontent {
+      width: 100%;
+      position: absolute;
+      top: 45vw;
+      left: 0;
+    }
+    
     &_article {
       display: grid;
-      padding: $sp48 0;
+      padding: $sp48 0 $sp32;
       grid-template-columns: repeat(1, 1fr);
-      gap: $sp48 0;
+      gap: $sp24 0;
     }
-
+    
     &_item {
       display: inline-block;
-
+      padding-bottom: $sp14;
+    
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding-bottom: $sp14;
+      }
+    
       img {
         width: 100%;
         height: 54.722vw;
         object-fit: cover;
       }
-
+      
       p {
         width: auto;
         font-size: $sp14;
-        margin:$sp12 $sp14 0;
+        margin: $sp12 $sp14 0;
       }
-
+      
       ._tag {
         font-size: $sp12;
         padding: 0 $sp18;
       }
-
+      
       ._container {
         margin-top: $sp10;
         font-size: $sp14;
       }
+
     }
-
-  }
-
   
+    // ページネーション
+    .pagination {
+      position: absolute;
+      margin-bottom: $sp32;
+    
+    
+      a {
+        font-size: $sp14;
+        text-align: center;
+        line-height: 2em;
+        margin: 0 $sp3;
+        display: inline-block;
+        background-color: $white;
+        position: relative;
+        border: $tb1 solid $black;
+        color: $dGray;
+        transition: .2s;
+        padding: 0 $sp10;
+      }
+    
+      .disabled {
+        opacity: 0;
+      }
+    
+      a:hover {
+        color: $white;
+        background: $yellow;
+      }
+    
+      .active {
+        a {
+          color: $white;
+          background-color: $black;
+        }
+    
+        a:hover {
+          cursor: default !important;
+          background: $black;
+        }
+      }
+    }
+  }
 }

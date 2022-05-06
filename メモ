@@ -7,3 +7,81 @@ worksの記事詳細ページ用のカスタムフィールドを2つ作成（�
 
 グループ名: sp_item
 カスタムフィールドの名前: sp_img
+
+管理画面で［設定］を選択し、一般設定を開き、［日付のフォーマット］を設定する部分がありますので、表示させたい形式を選択します。
+→カスタム"Y.n.j"
+
+<ul class="topics_article">
+          <a href="single-topics.html">
+            <li class="topics_item">
+              <img src="../img/topics_sample-min.jpg" alt="">
+              <p>
+                NEWS記事のタイトルです。NEWS記事のタイトルです。NEWS記事のタイ...
+              </p>
+              <div class="_container">
+                <div class="_tag">その他</div>
+                <div class="_date">2022.4.1</div>
+              </div>
+            </li>
+          </a>
+          <a href="single-topics.html">
+            <li class="topics_item">
+              <img src="../img/topics_sample-min.jpg" alt="">
+              <p>
+                NEWS記事のタイトルです。NEWS記事のタイトルです。NEWS記事のタイ...
+              </p>
+              <div class="_container">
+                <div class="_tag">その他</div>
+                <div class="_date">2022.4.1</div>
+              </div>
+            </li>
+          </a>
+          <a href="single-topics.html">
+            <li class="topics_item">
+              <img src="../img/topics_sample-min.jpg" alt="">
+              <p>
+                NEWS記事のタイトルです。NEWS記事のタイトルです。NEWS記事のタイ...
+              </p>
+              <div class="_container">
+                <div class="_tag">その他</div>
+                <div class="_date">2022.4.1</div>
+              </div>
+            </li>
+          </a>
+          <a href="single-topics.html">
+            <li class="topics_item">
+              <img src="../img/topics_sample-min.jpg" alt="">
+              <p>
+                NEWS記事のタイトルです。NEWS記事のタイトルです。NEWS記事のタイ...
+              </p>
+              <div class="_container">
+                <div class="_tag">その他</div>
+                <div class="_date">2022.4.1</div>
+              </div>
+            </li>
+          </a>
+          <a href="single-topics.html">
+            <li class="topics_item">
+              <img src="../img/topics_sample-min.jpg" alt="">
+              <p>
+                NEWS記事のタイトルです。NEWS記事のタイトルです。NEWS記事のタイ...
+              </p>
+              <div class="_container">
+                <div class="_tag">その他</div>
+                <div class="_date">2022.4.1</div>
+              </div>
+            </li>
+          </a>
+          <a href="single-topics.html">
+            <li class="topics_item">
+              <img src="../img/topics_sample-min.jpg" alt="">
+              <p>
+                NEWS記事のタイトルです。NEWS記事のタイトルです。NEWS記事のタイ...
+              </p>
+              <div class="_container">
+                <div class="_tag">その他</div>
+                <div class="_date">2022.4.1</div>
+              </div>
+            </li>
+          </a>
+        </ul>

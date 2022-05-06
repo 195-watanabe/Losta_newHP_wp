@@ -22,7 +22,7 @@
 
   &_content {
     width: 100%;
-    height: 114.875vw;
+    height: 118.875vw;
     position: relative;
     clear: both;
     z-index: 1;
@@ -224,15 +224,11 @@
 
     &_content {
       width: 100%;
-      height: 136.875vw;
+      height: 146vw;
       position: relative;
       clear: both;
       z-index: 1;
       padding: $pc64 0;
-      // display: grid;
-      // grid-template-columns: repeat(6, 1fr);
-      // gap: $pc16 $pc32;
-      // padding: $pc64 0;
     
       ._menu {
         box-sizing: border-box;

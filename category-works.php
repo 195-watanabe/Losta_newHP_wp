@@ -372,8 +372,7 @@
               wp_reset_postdata();
             ?>
             </ul>
-          </div>
-
+        </div>
       </div>
    </div>
   </main>
