@@ -769,7 +769,7 @@
 }
 .works_slider-item img {
   width: 100%;
-  height: 17.5vw;
+  height: 19.08vw;
 }
 .works_slider-item a {
   position: absolute;
@@ -890,8 +890,8 @@
   }
   .works_slide {
     position: relative;
-    width: 60%;
-    padding-left: 20%;
+    width: 56%;
+    padding-left: 22%;
   }
   .works_slider-item {
     position: relative;
@@ -899,7 +899,7 @@
   }
   .works_slider-item img {
     width: 100%;
-    height: 33.073vw;
+    height: 35.034vw;
   }
   .works .slideitem_heading {
     font-size: 2.083vw;
@@ -907,7 +907,7 @@
     margin-top: 1.823vw;
   }
   .works .slideitem_txt {
-    font-size: 1.823vw;
+    font-size: 2.083vw;
     line-height: 2em;
     margin-bottom: 1.823vw;
   }
@@ -982,7 +982,7 @@
   }
   .works_slider-item img {
     width: 100%;
-    height: 50vw;
+    height: 52.604vw;
   }
   .works_slider-item a {
     position: absolute;

@@ -65,7 +65,7 @@
 // スマホサイズ
 @include mq(sm) {
   .fv {
-    background:url(https://xs651965.xsrv.jp/img/fv_pic2-min.jpg) no-repeat center/cover scroll;
+    background:url(../../../img/fv_pic2-min.jpg) no-repeat center/cover scroll;
     min-height: 100vh;
     /* Fallback */
     //min-height: calc(var(--vh, 1vh) * 100);

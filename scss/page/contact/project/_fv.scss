@@ -68,7 +68,7 @@
 // スマホサイズ
 @include mq(sm) {
   .fv {
-    background: url(https://xs651965.xsrv.jp/img/fv_pic9-min.jpg) no-repeat center/cover scroll;
+    background: url(../../../img/fv_pic9-min.jpg) no-repeat center/cover scroll;
     min-height: 100vh;
     /* Fallback */
     //min-height: calc(var(--vh, 1vh) * 100);
@@ -96,7 +96,8 @@
   }
 
   .fv._hidden {
-    height: 17.222vw;
+    min-height: 0;
+    height: 0;
     background-image: none;
     background-color: $white;
 

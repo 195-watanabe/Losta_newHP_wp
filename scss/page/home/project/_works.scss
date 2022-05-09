@@ -62,8 +62,8 @@
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.12);
     
     & img {
-      width: 100%;
-      height: 17.5vw;
+      width: 100%; //画面サイズ1440 x 900想定
+      height: 19.08vw;
     }
 
     a {
@@ -172,18 +172,17 @@
     
     &_slide {
       position: relative;
-      width: 60%;
-      padding-left: 20%;
+      width: 56%;
+      padding-left: 22%;
     }
     
     &_slider-item {
       position: relative;
-      // width: 33.125vw;
       box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.12);
     
       & img {
         width: 100%;
-        height: 33.073vw;
+        height: 35.034vw;
       }
     }
 
@@ -194,7 +193,7 @@
     }
     
     .slideitem_txt {
-      font-size: $tb14;
+      font-size: $tb16;
       line-height: 2em;
       margin-bottom: $tb14  ;
     }
@@ -284,7 +283,7 @@
     
       & img {
         width: 100%;
-        height: 50vw;
+        height: 52.604vw;
       }
     
       a {

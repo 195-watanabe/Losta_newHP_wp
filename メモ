@@ -1,87 +1,246 @@
+アイキャッチは画面サイズ1440 x 900想定
+
 ＊プラグイン
 Smart Custom Fields
 
 worksの記事詳細ページ用のカスタムフィールドを2つ作成（繰り返し有）
+グループ名: sp_thumbnail
+カスタムフィールドの名前: sp_thumb_img
+memo: SP版のFV
+
 グループ名: pc_item
 カスタムフィールドの名前: pc_img
+memo: 
 
 グループ名: sp_item
 カスタムフィールドの名前: sp_img
+memo: 4枚だと綺麗
+
+＊プラグイン
+Contact Form 7 Multi-Step Forms
+
+固定ページcontact1,contact2,contact3を作っておく。
+
+contact1
+お問い合わせ
+<div class="form">
+<div class="form_block">
+ <div class="form_block _header">お名前<span>　※必須</span></div>
+ <div class="form_block _body">
+  [text* your-name class:is-full]
+ </div>
+</div>
+<div class="form_block">
+ <div class="form_block _header">会社名</div>
+ <div class="form_block _body">
+  [text your-company class:is-full]
+ </div>
+</div>
+<div class="form_block">
+ <div class="form_block _header">メールアドレス<span>　※必須</span></div>
+ <div class="form_block _body">
+  [email* your-email class:is-full]
+ </div>
+</div>
+<div class="form_block">
+ <div class="form_block _header">電話番号<span>　※必須</span></div>
+ <div class="form_block _body">
+  [tel* your-tel class:is-full]
+ </div>
+</div>
+<div class="form_block">
+ <div class="form_block _header">ご希望のプラン<span>　※必須</span></div>
+ <div class="form_block _body">
+  [select* your-plan include_blank "ミニマム" "ベーシック" "プロ" "アルファ" "未定"]
+ </div>
+</div>
+<div class="form_block">
+ <div class="form_block _header">ご希望の納期<span>　※必須</span></div>
+ <div class="form_block _body">
+  [select* your-period include_blank "1ヶ月以内" "3ヶ月以内" "6ヶ月以内" "12ヶ月以内" "未定"]
+ </div>
+</div>
+<div class="form_block">
+ <div class="form_block _header">ご相談内容<span>　※必須</span></div>
+ <div class="form_block _body">
+  [textarea* your-message]
+ </div>
+</div>
+<div class="form_block" id="privacy">
+              <div class="form_block _header">個人情報保護方針</div>
+              <div class="form_block _body">
+                <div class="form_privacy">
+                  <p>本ウェブサイトは、株式会社Losta（以下「当社」）の事業概要を紹介するサイトです。</p>
+                  <h2>
+                    1. 個人情報保護方針
+                  </h2>
+                  <p>
+                    当社は、当社が取得した個人情報の取扱いに関し、個人情報の保護に関する法律、個人情報保護に関するガイドライン等の指針、その他個人情報保護に関する関係法令を遵守します。
+                  </p>
+                  <h2>
+                    2. 個人情報の安全管理
+                  </h2>
+                  <p>
+                    当社は、個人情報の保護に関して、組織的、物理的、人的、技術的に適切な対策を実施し、当社の取り扱う個人情報の漏えい、滅失又はき損の防止その他の個人情報の安全管理のために必要かつ適切な措置を講ずるものとします。
+                  </p>
+                  <h2>
+                    3. 個人情報の取得等の遵守事項
+                  </h2>
+                  <p>
+                    当社による個人情報の取得、利用、提供については、以下の事項を遵守します。<br>
+                    
+                    <h3>
+                      (1) 個人情報の利用目的<br>
+                    </h3>
+                    当社は、当社が取得した個人情報について、法令に定める場合又は本人の同意を得た場合を除き、以下に定める利用目的の達成に必要な範囲を超えて利用することはありません。<br>
+                    <span>
+                      ① 本サイトの運営、維持、管理<br>
+                    </span>
+                    <span>
+                      ② 本サイトを通じたサービスの提供及び紹介<br>
+                    </span>
+                    <span>
+                      ③ 本サイトの品質向上のためのアンケート<br>
+                    </span>
+                    <h3>
+                      (2) 個人情報の提供等<br>
+                    </h3>
+                    当社は、法令で定める場合を除き、本人の同意に基づき取得した個人情報を、本人の事前の同意なく第三者に提供することはありません。なお、本人の求めによる個人情報の開示、訂正、追加若しくは削除又は利用目的の通知については、法令に従いこれを行うとともに、ご意見、ご相談に関して適切に対応します。
+                  </p>
+                  <h2>
+                    4 . 個人情報の利用目的の変更
+                  </h2>
+                  <p>
+                    当社は、前項で特定した利用目的は、予め本人の同意を得た場合を除くほかは、原則として変更しません。但し、変更前の利用目的と相当の関連性を有すると合理的に認められる範囲において、予め変更後の利用目的を公表の上で変更を行う場合はこの限りではありません。
+                  </p>
+                  <h2>
+                    ５. 個人情報の第三者提供
+                  </h2>
+                  <p>
+                    当社は、個人情報の取扱いの全部又は一部を第三者に委託する場合、その適格性を十分に審査し、その取扱いを委託された個人情報の安全管理が図られるよう、委託を受けた者に対する必要かつ適切な監督を行うこととします。
+                  </p>
+                  <h2>
+                    ６. 個人情報の取扱いの改善・見直し
+                  </h2>
+                  <p>
+                    当社は、個人情報の取扱い、管理体制及び取組みに関する点検を実施し、継続的に改善・見直しを行います。
+                  </p>
+                  <h2>
+                    ７. 個人情報の廃棄
+                  </h2>
+                  <p>
+                    当社は、個人情報の利用目的に照らしその必要性が失われたときは、個人情報を消去又は廃棄するものとし、当該消去及び廃棄は、外部流失等の危険を防止するために必要かつ適切な方法により、業務の遂行上必要な限りにおいて行います。
+                  </p>
+                  <h2>
+                    ８. お問い合わせ
+                  </h2>
+                  <p>
+                    当社の個人情報の取扱に関するお問い合せは問い合わせフォームよりご連絡ください。
+                  </p>
+                </div>
+<p>
+[checkbox* acceptance-policy class:acceptance-policy use_label_element "個人情報の取り扱いに同意する。"]
+</p>
+  </div>
+ </div>
+</div>
+<div class="form_submit">
+ <div class="form_submit _body">
+　[submit class:form_btn "入力内容の確認"]
+[multistep multistep-467 first_step "/contact2"]
+ </div>
+</div>
+
+contact2
+入力内容の確認
+<div class="form">
+<div class="form_block">
+ <div class="form_block _header">お名前<span>　※必須</span></div>
+ <div class="form_block _body">
+  [multiform "your-name"]
+ </div>
+</div>
+<div class="form_block">
+ <div class="form_block _header">会社名</div>
+ <div class="form_block _body">
+  [multiform "your-company"]
+ </div>
+</div>
+<div class="form_block">
+ <div class="form_block _header">メールアドレス<span>　※必須</span></div>
+ <div class="form_block _body">
+  [multiform "your-email"]
+ </div>
+</div>
+<div class="form_block">
+ <div class="form_block _header">電話番号<span>　※必須</span></div>
+ <div class="form_block _body">
+  [multiform "your-tel"]
+ </div>
+</div>
+<div class="form_block">
+ <div class="form_block _header">ご希望のプラン<span>　※必須</span></div>
+ <div class="form_block _body">
+  [multiform "your-plan"]
+ </div>
+</div>
+<div class="form_block">
+ <div class="form_block _header">ご希望の納期<span>　※必須</span></div>
+ <div class="form_block _body">
+  [multiform "your-period"]
+ </div>
+</div>
+<div class="form_block">
+ <div class="form_block _header">ご相談内容<span>　※必須</span></div>
+ <div class="form_block _body">
+  [multiform "your-message"]
+ </div>
+</div>
+</div>
+<div class="form_submit">
+ <div class="form_submit _body">
+　[previous class:form_btn class:_homeback "内容を修正する"]
+　[submit class:form_btn  class:_send "送信する"]
+[multistep multistep-184 last_step send_email "/contact3"]
+ </div>
+</div>
+
+メールのメッセージ本文
+お名前: [your-name]
+会社名: [your-company]
+e-mail: [your-email]
+電話番号: [your-tel]
+ご希望のプラン: [your-plan]
+ご希望の納期: [your-period]
+ご相談内容:
+[your-message]
+
+-- 
+このメールは [_site_title] ([_site_url]) のお問い合わせフォームから送信されました
+
+
 
 管理画面で［設定］を選択し、一般設定を開き、［日付のフォーマット］を設定する部分がありますので、表示させたい形式を選択します。
 →カスタム"Y.n.j"
 
-<ul class="topics_article">
-          <a href="single-topics.html">
-            <li class="topics_item">
-              <img src="../img/topics_sample-min.jpg" alt="">
-              <p>
-                NEWS記事のタイトルです。NEWS記事のタイトルです。NEWS記事のタイ...
-              </p>
-              <div class="_container">
-                <div class="_tag">その他</div>
-                <div class="_date">2022.4.1</div>
-              </div>
+<!-- <nav class="pagenation">
+          <ul class="pagenation_container">
+            <li class="_prev">
+              <?php if( get_previous_post_link() ) : ?>
+              <?php previous_post_link('%link', '&lt;　PREV', TRUE); ?>
+              <?php else : ?>
+              <a class="hidden">&lt;　PREV</a>
+              <?php endif; ?>
             </li>
-          </a>
-          <a href="single-topics.html">
-            <li class="topics_item">
-              <img src="../img/topics_sample-min.jpg" alt="">
-              <p>
-                NEWS記事のタイトルです。NEWS記事のタイトルです。NEWS記事のタイ...
-              </p>
-              <div class="_container">
-                <div class="_tag">その他</div>
-                <div class="_date">2022.4.1</div>
-              </div>
+            <li class="_home">
+              <a href="<?php echo home_url('/category/works', TRUE); ?>">WORKS INDEX</a>
             </li>
-          </a>
-          <a href="single-topics.html">
-            <li class="topics_item">
-              <img src="../img/topics_sample-min.jpg" alt="">
-              <p>
-                NEWS記事のタイトルです。NEWS記事のタイトルです。NEWS記事のタイ...
-              </p>
-              <div class="_container">
-                <div class="_tag">その他</div>
-                <div class="_date">2022.4.1</div>
-              </div>
+            <li class="_next">
+              <?php if( get_next_post_link() ) : ?>
+              <?php next_post_link('%link', 'NEXT　&gt;'); ?>
+              <?php else : ?>
+              <a class="hidden">NEXT　&gt;</a>
+              <?php endif; ?>
             </li>
-          </a>
-          <a href="single-topics.html">
-            <li class="topics_item">
-              <img src="../img/topics_sample-min.jpg" alt="">
-              <p>
-                NEWS記事のタイトルです。NEWS記事のタイトルです。NEWS記事のタイ...
-              </p>
-              <div class="_container">
-                <div class="_tag">その他</div>
-                <div class="_date">2022.4.1</div>
-              </div>
-            </li>
-          </a>
-          <a href="single-topics.html">
-            <li class="topics_item">
-              <img src="../img/topics_sample-min.jpg" alt="">
-              <p>
-                NEWS記事のタイトルです。NEWS記事のタイトルです。NEWS記事のタイ...
-              </p>
-              <div class="_container">
-                <div class="_tag">その他</div>
-                <div class="_date">2022.4.1</div>
-              </div>
-            </li>
-          </a>
-          <a href="single-topics.html">
-            <li class="topics_item">
-              <img src="../img/topics_sample-min.jpg" alt="">
-              <p>
-                NEWS記事のタイトルです。NEWS記事のタイトルです。NEWS記事のタイ...
-              </p>
-              <div class="_container">
-                <div class="_tag">その他</div>
-                <div class="_date">2022.4.1</div>
-              </div>
-            </li>
-          </a>
-        </ul>
+          </ul>
+        </nav> -->

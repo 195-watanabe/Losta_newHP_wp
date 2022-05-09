@@ -1,69 +1,5 @@
-<!DOCTYPE html>
-<html lang="ja">
+<?php get_header(); ?>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>株式会社Losta｜Web課題を解決するパートナー</title>
-  <meta name="description"
-    content="私たちLostaはWeb制作会社として、規模・業界問わずお客様が抱えるWeb課題を解決するパートナーを目指しています。「お客様の未来が私たちの明日へ。」それがLostaが持つミッションです。Webを通じて、お客様が抱えている課題を解決し、持続的な成長へと導いていきます。">
-  <meta property="og:url" content="https://">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Losta Inc.">
-  <meta property="og:description"
-    content="私たちLostaはWeb制作会社として、規模・業界問わずお客様が抱えるWeb課題を解決するパートナーを目指しています。「お客様の未来が私たちの明日へ。」それがLostaが持つミッションです。Webを通じて、お客様が抱えている課題を解決し、持続的な成長へと導いていきます。">
-  <meta property="og:site_name" content="">
-  <meta property="og:image" content="シェア時画像url">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="Twitterのアカウントをいれる">
-  <link rel="icon" type="image/x-icon" sizes="32×32" href="../img/icon.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-  <link rel="stylesheet" type="text/css" href="../css/style.css">
-  </link>
-  <link rel="stylesheet" type="text/css" href="../css/page/contact/style.css">
-  </link>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-</head>
-
-<body>
-  <header class="header">
-    <div class="header_wrapper">
-      <div class="header_logo">
-        <a href="home.html">
-          <img src="../img/logo_b.png" alt="ロゴ画像です">
-        </a>
-      </div>
-      <div class="scrolldown"><span>SCROLL</span><span></span></div>
-      <div class="topbtn _hidden">
-        <a href="#"><span></span></a>
-      </div>
-    </div>
-  </header>
-  <div class="openbtn">
-    <span></span><span></span><span></span>
-  </div>
-  <nav class="gnav">
-    <a href="home.html">
-      <div class="gnav_logo"><img src="../img/logo_b.png" alt=""></div>
-    </a>
-    <ul class="list">
-      <li class="list_item"><a href="about.html">ABOUT US</a></li>
-      <li class="list_item"><a href="service.html">SERVICE</a></li>
-      <li class="list_item"><a href="works.html">WORKS</a></li>
-      <li class="list_item"><a href="topics.html">TOPICS</a></li>
-      <li class="list_item"><a href="contact.html">CONTACT</a></li>
-    </ul>
-    <ul class="sns">
-      <li class="sns_item"><a href=""><img src="../img/icon_sns1.png" alt="twitter"></a></li>
-      <li class="sns_item"><a href=""><img src="../img/icon_sns2.png" alt="instagram"></a></li>
-    </ul>
-  </nav>
   <main class="main">
     <div class="fv _hidden">
       <div class="fv_title">
@@ -80,13 +16,14 @@
         <div class="form_container">
           <ol class="_stepBar">
             <li><span>1</span><br>入力</li>
-            <li class="_visited"><span>2</span><br>確認</li>
-            <li><span>3</span><br>完了</li>
+            <li><span>2</span><br>確認</li>
+            <li class="_visited"><span>3</span><br>完了</li>
           </ol>
-          <div class="form_txt">
+          <div class="form_txt" style="display: none;">
+            <p>お見積り、ご依頼、ご質問など、お気軽にお問い合わせください。</p>
           </div>
 
-          <div class="form_thanks" style="display: none;">
+          <div class="form_thanks">
             <p class="form_thanks _header">お問い合わせを受け付けました。</p>
             <p class="form_thanks _txt">
               このたびは、株式会社Lostaへお問い合わせ頂き誠にありがとうございます。<br>
@@ -96,61 +33,83 @@
               あらかじめご了承ください。<br>
             </p>
           </div>
-
+          
           <form method="post" action="" enctype="multipart/form-data">
           <div class="form">
 
-            <div class="form_block">
+            <div class="form_block" style="display: none;">
               <div class="form_block _header">お名前<span>　※必須</span></div>
               <div class="form_block _body">
-                お名前　太郎
-                <input type="hidden" name="your-name" class="is-full" size="60" value="" />
+                <input type="text" name="your-name" class="is-full" size="60" value="" />
               </div>
             </div>
-            <div class="form_block">
+            <div class="form_block" style="display: none;">
               <div class="form_block _header">会社名</div>
               <div class="form_block _body">
-                <input type="hidden" name="your-company" class="is-full" size="60" value="" />
+                <input type="text" name="your-company" class="is-full" size="60" value="" />
               </div>
             </div>
-            <div class="form_block">
+            <div class="form_block" style="display: none;">
               <div class="form_block _header">メールアドレス<span>　※必須</span></div>
               <div class="form_block _body">
-                aaa@gmail.com
-                <input type="hidden" name="your-email" class="is-full" size="60" value="" data-conv-half-alphanumeric="true" />
-              </div>
-            </div>
-            <div class="form_block">
-              <div class="form_block _header">電話番号<span>　※必須</span></div>
-              <div class="form_block _body">
-                0120-000-000
-                <input type="hidden" name="your-tel" class="is-full" size="60" value="" />
+                
+                <input type="email" name="your-email" class="is-full" size="60" value="" data-conv-half-alphanumeric="true" />
                 
               </div>
             </div>
-            <div class="form_block">
+            <div class="form_block" style="display: none;">
+              <div class="form_block _header">電話番号<span>　※必須</span></div>
+              <div class="form_block _body">
+                
+                <input type="text" name="your-tel" class="is-full" size="60" value="" />
+                
+              </div>
+            </div>
+            <div class="form_block" style="display: none;">
               <div class="form_block _header">ご希望のプラン</div>
               <div class="form_block _body">
                 
-                <input type="hidden" name="your-budget">
-                  ベーシック
+                <select name="your-budget">
+                  <option value="" selected='selected'>
+                  </option>
+                  <option value="ミニマム">
+                    ミニマム </option>
+                    <option value="ベーシック">
+                      ベーシック </option>
+                      <option value="プロ">
+                        プロ </option>
+                        <option value="未定">
+                          未定 </option>
+                        </select>
               </div>
             </div>
-            <div class="form_block">
+            <div class="form_block" style="display: none;">
               <div class="form_block _header">ご希望の納期</div>
               <div class="form_block _body">
-                1ヶ月以内
-                <input type="hidden" name="your-period">
+                
+                <select name="your-period">
+                  <option value="" selected='selected'>
+                  </option>
+                  <option value="1ヶ月以内">
+                    1ヶ月以内 </option>
+                    <option value="3ヶ月以内">
+                      3ヶ月以内 </option>
+                      <option value="6ヶ月以内">
+                        6ヶ月以内 </option>
+                        <option value="12ヶ月以内">
+                          12ヶ月以内 </option>
+                          <option value="未定">
+                            未定 </option>
+                </select>
               </div>
             </div>
-            <div class="form_block">
+            <div class="form_block" style="display: none;">
               <div class="form_block _header">ご相談内容<span>　※必須</span></div>
               <div class="form_block _body">
-                個人のHPを作りたい。
-                <input type="hidden" name="your-message" cols="50" rows="9">
+                <textarea name="your-message" cols="50" rows="9"></textarea>
               </div>
             </div>
-            <div class="form_block" id="privacy" style="display: none;">
+            <div class="form_block" style="display: none;" id="privacy">
               <div class="form_block _header">個人情報保護方針</div>
               <div class="form_block _body">
                 <div class="form_privacy">
@@ -230,14 +189,11 @@
           </div>
           <div class="form_submit">
             <div class="form_submit _body">
-
-              <button type="submit" name="send" value="send" class="form_btn _send">
-                <a href="contact3.html"></a>
-                <span>送信する</span><i></i></button>
-              <button type="submit" name="submitBack" value="back" class="form_btn _back">
-                <a href="contact.html"></a>
-                <span>修正する</span><i></i></button>
-
+              <button type="submit" name="submitConfirm" value="confirm" class="form_btn _homeback">
+                <a href="home.html">
+                </a>
+                  TOPへ戻る
+                </button>
             </div>
           </div>
       </div>
@@ -247,49 +203,4 @@
       </div>
     </div>
   </main>
-<footer class="footer">
-  <section class="footer_contact">
-    <div class="contact_container">
-      <h2 class="_heading">Contact</h2>
-      <p class="_subtitle">お問い合わせ</p>
-      <p class="_txt">Web制作の相談やお見積もりなどお気軽にご相談ください</p>
-      <button type="button" class="_morebtn" type=“button” onclick="location.href='contact.html'">
-        Contact Form
-      </button>
-    </div>
-  </section>
-  <section class="footer_works">
-    <div class="works_container">
-      <h2 class="_heading">Our works</h2>
-      <p class="_subtitle">制作実績一覧</p>
-      <button type="button" class="_morebtn" type=“button” onclick="location.href='works.html'">
-        View More</button>
-    </div>
-  </section>
-  <div class="footer_container">
-    <div class="_logo">
-      <div class="_logo-img"><img src="../img/logo_icon.png" alt="ロゴ画像です"></div>
-      <p class="_logo-txt">LOSTA</p>
-    </div>
-    <div class="_sns">
-      <a href="">
-        <div class="_sns-twitter"><img src="../img/icon_sns1.png" alt="Twitter"></div>
-      </a>
-      <a href="">
-        <div class="_sns-instagram"><img src="../img/icon_sns2.png" alt="instagram"></div>
-      </a>
-    </div>
-    <p class="_txt">© 2022 Losta, Inc.</p>
-  </div>
-</footer>
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-<script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAx5XXLmlD73zfjDWPOkh2Y0tOtpkPEpHk&callback=initMap"></script>
-<script src="../js/main.js"></script>
-<script src="../js/swiper.js"></script>
-</body>
-
-</html>
+<?php get_footer();?>

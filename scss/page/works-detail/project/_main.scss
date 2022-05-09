@@ -86,10 +86,10 @@
     
     .thumbnail_pc {
       position: absolute;
-      top: $pc28;
+      top: $pc24;
       right: 3.125vw;
-      width: 52.734vw ;
-      height: 30.55vw;
+      width: 50vw ;
+      height: 31.25vw;
       z-index: 3;
 
       img {
@@ -105,16 +105,16 @@
       right: -$pc100;
       position: absolute;
       right: -$pc100;
-      width: 14.063vw;
-      height: 28.125vw;
+      width: 14vw; //画面サイズ320 x 480想定
+      height: 28.351vw;
       z-index: 4;
       
       .wp-post-image {
         position: absolute;
         top: 4.688vw;
-        right: 0.781vw;
-        width: 12.509vw;
-        height: 19.203vw;
+        right: 0.72vw;
+        width: 12.70vw;
+        height: 19.05vw;
         object-fit: cover;
       }
     }
@@ -245,6 +245,7 @@
         background-color: $white;
         
         a {
+           box-sizing: border-box;
           transition: .2s;
           font-size: $pc14;
           font-weight: 700;
@@ -271,7 +272,6 @@
       }
       
       ._home {
-        border: $pc1 solid $black;
         color: $white;
         background-image: url(../../../img/fv_pic4-min.jpg);
         background-size: cover;
@@ -364,7 +364,7 @@
         top: $tb24;
         right: 4vw;
         width: 62vw;
-        height: 36.5vw;
+        height: 38.75vw;
         z-index: 3;
       
         img {
@@ -378,16 +378,16 @@
         position: absolute;
         top: 29.8vw;
         right: -$tb40;
-        width: 14.063vw;
-        height: 28.125vw;
+        width: 14vw;
+        height: 28.351vw;
         z-index: 4;
       
         .wp-post-image {
           position: absolute;
           top: 4.688vw;
-          right: 0.781vw;
-          width: 12.509vw;
-          height: 19.203vw;
+          right: 0.7vw;
+          width: 12.7vw;
+          height: 19.05vw;
           object-fit: cover;
         }
       }
@@ -608,7 +608,7 @@
         top: $sp12;
         right: $sp36;
         width: 80vw;
-        height: 48vw;
+        height: 50vw;
         z-index: 3;
       
         img {
@@ -623,14 +623,14 @@
         top: 34.7vw;
         right: $sp8;
         width: 20vw;
-        height: 28.125vw;
+        height: 40.502vw;
         z-index: 4;
       
         .wp-post-image {
           position: absolute;
           top: 6.6vw;
           right: 1vw;
-          width: 17.98vw;
+          width: 18vw;
           height: 27vw;
           object-fit: cover;
         }

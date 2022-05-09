@@ -72,6 +72,11 @@
   }
 }
 
+.screen-reader-response {
+  display: none;
+}
+
+
 .form {
   padding: 0 5.938vw;
   font-size: $pc14;
@@ -125,6 +130,13 @@
     ._body {
       box-sizing: border-box;
 
+      .wpcf7-not-valid-tip {
+        color: $red;
+        display: block;
+        margin-top: .4em;
+        margin-left: .4em;
+      }
+
       input[type="text"],
       input[type="password"],
       input[type="url"],
@@ -163,7 +175,7 @@
   }
 
   &_privacy {
-    margin-bottom: 3.281vw;
+    margin-bottom: 1.5vw;
     padding: $pc18;
     width: 100%;
     max-height: 8.438vw;
@@ -188,7 +200,14 @@
   }
 
   p {
-    font-size: 0.938vw;
+    font-size: $pc14;
+  }
+
+  .acceptance-policy {
+
+    input {
+     margin-right: 1em;
+    }
   }
 
   &_submit {
@@ -199,6 +218,10 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
+
+      .wpcf7-spinner {
+        display: none;
+      }
     }
   }
 
@@ -404,7 +427,7 @@
     }
   
     p {
-      font-size: $tb12;
+      font-size: $tb14;
     }
   
     &_submit {
@@ -447,7 +470,7 @@
       margin-top: $tb24;
       font-size: $tb16;
       line-height: 3.44em;
-      margin: 0 10vw;
+      margin: 2.5vw 14vw 0;
       padding: 0;
     }
   

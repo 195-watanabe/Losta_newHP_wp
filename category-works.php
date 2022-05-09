@@ -30,23 +30,23 @@
               <?php if(has_post_thumbnail()): ?>
               <?php the_post_thumbnail( 'large',  array("alt" => get_the_title())); ?>
               <?php endif; ?>
-              <div class="_container">
-                <p class="_left">
-                  <!-- 記事タイトル -->
-                  <span>
-                    <?php
-                  if(mb_strlen($post->post_title, 'UTF-8')>15){
-                    $title= mb_substr($post->post_title, 0, 15, 'UTF-8');
-                    echo $title.'……';
+              <p class="article_title">
+                <!-- 記事タイトル -->
+                <?php
+                  if(mb_strlen($post->post_title, 'UTF-8')>38){
+                    $title= mb_substr($post->post_title, 0, 38, 'UTF-8');
+                    echo $title.'…';
                   }else{
                     echo $post->post_title;
                   }
-                  ?>
-                  </span><br>
+                ?>
+              </p>
+              <div class="_container">
+                <p class="_left">
                   <!-- 記事本文 -->
                   <?php
-                  if(mb_strlen($post->post_content,'UTF-8')>25){
-                    $content= str_replace('\n', '', mb_substr(strip_tags($post-> post_content), 0, 25,'UTF-8'));
+                  if(mb_strlen($post->post_content,'UTF-8')>36){
+                    $content= str_replace('\n', '', mb_substr(strip_tags($post-> post_content), 0, 36,'UTF-8'));
                     echo $content.'…';
                   }else{
                     echo str_replace('\n', '', strip_tags($post->post_content));
@@ -91,23 +91,23 @@
               <?php if(has_post_thumbnail()): ?>
               <?php the_post_thumbnail( 'large',  array("alt" => get_the_title())); ?>
               <?php endif; ?>
-              <div class="_container">
-                <p class="_left">
-                  <!-- 記事タイトル -->
-                  <span>
-                    <?php
-                  if(mb_strlen($post->post_title, 'UTF-8')>15){
-                    $title= mb_substr($post->post_title, 0, 15, 'UTF-8');
-                    echo $title.'……';
+              <p class="article_title">
+                <!-- 記事タイトル -->
+                <?php
+                  if(mb_strlen($post->post_title, 'UTF-8')>38){
+                    $title= mb_substr($post->post_title, 0, 38, 'UTF-8');
+                    echo $title.'…';
                   }else{
                     echo $post->post_title;
                   }
-                  ?>
-                  </span><br>
+                ?>
+              </p>
+              <div class="_container">
+                <p class="_left">
                   <!-- 記事本文 -->
                   <?php
-                  if(mb_strlen($post->post_content,'UTF-8')>25){
-                    $content= str_replace('\n', '', mb_substr(strip_tags($post-> post_content), 0, 25,'UTF-8'));
+                  if(mb_strlen($post->post_content,'UTF-8')>36){
+                    $content= str_replace('\n', '', mb_substr(strip_tags($post-> post_content), 0, 36,'UTF-8'));
                     echo $content.'…';
                   }else{
                     echo str_replace('\n', '', strip_tags($post->post_content));
@@ -151,23 +151,23 @@
               <?php if(has_post_thumbnail()): ?>
               <?php the_post_thumbnail( 'large',  array("alt" => get_the_title())); ?>
               <?php endif; ?>
-              <div class="_container">
-                <p class="_left">
-                  <!-- 記事タイトル -->
-                  <span>
-                    <?php
-                  if(mb_strlen($post->post_title, 'UTF-8')>15){
-                    $title= mb_substr($post->post_title, 0, 15, 'UTF-8');
-                    echo $title.'……';
+              <p class="article_title">
+                <!-- 記事タイトル -->
+                <?php
+                  if(mb_strlen($post->post_title, 'UTF-8')>38){
+                    $title= mb_substr($post->post_title, 0, 38, 'UTF-8');
+                    echo $title.'…';
                   }else{
                     echo $post->post_title;
                   }
-                  ?>
-                  </span><br>
+                ?>
+              </p>
+              <div class="_container">
+                <p class="_left">
                   <!-- 記事本文 -->
                   <?php
-                  if(mb_strlen($post->post_content,'UTF-8')>25){
-                    $content= str_replace('\n', '', mb_substr(strip_tags($post-> post_content), 0, 25,'UTF-8'));
+                  if(mb_strlen($post->post_content,'UTF-8')>36){
+                    $content= str_replace('\n', '', mb_substr(strip_tags($post-> post_content), 0, 36,'UTF-8'));
                     echo $content.'…';
                   }else{
                     echo str_replace('\n', '', strip_tags($post->post_content));
@@ -211,23 +211,23 @@
               <?php if(has_post_thumbnail()): ?>
               <?php the_post_thumbnail( 'large',  array("alt" => get_the_title())); ?>
               <?php endif; ?>
-              <div class="_container">
-                <p class="_left">
-                  <!-- 記事タイトル -->
-                  <span>
-                    <?php
-                  if(mb_strlen($post->post_title, 'UTF-8')>15){
-                    $title= mb_substr($post->post_title, 0, 15, 'UTF-8');
-                    echo $title.'……';
+              <p class="article_title">
+                <!-- 記事タイトル -->
+                <?php
+                  if(mb_strlen($post->post_title, 'UTF-8')>38){
+                    $title= mb_substr($post->post_title, 0, 38, 'UTF-8');
+                    echo $title.'…';
                   }else{
                     echo $post->post_title;
                   }
-                  ?>
-                  </span><br>
+                ?>
+              </p>
+              <div class="_container">
+                <p class="_left">
                   <!-- 記事本文 -->
                   <?php
-                  if(mb_strlen($post->post_content,'UTF-8')>25){
-                    $content= str_replace('\n', '', mb_substr(strip_tags($post-> post_content), 0, 25,'UTF-8'));
+                  if(mb_strlen($post->post_content,'UTF-8')>36){
+                    $content= str_replace('\n', '', mb_substr(strip_tags($post-> post_content), 0, 36,'UTF-8'));
                     echo $content.'…';
                   }else{
                     echo str_replace('\n', '', strip_tags($post->post_content));
@@ -271,23 +271,23 @@
               <?php if(has_post_thumbnail()): ?>
               <?php the_post_thumbnail( 'large',  array("alt" => get_the_title())); ?>
               <?php endif; ?>
-              <div class="_container">
-                <p class="_left">
-                  <!-- 記事タイトル -->
-                  <span>
-                    <?php
-                  if(mb_strlen($post->post_title, 'UTF-8')>15){
-                    $title= mb_substr($post->post_title, 0, 15, 'UTF-8');
-                    echo $title.'……';
+              <p class="article_title">
+                <!-- 記事タイトル -->
+                <?php
+                  if(mb_strlen($post->post_title, 'UTF-8')>38){
+                    $title= mb_substr($post->post_title, 0, 38, 'UTF-8');
+                    echo $title.'…';
                   }else{
                     echo $post->post_title;
                   }
-                  ?>
-                  </span><br>
+                ?>
+              </p>
+              <div class="_container">
+                <p class="_left">
                   <!-- 記事本文 -->
                   <?php
-                  if(mb_strlen($post->post_content,'UTF-8')>25){
-                    $content= str_replace('\n', '', mb_substr(strip_tags($post-> post_content), 0, 25,'UTF-8'));
+                  if(mb_strlen($post->post_content,'UTF-8')>36){
+                    $content= str_replace('\n', '', mb_substr(strip_tags($post-> post_content), 0, 36,'UTF-8'));
                     echo $content.'…';
                   }else{
                     echo str_replace('\n', '', strip_tags($post->post_content));
@@ -331,23 +331,23 @@
               <?php if(has_post_thumbnail()): ?>
               <?php the_post_thumbnail( 'large',  array("alt" => get_the_title())); ?>
               <?php endif; ?>
-              <div class="_container">
-                <p class="_left">
-                  <!-- 記事タイトル -->
-                  <span>
-                    <?php
-                  if(mb_strlen($post->post_title, 'UTF-8')>15){
-                    $title= mb_substr($post->post_title, 0, 15, 'UTF-8');
-                    echo $title.'……';
+              <p class="article_title">
+                <!-- 記事タイトル -->
+                <?php
+                  if(mb_strlen($post->post_title, 'UTF-8')>38){
+                    $title= mb_substr($post->post_title, 0, 38, 'UTF-8');
+                    echo $title.'…';
                   }else{
                     echo $post->post_title;
                   }
-                  ?>
-                  </span><br>
+                ?>
+              </p>
+              <div class="_container">
+                <p class="_left">
                   <!-- 記事本文 -->
                   <?php
-                  if(mb_strlen($post->post_content,'UTF-8')>25){
-                    $content= str_replace('\n', '', mb_substr(strip_tags($post-> post_content), 0, 25,'UTF-8'));
+                  if(mb_strlen($post->post_content,'UTF-8')>36){
+                    $content= str_replace('\n', '', mb_substr(strip_tags($post-> post_content), 0, 36,'UTF-8'));
                     echo $content.'…';
                   }else{
                     echo str_replace('\n', '', strip_tags($post->post_content));

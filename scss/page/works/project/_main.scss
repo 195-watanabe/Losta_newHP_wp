@@ -17,10 +17,12 @@
     width: 100%;
     height: $pc1;
     background-color: $dGray;
+    z-index: 100;
   }
 
 
   &_content {
+    background-color: $white;
     width: 100%;
     height: 118.875vw;
     position: relative;
@@ -82,11 +84,19 @@
     }
     
     img {
-      width: 34.267vw;
-      height: 20.469vw;
+      width: 34.267vw; //画面サイズ1440 x 900想定
+      height: 21.417vw;
       object-fit: cover;
     }
 
+    .article_title {
+      margin-top: $pc18;
+      margin-right: $pc14;
+      margin-left: $pc14;
+      margin-bottom: $pc10;
+      font-size: 0.938vw;
+    }
+    
     ._container {
       display: flex;
       justify-content: space-between;
@@ -94,18 +104,12 @@
       font-weight: 700;
       font-size: $pc14;
     }
-
+    
     ._left {
-      width: 19.844vw;
+      width: 20.5vw;
       line-height: 1.8em;
-      margin-top: $pc14;
       margin-left: $pc14;
       font-size: $pc14;
-      
-      span {
-        font-size: 0.938vw;
-        // font-size: $pc14;
-      }
     }
 
     ._right {
@@ -268,9 +272,17 @@
       }
   
       img {
-        width: 100%;
-        height: 22vw;
+        width: 100%; //画面サイズ1440 x 900想定
+        height: 26.416vw;
         object-fit: cover;
+      }
+
+      .article_title {
+        margin-top: $tb14;
+        margin-right: $tb14;
+        margin-left: $tb14;
+        margin-bottom: $tb12;
+        font-size: $tb12;
       }
     
       ._container {
@@ -282,16 +294,11 @@
       }
     
       ._left {
-        width: 24.844vw;
+        width: 26.5vw;
         line-height: 1.6em;
-        margin-top: $tb14;
+        margin-top: 0;
         margin-left: $tb14;
         font-size: $tb14;
-        
-        span {
-          margin-top: $tb14;
-          font-size: $tb12;
-        }
       }
     
       ._right {
@@ -434,9 +441,17 @@
       }
     
       img {
-        width: 100%;
-        height: 54.722vw;
+        width: 100%; //画面サイズ1440 x 900想定
+        height: 56.947vw;
         object-fit: cover;
+      }
+
+      .article_title {
+        font-size: $sp12;
+        margin-top: $sp12;
+        margin-right: $sp10;
+        margin-left: $sp10;
+        margin-bottom: $sp12;
       }
     
       ._container {
@@ -444,19 +459,14 @@
       }
     
       ._left {
-        width: 55.556vw;
-        margin-top: $sp12;
-        margin-left: $sp14;
+        width: 56vw;
+        margin-left: $sp10;
         font-size: $sp14;
-        
-        span {
-          margin-top: $sp12;
-          font-size: $sp12;
-        }
       }
     
       ._right {
         width: 23.889vw;
+        font-size: $sp12;
         line-height: $sp30;
         margin-right: $sp12;
       }

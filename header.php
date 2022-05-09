@@ -44,12 +44,13 @@
   elseif ( in_category(5) || post_is_in_descendant_category(5)): ?> 
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/page/topics-detail/style.css"></link>
     <?php endif; ?> 
-    <?php if ( is_page('contact') ): ?>
+    <?php if(is_page(array('contact1','contact2','contact3'))) : ?>
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/page/contact/style.css"></link>
   <?php endif; ?>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <?php wp_head(); ?>
 </head>
   
 <body>
@@ -70,7 +71,7 @@
     <span></span><span></span><span></span>
   </div>
   <nav class="gnav">
-    <a href="home.html">
+    <a href="<?php echo home_url(); ?>">
       <div class="gnav_logo"><img src="<?php echo get_template_directory_uri();?>/img/logo_b.png" alt=""></div>
     </a>
     <?php

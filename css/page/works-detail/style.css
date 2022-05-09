@@ -75,10 +75,10 @@
 }
 .fv_img .thumbnail_pc {
   position: absolute;
-  top: 2.188vw;
+  top: 1.875vw;
   right: 3.125vw;
-  width: 52.734vw;
-  height: 30.55vw;
+  width: 50vw;
+  height: 31.25vw;
   z-index: 3;
 }
 .fv_img .thumbnail_pc img {
@@ -92,16 +92,16 @@
   right: -7.813vw;
   position: absolute;
   right: -7.813vw;
-  width: 14.063vw;
-  height: 28.125vw;
+  width: 14vw;
+  height: 28.351vw;
   z-index: 4;
 }
 .fv_img .thumbnail_sp .wp-post-image {
   position: absolute;
   top: 4.688vw;
-  right: 0.781vw;
-  width: 12.509vw;
-  height: 19.203vw;
+  right: 0.72vw;
+  width: 12.7vw;
+  height: 19.05vw;
   object-fit: cover;
 }
 
@@ -212,6 +212,7 @@
   background-color: #fff;
 }
 .article .pagenation_container li a {
+  box-sizing: border-box;
   transition: 0.2s;
   font-size: 1.094vw;
   font-weight: 700;
@@ -233,7 +234,6 @@
   background-color: #F1C407;
 }
 .article .pagenation_container ._home {
-  border: 0.0781vw solid #000;
   color: #fff;
   background-image: url(../../../img/fv_pic4-min.jpg);
   background-size: cover;
@@ -311,7 +311,7 @@
     top: 3.125vw;
     right: 4vw;
     width: 62vw;
-    height: 36.5vw;
+    height: 38.75vw;
     z-index: 3;
   }
   .fv_img .thumbnail_pc img {
@@ -323,16 +323,16 @@
     position: absolute;
     top: 29.8vw;
     right: -5.208vw;
-    width: 14.063vw;
-    height: 28.125vw;
+    width: 14vw;
+    height: 28.351vw;
     z-index: 4;
   }
   .fv_img .thumbnail_sp .wp-post-image {
     position: absolute;
     top: 4.688vw;
-    right: 0.781vw;
-    width: 12.509vw;
-    height: 19.203vw;
+    right: 0.7vw;
+    width: 12.7vw;
+    height: 19.05vw;
     object-fit: cover;
   }
 
@@ -519,7 +519,7 @@
     top: 3.333vw;
     right: 10vw;
     width: 80vw;
-    height: 48vw;
+    height: 50vw;
     z-index: 3;
   }
   .fv_img .thumbnail_pc img {
@@ -532,14 +532,14 @@
     top: 34.7vw;
     right: 2.222vw;
     width: 20vw;
-    height: 28.125vw;
+    height: 40.502vw;
     z-index: 4;
   }
   .fv_img .thumbnail_sp .wp-post-image {
     position: absolute;
     top: 6.6vw;
     right: 1vw;
-    width: 17.98vw;
+    width: 18vw;
     height: 27vw;
     object-fit: cover;
   }

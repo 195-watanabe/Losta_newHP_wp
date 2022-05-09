@@ -4,7 +4,7 @@
         <h2 class="_heading">Contact</h2>
         <p class="_subtitle">お問い合わせ</p>
         <p class="_txt">Web制作の相談やお見積もりなどお気軽にご相談ください</p>
-        <button type="button" class="_morebtn" type=“button” onclick="location.href='<?php echo home_url('/contact'); ?>'">
+        <button type="button" class="_morebtn" type=“button” onclick="location.href='<?php echo home_url('/contact1'); ?>'">
           Contact Form
         </button>
       </div>
@@ -13,7 +13,7 @@
       <div class="works_container">
         <h2 class="_heading">Our works</h2>
         <p class="_subtitle">制作実績一覧</p>
-        <button type="button" class="_morebtn" type=“button” onclick="location.href='<?php echo home_url('/works'); ?>'">
+        <button type="button" class="_morebtn" type=“button” onclick="location.href='<?php echo home_url('/category/works'); ?>'">
             View More</button>
       </div>
     </section>

@@ -53,7 +53,7 @@
 }
 @media screen and (max-width: 767px) {
   .fv {
-    background: url(https://xs651965.xsrv.jp/img/fv_pic4-min.jpg) no-repeat center/cover scroll;
+    background: url(../../../img/fv_pic4-min.jpg) no-repeat center/cover scroll;
     min-height: 100vh;
     /* Fallback */
   }
@@ -92,8 +92,10 @@
   width: 100%;
   height: 0.0781vw;
   background-color: #757575;
+  z-index: 100;
 }
 .work_content {
+  background-color: #fff;
   width: 100%;
   height: 118.875vw;
   position: relative;
@@ -147,8 +149,15 @@
 }
 .work_item img {
   width: 34.267vw;
-  height: 20.469vw;
+  height: 21.417vw;
   object-fit: cover;
+}
+.work_item .article_title {
+  margin-top: 1.406vw;
+  margin-right: 1.094vw;
+  margin-left: 1.094vw;
+  margin-bottom: 0.781vw;
+  font-size: 0.938vw;
 }
 .work_item ._container {
   display: flex;
@@ -158,14 +167,10 @@
   font-size: 1.094vw;
 }
 .work_item ._left {
-  width: 19.844vw;
+  width: 20.5vw;
   line-height: 1.8em;
-  margin-top: 1.094vw;
   margin-left: 1.094vw;
   font-size: 1.094vw;
-}
-.work_item ._left span {
-  font-size: 0.938vw;
 }
 .work_item ._right {
   width: 9.063vw;
@@ -304,8 +309,15 @@
   }
   .work_item img {
     width: 100%;
-    height: 22vw;
+    height: 26.416vw;
     object-fit: cover;
+  }
+  .work_item .article_title {
+    margin-top: 1.823vw;
+    margin-right: 1.823vw;
+    margin-left: 1.823vw;
+    margin-bottom: 1.563vw;
+    font-size: 1.563vw;
   }
   .work_item ._container {
     display: flex;
@@ -315,15 +327,11 @@
     font-size: 1.823vw;
   }
   .work_item ._left {
-    width: 24.844vw;
+    width: 26.5vw;
     line-height: 1.6em;
-    margin-top: 1.823vw;
+    margin-top: 0;
     margin-left: 1.823vw;
     font-size: 1.823vw;
-  }
-  .work_item ._left span {
-    margin-top: 1.823vw;
-    font-size: 1.563vw;
   }
   .work_item ._right {
     width: 9.063vw;
@@ -439,24 +447,27 @@
   }
   .work_item img {
     width: 100%;
-    height: 54.722vw;
+    height: 56.947vw;
     object-fit: cover;
+  }
+  .work_item .article_title {
+    font-size: 3.333vw;
+    margin-top: 3.333vw;
+    margin-right: 2.778vw;
+    margin-left: 2.778vw;
+    margin-bottom: 3.333vw;
   }
   .work_item ._container {
     font-size: 3.889vw;
   }
   .work_item ._left {
-    width: 55.556vw;
-    margin-top: 3.333vw;
-    margin-left: 3.889vw;
+    width: 56vw;
+    margin-left: 2.778vw;
     font-size: 3.889vw;
-  }
-  .work_item ._left span {
-    margin-top: 3.333vw;
-    font-size: 3.333vw;
   }
   .work_item ._right {
     width: 23.889vw;
+    font-size: 3.333vw;
     line-height: 8.333vw;
     margin-right: 3.333vw;
   }

@@ -54,7 +54,7 @@
 }
 @media screen and (max-width: 767px) {
   .fv {
-    background: url(https://xs651965.xsrv.jp/img/fv_pic8-min.jpg) no-repeat center/cover scroll;
+    background: url(../../../img/fv_pic8-min.jpg) no-repeat center/cover scroll;
     min-height: 100vh;
     /* Fallback */
   }

@@ -23,7 +23,21 @@ Template Post Type: post
             </div>
             <div class="thumbnail_sp">
               <img src="<?php echo get_template_directory_uri(); ?>/img/works_pic3.png" alt="スマートフォン画像">
-              <?php the_post_thumbnail('thumbnail'); ?>
+              <?php
+              $imgGroup = SCF::get('sp_thumbnail');
+              foreach ($imgGroup as $fields) { 
+                  $imgurl = wp_get_attachment_image_src($fields['sp_thumb_img'] , 'large');          
+              ?>
+              <!-- 画像がない時はnoImg画像を表示 -->
+              <?php if($fields['pc_img'] === "" ) {?>
+                  <img class="wp-post-image" src="<?php echo get_template_directory_uri(); ?>/img/noImage.jpg">
+              <!-- それ以外（画像がある時）画像を表示 -->
+              <?php } else { ?>
+                  <img class="wp-post-image" src="<?php echo $imgurl[0]; ?>" >
+              <?php
+              }
+              ?>
+              <?php } ?>
             </div>
             <?php endif; ?>
           </div>
@@ -81,13 +95,6 @@ Template Post Type: post
               ?>
           </div>
           <?php } ?>
-
-            <!-- <img src="../img/work_detail_sample2.png" alt=""> -->
-           <!-- <img src="../img/work_detail_sample3.png" alt=""> -->
-           <!-- <img src="../img/work_detail_sample2.png" alt=""> -->
-           <!-- <img src="../img/work_detail_sample3.png" alt=""> -->
-           <!-- <img src="../img/work_detail_sample2.png" alt=""> -->
-           <!-- <img src="../img/work_detail_sample3.png" alt="">  -->
         </div>
         <div class="article_sp">
           <h2 class="_heading">SPサイズ</h2>
@@ -111,14 +118,12 @@ Template Post Type: post
             <?php } ?>
           </div>
         </div>
+        
         <nav class="pagenation">
           <ul class="pagenation_container">
-            
-           
-
             <li class="_prev">
               <?php if( get_previous_post_link() ) : ?>
-              <?php previous_post_link('%link', '&lt;　PREV'); ?>
+              <?php previous_post_link('%link', '&lt;　PREV', false, '5, 12, 13, 14, 15'); ?>
               <?php else : ?>
               <a class="hidden">&lt;　PREV</a>
               <?php endif; ?>
@@ -128,15 +133,11 @@ Template Post Type: post
             </li>
             <li class="_next">
               <?php if( get_next_post_link() ) : ?>
-              <?php next_post_link('%link', 'NEXT　&gt;'); ?>
+              <?php next_post_link('%link', 'NEXT　&gt;', false, '5, 12, 13, 14, 15'); ?>
               <?php else : ?>
               <a class="hidden">NEXT　&gt;</a>
               <?php endif; ?>
             </li>
-
-            <!-- <a href=""><li class="_prev">&lt;　PREV</li></a>
-            <a href="works.html"><li class="_home">WORKS INDEX</li></a>
-            <a href=""><li class="_next">NEXT　&gt;</li></a> -->
           </ul>
         </nav>
       </div>

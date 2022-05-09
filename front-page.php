@@ -92,19 +92,29 @@
           <div class="works_slidewrapper">
             <div class="works_slide swiper-container">
               <div class="swiper-wrapper">
-                <?php query_posts('category_name=works');?>
-                <?php query_posts('posts_per_page=6'); ?>
-                <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
+                <?php
+                global $post;
+                $cat_slug = 'works'; // カテゴリーのスラッグ
+                $cat_posts = get_posts(array(
+                  'post_type' => 'post', // 投稿タイプ
+                  'category_name' => $cat_slug, // カテゴリをスラッグで指定する場合
+                  'posts_per_page' => 6, // 表示件数
+                  'orderby' => 'date', // 基準になる表示順
+                  'order' => 'DESC' // 昇順・降順
+                ));
+                if($cat_posts):
+                  foreach($cat_posts as $post):
+                    setup_postdata($post);
+                ?>
                 <div class="works_slider-item swiper-slide">
                   <?php if(has_post_thumbnail()): ?>
                   <?php the_post_thumbnail( 'large',  array("alt" => get_the_title())); ?>
                   <?php endif; ?>
                   <h4 class="slideitem_heading">
                     <?php
-                    if(mb_strlen($post->post_title, 'UTF-8')>15){
-                      $title= mb_substr($post->post_title, 0, 15, 'UTF-8');
-                      echo $title.'……';
+                    if(mb_strlen($post->post_title, 'UTF-8')>23){
+                      $title= mb_substr($post->post_title, 0, 23, 'UTF-8');
+                      echo $title.'…';
                     }else{
                       echo $post->post_title;
                     }
@@ -112,8 +122,8 @@
                   </h4>
                   <p class="slideitem_txt">
                     <?php
-                    if(mb_strlen($post->post_content,'UTF-8')>28){
-                      $content= str_replace('\n', '', mb_substr(strip_tags($post-> post_content), 0, 22,'UTF-8'));
+                    if(mb_strlen($post->post_content,'UTF-8')>23){
+                      $content= str_replace('\n', '', mb_substr(strip_tags($post-> post_content), 0, 23,'UTF-8'));
                       echo $content.'…';
                     }else{
                       echo str_replace('\n', '', strip_tags($post->post_content));
@@ -122,15 +132,12 @@
                   </p>
                   <a href="<?php the_permalink(); ?>"></a>
                 </div>
-                <?php endwhile; endif; ?>
-
-                <!-- <div class="works_slider-item swiper-slide">
-                  <img src="<?php echo get_template_directory_uri();?>/img/works_sample.png" alt="">
-                  <h4 class="slideitem_heading">サイト名</h4>
-                  <p class="slideitem_txt">サイトの説明</p>
-                  <a href="single-works.html"></a>
-                </div> -->
-                
+                <?php
+                  endforeach;
+                endif;
+                // ループ後のリセット処理
+                wp_reset_postdata();
+                ?>
               </div>
             </div>
           </div>
@@ -154,24 +161,41 @@
               </button>
           </div>
           <div class="topics_right">
-            <a href="single-topics.html">
+            <?php
+            global $post;
+            $cat_slug = 'topics'; // カテゴリーのスラッグ
+            $cat_posts = get_posts(array(
+              'post_type' => 'post', // 投稿タイプ
+              'category_name' => $cat_slug, // カテゴリをスラッグで指定する場合
+              'posts_per_page' => 3, // 表示件数
+              'orderby' => 'date', // 基準になる表示順
+              'order' => 'DESC' // 昇順・降順
+            ));
+            if($cat_posts):
+              foreach($cat_posts as $post):
+                setup_postdata($post);
+            ?>
+            <a href="<?php the_permalink(); ?>">
               <div class="topics_item">
-                <p class="article_date">2022.1.1</p>
-                <h4 class="article_title">年末年始のお知らせ</h4>
+                <p class="article_date"><?php echo get_the_date(); ?></p>
+                <h4 class="article_title">
+                  <?php
+                  if(mb_strlen($post->post_title, 'UTF-8')>25){
+                    $title= mb_substr($post->post_title, 0, 25, 'UTF-8');
+                    echo $title.'……';
+                  }else{
+                    echo $post->post_title;
+                  }
+                  ?> 
+                </h4>
               </div>
             </a>
-            <a href="single-topics.html">
-              <div class="topics_item">
-                <p class="article_date">2022.1.1</p>
-                <h4 class="article_title">年末年始のお知らせ</h4>
-              </div>
-            </a>
-            <a href="single-topics.html">
-              <div class="topics_item">
-                <p class="article_date">2022.1.1</p>
-                <h4 class="article_title">年末年始のお知らせ</h4>
-              </div>
-            </a>
+            <?php
+              endforeach;
+            endif;
+            // ループ後のリセット処理
+            wp_reset_postdata();
+            ?>
           </div>
         </div>
       </div>
