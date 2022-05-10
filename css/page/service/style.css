@@ -178,6 +178,7 @@
   padding-bottom: 10.625vw;
 }
 .process_step ._step {
+  font-family: "Lato", sans-serif;
   position: absolute;
   top: 0;
   left: -0.0781vw;

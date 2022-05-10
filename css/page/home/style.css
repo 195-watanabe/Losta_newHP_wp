@@ -756,6 +756,7 @@
   top: -50px;
   width: 100%;
   height: 25.781vw;
+  overflow: hidden;
   margin-bottom: 3vw;
 }
 .works_slide {
@@ -992,13 +993,16 @@
   }
   .works .slideitem_heading {
     font-size: 3.333vw;
-    line-height: 1.5em;
-    margin-top: 2.778vw;
+    margin-top: 3.333vw;
+    margin-right: 2.778vw;
+    margin-left: 2.778vw;
+    margin-bottom: 2.222vw;
   }
   .works .slideitem_txt {
     font-size: 3.333vw;
     line-height: 1.5em;
-    margin: 1.389vw 0 2.778vw;
+    margin: 0;
+    padding: 0 2.778vw 5vw;
   }
   .works_btnarea {
     padding-bottom: 0;

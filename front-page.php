@@ -112,8 +112,8 @@
                   <?php endif; ?>
                   <h4 class="slideitem_heading">
                     <?php
-                    if(mb_strlen($post->post_title, 'UTF-8')>23){
-                      $title= mb_substr($post->post_title, 0, 23, 'UTF-8');
+                    if(mb_strlen($post->post_title, 'UTF-8')>20){
+                      $title= mb_substr($post->post_title, 0, 20, 'UTF-8');
                       echo $title.'…';
                     }else{
                       echo $post->post_title;
@@ -122,8 +122,8 @@
                   </h4>
                   <p class="slideitem_txt">
                     <?php
-                    if(mb_strlen($post->post_content,'UTF-8')>23){
-                      $content= str_replace('\n', '', mb_substr(strip_tags($post-> post_content), 0, 23,'UTF-8'));
+                    if(mb_strlen($post->post_content,'UTF-8')>22){
+                      $content= str_replace('\n', '', mb_substr(strip_tags($post-> post_content), 0, 22,'UTF-8'));
                       echo $content.'…';
                     }else{
                       echo str_replace('\n', '', strip_tags($post->post_content));

@@ -74,7 +74,7 @@
         </h3>
         <!-- Google Map -->
         <div class="access_map">
-          <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyAx5XXLmlD73zfjDWPOkh2Y0tOtpkPEpHk"></script><!-- APIキーを入力 -->
+          <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyAiCoHJYz-02cmg2O5VblNNQwREfjX6w6Q"></script><!-- APIキーを入力 -->
           <script type="text/javascript">
           function googleMap() {
             var latlng = new google.maps.LatLng(35.55330126959252,139.61958645714833);/* 座標を入れる */

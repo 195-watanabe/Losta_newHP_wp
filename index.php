@@ -351,7 +351,7 @@
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAx5XXLmlD73zfjDWPOkh2Y0tOtpkPEpHk&callback=initMap"></script>
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiCoHJYz-02cmg2O5VblNNQwREfjX6w6Q&callback=initMap"></script>
   <script src="js/main.js"></script>
   <script src="js/swiper.js"></script>
   <script type="text/javascript" src="js/smoothScroll.js"></script>

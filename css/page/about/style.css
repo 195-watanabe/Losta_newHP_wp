@@ -93,7 +93,7 @@
   font-weight: 700;
   text-align: center;
   line-height: 4.375vw;
-  margin-top: 9.512vw;
+  margin-top: 3.75vw;
   z-index: 2;
 }
 .about_heading br:nth-child(2) {
@@ -103,7 +103,7 @@
   font-size: 1.094vw;
   line-height: 2.734vw;
   width: 64.375vw;
-  margin: 5vw auto 0;
+  margin: 2.813vw auto 0;
   z-index: 2;
 }
 .about_sign {
@@ -128,7 +128,7 @@
 @media screen and (max-width: 1025px) {
   .about {
     padding-top: 8.333vw;
-    padding-bottom: 8.333vw;
+    padding-bottom: 5.729vw;
   }
   .about_img {
     width: 10.417vw;
@@ -138,14 +138,14 @@
     font-size: 2.604vw;
     text-align: center;
     line-height: 2em;
-    margin-top: 6.51vw;
+    margin-top: 6.25vw;
     z-index: 2;
   }
   .about_txt {
     font-size: 1.823vw;
     line-height: 2em;
     width: 80%;
-    margin: 5.208vw auto 0;
+    margin: 3.125vw auto 0;
     z-index: 2;
   }
   .about_sign {
@@ -154,14 +154,11 @@
     z-index: 2;
   }
   .about::after {
-    left: -6%;
-  }
-  .about::after {
     background-repeat: no-repeat;
-    bottom: -4.444vw;
-    left: -4.444vw;
-    width: 100%;
-    height: 77.222vw;
+    bottom: -3.125vw;
+    left: -2.083vw;
+    width: 44vw;
+    height: 44vw;
   }
 }
 @media screen and (max-width: 767px) {
@@ -175,7 +172,7 @@
   }
   .about_heading {
     font-size: 5vw;
-    margin-top: 10vw;
+    margin-top: 13.333vw;
   }
   .about_heading br:nth-child(2) {
     display: inline;
@@ -183,18 +180,25 @@
   .about_txt {
     font-size: 3.889vw;
     width: 100%;
-    margin: 10vw 0;
+    margin: 8.889vw 0;
   }
   .about_sign {
     width: 43.333vw;
     margin: 0 0 0 auto;
+  }
+  .about::after {
+    background-repeat: no-repeat;
+    bottom: -4.444vw;
+    left: -4.444vw;
+    width: 75vw;
+    height: 75vw;
   }
 }
 .company {
   position: relative;
   padding-top: 9.512vw;
   padding-left: 10.78vw;
-  padding-bottom: 17.5vw;
+  padding-bottom: 9.512vw;
   background-color: #fff;
   z-index: 1;
 }
@@ -298,6 +302,7 @@
 @media screen and (max-width: 767px) {
   .company {
     padding-top: 13.333vw;
+    padding-bottom: 13.333vw;
     padding-left: 4.444vw !important;
     padding-right: 4.444vw !important;
   }

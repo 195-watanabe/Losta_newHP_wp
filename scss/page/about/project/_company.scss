@@ -5,7 +5,7 @@
   position: relative;
   padding-top: $pc122;
   padding-left: 10.78vw;
-  padding-bottom: 17.5vw;
+  padding-bottom: $pc122;
   background-color: $white;
   z-index: 1;
 
@@ -134,6 +134,7 @@
 @include mq(sm) {
   .company {
     padding-top: $sp48;
+    padding-bottom: $sp48;
     padding-left: $sp16 !important;
     padding-right: $sp16 !important;
 

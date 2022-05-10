@@ -24,7 +24,7 @@
   &_content {
     background-color: $white;
     width: 100%;
-    height: 118.875vw;
+    height: 122vw;
     position: relative;
     clear: both;
     z-index: 1;
@@ -95,13 +95,13 @@
       margin-left: $pc14;
       margin-bottom: $pc10;
       font-size: 0.938vw;
+      font-weight: 700;
     }
     
     ._container {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-      font-weight: 700;
       font-size: $pc14;
     }
     
@@ -113,6 +113,7 @@
     }
 
     ._right {
+      font-weight: 700;
       width: 9.063vw;
       color: $dGray;
       border: $pc1 solid $dGray;
@@ -228,7 +229,7 @@
 
     &_content {
       width: 100%;
-      height: 146vw;
+      height: 172vw;
       position: relative;
       clear: both;
       z-index: 1;
@@ -289,7 +290,6 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
-        font-weight: 700;
         font-size: $tb14;
       }
     
@@ -387,7 +387,7 @@
 
     &_content {
       width: 100%;
-      height: 598vw;
+      height: 642vw;
       padding: 5vw 0 $sp48;
       position: relative;
       clear: both;
@@ -469,6 +469,7 @@
         font-size: $sp12;
         line-height: $sp30;
         margin-right: $sp12;
+        border: $sp1 solid $dGray;
       }
     }
   }

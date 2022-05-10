@@ -19,7 +19,7 @@
     font-weight: 700;
     text-align: center;
     line-height: 4.375vw;
-    margin-top: $pc122;
+    margin-top: $pc48;
     z-index: 2;
     
     br:nth-child(2) {
@@ -31,7 +31,7 @@
     font-size: $pc14;
     line-height: 2.734vw;
     width: 64.375vw;
-    margin: $pc64 auto 0;
+    margin: $pc36 auto 0;
     z-index: 2;
   }
 
@@ -61,7 +61,7 @@
 @include mq(lg) {
   .about {
     padding-top: $tb64;
-    padding-bottom: $tb64;
+    padding-bottom: $tb44;
 
     &_img {
       width: $tb80;
@@ -72,7 +72,7 @@
       font-size: $tb20;
       text-align: center;
       line-height: 2em;
-      margin-top: $tb50;
+      margin-top: $tb48;
       z-index: 2;
     }
     
@@ -80,7 +80,7 @@
       font-size: $tb14;
       line-height: 2em;
       width: 80%;
-      margin: $tb40 auto  0;
+      margin: $tb24 auto  0;
       z-index: 2;
     }
     
@@ -89,17 +89,13 @@
       margin: $tb28 12.973vw 0 auto;
       z-index: 2;
     }
-    
-    &::after {
-      left: -6%;
-    }
 
     &::after {
       background-repeat: no-repeat;
-      bottom: -$sp16;
-      left: -$sp16;
-      width: 100%;
-      height: 77.222vw;
+      bottom: -$tb24;
+      left: -$tb16;
+      width: 44vw;
+      height: 44vw;
     }
   }
 }
@@ -118,7 +114,7 @@
 
     &_heading {
       font-size: $sp18;
-      margin-top: $sp36;
+      margin-top: $sp48;
 
       br:nth-child(2) {
         display: inline;
@@ -128,7 +124,7 @@
     &_txt {
       font-size: $sp14;
       width: 100%;
-      margin: $sp36 0;
+      margin: $sp32 0;
     }
 
     &_sign {
@@ -136,6 +132,12 @@
       margin: 0 0 0 auto;
     }
 
-
+    &::after {
+      background-repeat: no-repeat;
+      bottom: -$sp16;
+      left: -$sp16;
+      width: 75vw;
+      height: 75vw;
+    }
   }
 }

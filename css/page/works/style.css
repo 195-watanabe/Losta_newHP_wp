@@ -97,7 +97,7 @@
 .work_content {
   background-color: #fff;
   width: 100%;
-  height: 118.875vw;
+  height: 122vw;
   position: relative;
   clear: both;
   z-index: 1;
@@ -158,12 +158,12 @@
   margin-left: 1.094vw;
   margin-bottom: 0.781vw;
   font-size: 0.938vw;
+  font-weight: 700;
 }
 .work_item ._container {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  font-weight: 700;
   font-size: 1.094vw;
 }
 .work_item ._left {
@@ -173,6 +173,7 @@
   font-size: 1.094vw;
 }
 .work_item ._right {
+  font-weight: 700;
   width: 9.063vw;
   color: #757575;
   border: 0.0781vw solid #757575;
@@ -271,7 +272,7 @@
   }
   .work_content {
     width: 100%;
-    height: 146vw;
+    height: 172vw;
     position: relative;
     clear: both;
     z-index: 1;
@@ -323,7 +324,6 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    font-weight: 700;
     font-size: 1.823vw;
   }
   .work_item ._left {
@@ -401,7 +401,7 @@
   }
   .work_content {
     width: 100%;
-    height: 598vw;
+    height: 642vw;
     padding: 5vw 0 13.333vw;
     position: relative;
     clear: both;
@@ -470,6 +470,7 @@
     font-size: 3.333vw;
     line-height: 8.333vw;
     margin-right: 3.333vw;
+    border: 0.278vw solid #757575;
   }
 
   .pagination {
