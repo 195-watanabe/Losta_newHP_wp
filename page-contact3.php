@@ -190,8 +190,7 @@
           <div class="form_submit">
             <div class="form_submit _body">
               <button type="submit" name="submitConfirm" value="confirm" class="form_btn _homeback">
-                <a href="home.html">
-                </a>
+                <a href="<?php echo home_url('/contact1'); ?>"></a>
                   TOPへ戻る
                 </button>
             </div>
